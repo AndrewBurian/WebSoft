@@ -16,8 +16,9 @@ body { background: url(/assets/images/layout/body.gif) top repeat-x; font-family
 #header fieldset .input-text { background: url(/assets/images/layout/search.gif) no-repeat; width: 151px; height: 21px; border: none; font-size: 11px; position: absolute; right: 0; top: 69px; padding: 5px 38px 0 8px; color: #999; }
 
 #social-media { position: absolute; top: 161px; right: 0; }
-#social-media li { display: inline; }
-#social-media li a { display: block; float: left; text-indent: -5000px; width: 30px; height: 32px; margin-left: 12px; }
+//#social-media li { display: inline; }
+//#social-media li a { display: block; float: left; text-indent: -5000px; width: 30px; height: 32px; margin-left: 12px; }
+#social-media li { font: "Times New Roman", Times, serif; text-decoration: none; padding: 8px; display: block; float: left; font-size: 15px;}
 #social-media li.item-1 a { background: url(/assets/images/icons/facebook.gif) no-repeat; }
 #social-media li.item-2 a { background: url(/assets/images/icons/twitter.gif) no-repeat; }
 #social-media li.item-3 a { background: url(/assets/images/icons/rss.gif) no-repeat; }

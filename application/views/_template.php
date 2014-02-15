@@ -38,9 +38,7 @@ if (!defined('APPPATH'))
                         </fieldset>
                     </form>
                     <ul id="social-media">
-                        <li class="item-1"><a href="#">Facebook</a></li>
-                        <li class="item-2"><a href="#">Twitter</a></li>
-                        <li class="item-3"><a href="#">RSS</a></li>
+                        <li>{login}</li>
                     </ul>
 
                     <h2>{pageTitle}<span>{pageDescrip}</span></h2>
