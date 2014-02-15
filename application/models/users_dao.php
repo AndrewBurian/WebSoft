@@ -35,7 +35,7 @@ class Users_dao extends _Mymodel{
         }
     }
     
-    function restrictUser($userID, $requiredRole = ROLE_VISITOR){
+    function restrict($userID, $requiredRole = ROLE_VISITOR){
         
         // no one will ever be less than a visitor
         if($requiredRole == ROLE_VISITOR){
@@ -48,17 +48,13 @@ class Users_dao extends _Mymodel{
             return true;
         }
         
-        //if the required role is admin, fail
-        if($requiredRole == ROLE_ADMIN){
-            return false;
-        }
-        
-        // if the required role is user, and user is admin, pass
-        if($requiredRole == ROLE_USER && $userRole == ROLE_ADMIN){
+        // if user is admin, allow anyways
+        if($userRole == ROLE_ADMIN){
             return true;
         }
         
         // required role or user role is not valid
+        // or requirements are too high
         return false;
     }
     
