@@ -1,0 +1,2853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+locations.xml
+
+This XML document is a listing of bars, pubs and lounges in the Lower Mainland
+Original data came from the BC Ministry of Justice, Liquor Control and Licensing Branch, List of Licensed Establishments in BC
+Data is a selected subset of establishments with a 'Liquor Only' license
+HREF: www.pssg.gov.bc.ca/lclb/licensed/all-location.htm
+-->
+
+<!DOCTYPE ESTABLISHMENTS SYSTEM 'locations.dtd'>
+
+
+
+<ESTABLISHMENTS source = "www.pssg.gov.bc.ca/lclb/licensed/all-location.htm">
+    <CITY name = "Aldergrove">
+        <BAR>
+            <NAME>Alder Inn Hotel</NAME>
+            <ADDRESS>27214 Fraser Hwy</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fox &amp; Hounds Neighbourhood Pub</NAME>
+            <ADDRESS>26444  32nd Ave</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Mustangs Bar</NAME>
+            <ADDRESS>7-3227 264 Street</ADDRESS>
+            <CAPACITY>312</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 265</BRANCH>
+            <ADDRESS>26607 Fraser Hwy</ADDRESS>
+            <CAPACITY>510</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Westminster Regiment - Aldergrove Mess</NAME>
+            <ADDRESS>Building 2, CFS Aldergrove, 272 Street</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Burnaby">
+        <BAR>
+            <NAME>Admiral Pub &amp; Grill</NAME>
+            <ADDRESS>4125 E Hastings St</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BEST WESTERN KINGS INN</NAME>
+            <ADDRESS>5411 KINGSWAY</ADDRESS>
+            <CAPACITY>67</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BRENTWOOD LANES</NAME>
+            <ADDRESS>5502 LOUGHEED HWY</ADDRESS>
+            <CAPACITY>45</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BRENTWOOD RACQUETBALL CLUB</NAME>
+            <ADDRESS>5502 LOUGHEED HWY</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BURNABY WINTER CLUB</NAME>
+            <ADDRESS>4990 CANADA WAY</ADDRESS>
+            <CAPACITY>190</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>EAGLE CREEK AT BURNABY MOUNTAIN</NAME>
+            <ADDRESS>7600 HALIFAX ST</ADDRESS>
+            <CAPACITY>175</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>EXECUTIVE INN HOTEL</NAME>
+            <ADDRESS>4201 LOUGHEED HWY</ADDRESS>
+            <CAPACITY>35</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Firefighters Hose N Hydrant Public House</NAME>
+            <ADDRESS>6515 Bonsor Avenue</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Grand Villa Casino &amp; Hotel</NAME>
+            <ADDRESS>4331 Dominion St</ADDRESS>
+            <CAPACITY>20</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Grand Villa Casino &amp; Hotel</NAME>
+            <ADDRESS>4331 Dominion Street</ADDRESS>
+            <CAPACITY>4344</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Great Bear Pub &amp; Liquor Store </NAME>
+            <ADDRESS>5665 KINGSWAY</ADDRESS>
+            <CAPACITY>208</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HILTON VANCOUVER METROTOWN</NAME>
+            <ADDRESS>6083 MCKAY AVENUE</ADDRESS>
+            <CAPACITY>149</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Holiday Inn</NAME>
+            <BRANCH>Metrotown</BRANCH>
+            <ADDRESS>4405 Central Blvd</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HOP &amp; VINE NEIGHBOURHOOD PUB &amp; BEER STORE</NAME>
+            <ADDRESS>9 1601 BURNWOOD DR</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Joey Burnaby Grill Lounge</NAME>
+            <ADDRESS>107-1899 Rosser Ave</ADDRESS>
+            <CAPACITY>124</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lougheed Village Bar and Grill</NAME>
+            <ADDRESS>9532 ERICKSON DR</ADDRESS>
+            <CAPACITY>356</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Marine Neighbourhood Pub</NAME>
+            <ADDRESS>5820 Marine Dr</ADDRESS>
+            <CAPACITY>175</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MOUNTAIN SHADOW INN</NAME>
+            <ADDRESS>7174 BARNET RD</ADDRESS>
+            <CAPACITY>160</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Oliver Twist Pub</NAME>
+            <ADDRESS>7557 Edmonds St</ADDRESS>
+            <CAPACITY>80</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Professor Mugs Pub and Grill</NAME>
+            <ADDRESS>3700 WILLINGDON AVE</ADDRESS>
+            <CAPACITY>346</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Riverway Golf Course</NAME>
+            <ADDRESS>9001 Bill Fox Way</ADDRESS>
+            <CAPACITY>154</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 83</BRANCH>
+            <ADDRESS>5289 Grimmer Street</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 148</BRANCH>
+            <ADDRESS>4356 E  HASTINGS ST</ADDRESS>
+            <CAPACITY>425</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Wings Tap &amp; Grill Kingsway</NAME>
+            <ADDRESS>6879 Kingsway</ADDRESS>
+            <CAPACITY>115</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Coquitlam">
+        <BAR>
+            <NAME>Charlie Hamilton's Pub</NAME>
+            <ADDRESS>1031-1037  1163 Pinetree Way</ADDRESS>
+            <CAPACITY>60</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>COQUITLAM INN AND CONVENTION CENTRE</NAME>
+            <ADDRESS>319 NORTH RD</ADDRESS>
+            <CAPACITY>106</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Executive Plaza Coquitlam</NAME>
+            <ADDRESS>405 North Rd</ADDRESS>
+            <CAPACITY>72</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>FROG AND NIGHTGOWN</NAME>
+            <ADDRESS>1125 FALCON DR</ADDRESS>
+            <CAPACITY>170</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hard Rock Casino Vancouver</NAME>
+            <ADDRESS>2080 United Blvd.</ADDRESS>
+            <CAPACITY>2953</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>John B Pub</NAME>
+            <ADDRESS>1000 Austin Ave</ADDRESS>
+            <CAPACITY>282</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Micky's Public House</NAME>
+            <ADDRESS>170 Golden Drive</ADDRESS>
+            <CAPACITY>215</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Milestone's Restaurant &amp; Palomino Bar</NAME>
+            <ADDRESS>2745 Barnet Hwy</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Planet Ice</NAME>
+            <BRANCH>Boomers - Coquitlam</BRANCH>
+            <ADDRESS>2300 ROCKET WAY</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ramada Hotel</NAME>
+            <ADDRESS>631 Lougheed Hwy </ADDRESS>
+            <CAPACITY>60</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>RHINO'S</NAME>
+            <ADDRESS>541 CLARKE RD</ADDRESS>
+            <CAPACITY>208</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Roos Pub &amp; Grill</NAME>
+            <ADDRESS>2962 Christmas Way</ADDRESS>
+            <CAPACITY>179</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 263</BRANCH>
+            <ADDRESS>1025 Ridgeway Ave</ADDRESS>
+            <CAPACITY>422</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Town Hall Public House</NAME>
+            <BRANCH>Coquitlam</BRANCH>
+            <ADDRESS>925 Brunette Avenue</ADDRESS>
+            <CAPACITY>145</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER GOLF CLUB</NAME>
+            <ADDRESS>771 AUSTIN AVE</ADDRESS>
+            <CAPACITY>542</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VIP Lounge and Cinemas</NAME>
+            <ADDRESS>170 Schoolhouse Street</ADDRESS>
+            <CAPACITY>591</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Westwood Plateau Golf - Executive 12 Hole Course</NAME>
+            <ADDRESS>1630 PARKWAY BLVD</ADDRESS>
+            <CAPACITY>32</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WESTWOOD PLATEAU GOLF &amp; COUNTRY CLUB</NAME>
+            <ADDRESS>3251 WESTWOOD PLATEAU BLVD</ADDRESS>
+            <CAPACITY>23</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WOODY'S ON BRUNETTE</NAME>
+            <ADDRESS>935 BRUNETTE ST</ADDRESS>
+            <CAPACITY>255</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Delta">
+        <BAR>
+            <NAME>BEACH GROVE GOLF CLUB</NAME>
+            <ADDRESS>5946 - 12TH AVE</ADDRESS>
+            <CAPACITY>196</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Browns Social House (Tsawwassen)</NAME>
+            <ADDRESS>1665 56th St</ADDRESS>
+            <CAPACITY>23</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CAPTAIN'S COVE MARINA</NAME>
+            <ADDRESS>6100 FERRY RD</ADDRESS>
+            <CAPACITY>71</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Delta Golf Club</NAME>
+            <ADDRESS>11550 Ladner Trunk Rd</ADDRESS>
+            <CAPACITY>152</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DELTA LION PUB &amp; BISTRO</NAME>
+            <ADDRESS>11186 84TH AVE</ADDRESS>
+            <CAPACITY>208</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DELTA TOWN &amp; COUNTRY INN</NAME>
+            <ADDRESS>6005 HWY 17</ADDRESS>
+            <CAPACITY>130</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GREAT PACIFIC FORUM</NAME>
+            <ADDRESS>10388 NORDEL COURT</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>KENNEDY'S PUB</NAME>
+            <ADDRESS>11906 88TH AVE</ADDRESS>
+            <CAPACITY>221</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Kings Links Golf Course by the Sea</NAME>
+            <ADDRESS>3388 72 St</ADDRESS>
+            <CAPACITY>232</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>KinVillage Community Centre</NAME>
+            <ADDRESS>5430 10TH Avenue</ADDRESS>
+            <CAPACITY>300</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>LANDING PUB &amp; GRILL</NAME>
+            <ADDRESS>5449 48TH AVE</ADDRESS>
+            <CAPACITY>120</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>NORTH DELTA INN</NAME>
+            <ADDRESS>11920 70TH AVE</ADDRESS>
+            <CAPACITY>105</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>NORTH DELTA INN</NAME>
+            <ADDRESS>11920 70TH AVE</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>NORTH DELTA INN</NAME>
+            <ADDRESS>11920 70TH AVE</ADDRESS>
+            <CAPACITY>418</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>NORTH DELTA RECREATION CENTRE</NAME>
+            <ADDRESS>11415 - 84TH AVE</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>One 20 Pub</NAME>
+            <ADDRESS>8037 - 120TH ST</ADDRESS>
+            <CAPACITY>213</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>River House Restaurant &amp; Pub</NAME>
+            <ADDRESS>5825 60 Ave</ADDRESS>
+            <CAPACITY>106</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Rose &amp; Crown Neighbourhood Pub</NAME>
+            <ADDRESS>1203 56th Street</ADDRESS>
+            <CAPACITY>199</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 61</BRANCH>
+            <ADDRESS>4896 DELTA ST</ADDRESS>
+            <CAPACITY>122</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 289</BRANCH>
+            <ADDRESS>22-1835 56 St</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SOUTH DELTA RECREATION CENTRE</NAME>
+            <ADDRESS>1720 56TH ST</ADDRESS>
+            <CAPACITY>155</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Speed's Neighbourhood Pub</NAME>
+            <ADDRESS>4943 Chisholm Street</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SUNDANCE INN</NAME>
+            <ADDRESS>6574 LADNER TRUNK RD</ADDRESS>
+            <CAPACITY>120</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sundowner Neighbourhood Pub</NAME>
+            <ADDRESS>11970A  64TH Ave</ADDRESS>
+            <CAPACITY>98</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Tidewaters Pub</NAME>
+            <ADDRESS>10190 River Road</ADDRESS>
+            <CAPACITY>157</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Tsawwassen Golf &amp; Country Club</NAME>
+            <ADDRESS>1595 52nd Street</ADDRESS>
+            <CAPACITY>351</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Fort Langley">
+        <BAR>
+            <NAME>FORT GOLF AND COUNTRY CLUB</NAME>
+            <ADDRESS>9782 MCKINNON RD</ADDRESS>
+            <CAPACITY>135</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fort Pub</NAME>
+            <ADDRESS>9273 Glover Rd</ADDRESS>
+            <CAPACITY>218</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Langley">
+        <BAR>
+            <NAME>ARTFUL DODGER NEIGHBOURHOOD PUB</NAME>
+            <ADDRESS>2364 200TH ST</ADDRESS>
+            <CAPACITY>208</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Baselines Pub</NAME>
+            <BRANCH>Langley</BRANCH>
+            <ADDRESS>20340 Fraser Hwy</ADDRESS>
+            <CAPACITY>194</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>B's Craft Beer Lounge </NAME>
+            <ADDRESS>100-19665 Willowbrook Drive</ADDRESS>
+            <CAPACITY>24</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cascades Casino</NAME>
+            <ADDRESS>20393 Fraser Highway</ADDRESS>
+            <CAPACITY>3626</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GABBY'S</NAME>
+            <ADDRESS>20297 Fraser Highway</ADDRESS>
+            <CAPACITY>285</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>George Preston Recreation Centre Lounge</NAME>
+            <ADDRESS>20699 42 Avenue</ADDRESS>
+            <CAPACITY>178</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Jimmy Liks</NAME>
+            <ADDRESS>6001 196A ST</ADDRESS>
+            <CAPACITY>258</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>JIMY MAC'S</NAME>
+            <ADDRESS>19935 96TH AVE</ADDRESS>
+            <CAPACITY>336</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Moxie's </NAME>
+            <ADDRESS>8828 201 Street </ADDRESS>
+            <CAPACITY>152</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Murrayville Town Pub</NAME>
+            <ADDRESS>22070  48 A Avenue</ADDRESS>
+            <CAPACITY>202</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>NEWLANDS GOLF &amp; RACQUET CLUB</NAME>
+            <ADDRESS>21025 48TH AVE</ADDRESS>
+            <CAPACITY>227</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Playtime Gaming - Langley</NAME>
+            <ADDRESS>19664 64th Avenue</ADDRESS>
+            <CAPACITY>130</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Rendezvous Neighbourhood Pub</NAME>
+            <ADDRESS>119 - 20620 56th Avenue</ADDRESS>
+            <CAPACITY>173</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 21</BRANCH>
+            <ADDRESS>20570 56th Avenue</ADDRESS>
+            <CAPACITY>209</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SANDMAN HOTEL (LANGLEY)</NAME>
+            <ADDRESS>8855 - 202nd Street</ADDRESS>
+            <CAPACITY>312</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>TALL TIMBER GOLF COURSE</NAME>
+            <ADDRESS>23523 56TH AVE</ADDRESS>
+            <CAPACITY>124</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Thirsty Penguin Grill House</NAME>
+            <ADDRESS>5700 Langley Bypass</ADDRESS>
+            <CAPACITY>197</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Town Hall Public House</NAME>
+            <BRANCH>Langley</BRANCH>
+            <ADDRESS>19640 64th Avenue</ADDRESS>
+            <CAPACITY>166</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Walnut Grove Pub &amp; Bistro</NAME>
+            <ADDRESS>20470 88 Ave</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WEST COUNTRY HOTEL</NAME>
+            <ADDRESS>20222 56TH AVE</ADDRESS>
+            <CAPACITY>81</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Maple Ridge">
+        <BAR>
+            <NAME>ARMY, NAVY &amp; AIR FORCE VETERANS IN CANADA</NAME>
+            <BRANCH>Branch No. 379</BRANCH>
+            <ADDRESS>22326 NORTH AVE</ADDRESS>
+            <CAPACITY>75</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Best Western</NAME>
+            <BRANCH>Maple Ridge Motor Lodge</BRANCH>
+            <ADDRESS>21707 Lougheed Highway</ADDRESS>
+            <CAPACITY>60</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Billy Miner Pub</NAME>
+            <ADDRESS>22355 River Road</ADDRESS>
+            <CAPACITY>81</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Black Sheep Pub &amp; Grill</NAME>
+            <ADDRESS>12968 232 Street</ADDRESS>
+            <CAPACITY>158</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Chances Maple Ridge</NAME>
+            <ADDRESS>22710 Lougheed Hwy</ADDRESS>
+            <CAPACITY>789</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Dartfords Social House</NAME>
+            <ADDRESS>11232 Dartford St</ADDRESS>
+            <CAPACITY>177</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fox's Reach Pub</NAME>
+            <ADDRESS>300 20398 Dewdney Trunk Road</ADDRESS>
+            <CAPACITY>141</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Golden Ears Winter Club</NAME>
+            <ADDRESS>23588 - 105 Avenue</ADDRESS>
+            <CAPACITY>410</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HANEY MOTOR HOTEL</NAME>
+            <ADDRESS>22222 LOUGHEED HWY</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Houston's Pub &amp; Grill</NAME>
+            <ADDRESS>21525 Dewdney Trunk Rd</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Kingfishers Waterfront Bar &amp; Grill</NAME>
+            <ADDRESS>23840 River Road</ADDRESS>
+            <CAPACITY>58</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MAPLE RIDGE GOLF COURSE</NAME>
+            <ADDRESS>20818 GOLF LANE</ADDRESS>
+            <CAPACITY>185</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MAPLE RIDGE LANES</NAME>
+            <ADDRESS>22730 119TH AVE</ADDRESS>
+            <CAPACITY>40</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Planet Ice</NAME>
+            <BRANCH>Breakaway Bar &amp; Grill - Maple Ridge</BRANCH>
+            <ADDRESS>23588 105th Ave</ADDRESS>
+            <CAPACITY>80</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 88</BRANCH>
+            <ADDRESS>12101 224TH ST</ADDRESS>
+            <CAPACITY>275</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Shake &amp; Shingle Pub</NAME>
+            <ADDRESS>9610 287 St</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SHOOTER'S BAR </NAME>
+            <ADDRESS>20644 DEWDNEY TRUNK RD</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Ranch Pub &amp; Grill</NAME>
+            <ADDRESS>21973 132 Ave</ADDRESS>
+            <CAPACITY>185</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Wolf Bar</NAME>
+            <ADDRESS>22336B Lougheed Highway</ADDRESS>
+            <CAPACITY>108</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Witch Of Endor Neighbourhood Pub</NAME>
+            <ADDRESS>22648 Dewdney Trunk Rd</ADDRESS>
+            <CAPACITY>189</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "New Westminster">
+        <BAR>
+            <NAME>BROOKLYN BAR &amp; GRILL</NAME>
+            <ADDRESS>250 COLUMBIA ST</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DOUGLAS COLLEGE</NAME>
+            <ADDRESS>700 ROYAL AVE</ADDRESS>
+            <CAPACITY>847</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Elks Club of New Westminster</NAME>
+            <ADDRESS>303-681 Columbia Street</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>FIRESIDE INN NEIGHBORHOOD PUB</NAME>
+            <ADDRESS>421 E  COLUMBIA ST</ADDRESS>
+            <CAPACITY>113</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>FRANKIE G'S BOILERHOUSE PUB</NAME>
+            <ADDRESS>305 EWEN AVE</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hops! A Northwest Pub</NAME>
+            <ADDRESS>48 Eighth Street</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Inn at Westminster Quay</NAME>
+            <ADDRESS>900 Quayside Dr</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Judge Begbie's Tavern </NAME>
+            <ADDRESS>609 Columbia Street</ADDRESS>
+            <CAPACITY>76</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lafflines Comedy Club </NAME>
+            <ADDRESS>530 Columbia Street</ADDRESS>
+            <CAPACITY>110</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>LUCKY STRIKE BOWLING LANES</NAME>
+            <ADDRESS>1205 6TH AVE</ADDRESS>
+            <CAPACITY>107</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Old Terminal Pub</NAME>
+            <ADDRESS>115 12th Street</ADDRESS>
+            <CAPACITY>176</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Paddlewheeler Restaurant &amp; Pub</NAME>
+            <ADDRESS>128  810 Quayside Drive</ADDRESS>
+            <CAPACITY>184</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Queens Motor Hotel</NAME>
+            <ADDRESS>1110 Ewen Ave</ADDRESS>
+            <CAPACITY>301</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>River's Reach Pub</NAME>
+            <ADDRESS>320  6th St</ADDRESS>
+            <CAPACITY>242</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 2</BRANCH>
+            <ADDRESS>631 Sixth Street</ADDRESS>
+            <CAPACITY>145</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ROYAL CITY CURLING CLUB</NAME>
+            <ADDRESS>75 6TH AVE  E</ADDRESS>
+            <CAPACITY>260</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Towers Hotel</NAME>
+            <ADDRESS>140 6th Street</ADDRESS>
+            <CAPACITY>30</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ROYAL WESTMINSTER REGIMENT MESSES</NAME>
+            <ADDRESS>530 Queens Ave</ADDRESS>
+            <CAPACITY>215</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Schanks Sports Grill</NAME>
+            <ADDRESS>350 Gifford Street</ADDRESS>
+            <CAPACITY>1020</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Starlight Casino</NAME>
+            <ADDRESS>350 Gifford Street</ADDRESS>
+            <CAPACITY>5296</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Status Nightclub</NAME>
+            <ADDRESS>27 Church St.</ADDRESS>
+            <CAPACITY>350</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Metropolitan</NAME>
+            <ADDRESS>411 Columbia St</ADDRESS>
+            <CAPACITY>98</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Union Jack Public House and Carvery</NAME>
+            <ADDRESS>525 7th Street</ADDRESS>
+            <CAPACITY>113</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "North Vancouver">
+        <BAR>
+            <NAME>6TH FIELD SQUADRON ALL RANKS MESS</NAME>
+            <ADDRESS>1513 FORBES AVE</ADDRESS>
+            <CAPACITY>400</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ARMY, NAVY &amp; AIR FORCE VETERANS IN CANADA</NAME>
+            <BRANCH>Branch No. 45</BRANCH>
+            <ADDRESS>119 E  3RD ST</ADDRESS>
+            <CAPACITY>227</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BLACK BEAR NEIGHBOURHOOD PUBLIC HOUSE</NAME>
+            <ADDRESS>1177 LYNN VALLEY RD</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BURRARD YACHT CLUB</NAME>
+            <ADDRESS>10 GOSTICK PLACE</ADDRESS>
+            <CAPACITY>84</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DEEP COVE CULTURAL CENTRE</NAME>
+            <ADDRESS>4360 GALLANT AVE</ADDRESS>
+            <CAPACITY>130</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DEEP COVE YACHT AND SPORTS CLUB</NAME>
+            <ADDRESS>4420 GALLANT AVE</ADDRESS>
+            <CAPACITY>175</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Eastside Marios</NAME>
+            <ADDRESS>123 Carrie Cates Court</ADDRESS>
+            <CAPACITY>81</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fraternal Order Of Eagles, Aerie No. 2638</NAME>
+            <ADDRESS>170 W 3rd St</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Holiday Inn</NAME>
+            <BRANCH>Hotel &amp; Suites</BRANCH>
+            <ADDRESS>700 Lillooet Rd</ADDRESS>
+            <CAPACITY>57</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>JACK LONSDALE'S PUB</NAME>
+            <ADDRESS>127 - 1433 LONSDALE AVE</ADDRESS>
+            <CAPACITY>149</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lonsdale Quay Hotel</NAME>
+            <ADDRESS>123 Carrie Cates Court</ADDRESS>
+            <CAPACITY>23</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lynnwood Motor Inn</NAME>
+            <ADDRESS>1515 Barrow St</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Narrows Pub</NAME>
+            <ADDRESS>1970 Spicer Rd</ADDRESS>
+            <CAPACITY>210</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>North Shore Credit Union Centre for the Performing Arts</NAME>
+            <ADDRESS>2055 Purcell Way</ADDRESS>
+            <CAPACITY>430</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>North Shore Winter Club</NAME>
+            <ADDRESS>1325 Keith Rd E</ADDRESS>
+            <CAPACITY>945</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Northlands Golf Course</NAME>
+            <ADDRESS>3400 Anne MacDonald Way</ADDRESS>
+            <CAPACITY>38</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PEMBERTON STATION</NAME>
+            <ADDRESS>135 PEMBERTON AVE</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PRESENTATION HOUSE</NAME>
+            <ADDRESS>333 CHESTERFIELD AVE</ADDRESS>
+            <CAPACITY>173</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>QUEENS CROSS</NAME>
+            <ADDRESS>2989 LONSDALE AVE</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Raven Inn</NAME>
+            <ADDRESS>1052 Deep Cove Rd</ADDRESS>
+            <CAPACITY>134</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 114</BRANCH>
+            <ADDRESS>1630 LYNN VALLEY RD</ADDRESS>
+            <CAPACITY>123</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 118</BRANCH>
+            <ADDRESS>123 W  15TH ST</ADDRESS>
+            <CAPACITY>253</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Rusty Gull Neighbourhood Pub</NAME>
+            <ADDRESS>175 East First Street</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SAILOR HAGARS PUB</NAME>
+            <ADDRESS>86 SEMISCH AVE</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SEYMOUR GOLF &amp; COUNTRY CLUB</NAME>
+            <ADDRESS>3723 MOUNT SEYMOUR PARKWAY</ADDRESS>
+            <CAPACITY>212</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Top Of Grouse</NAME>
+            <ADDRESS>6400 Nancy Greene Way</ADDRESS>
+            <CAPACITY>784</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Two Lions Public House</NAME>
+            <ADDRESS>500-2601 Westview Drive</ADDRESS>
+            <CAPACITY>295</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Pitt Meadows">
+        <BAR>
+            <NAME>JOLLY COACHMAN</NAME>
+            <ADDRESS>19167 FORD RD</ADDRESS>
+            <CAPACITY>220</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MEADOW GARDENS GOLF COURSE</NAME>
+            <ADDRESS>19675 MEADOW GARDENS WAY</ADDRESS>
+            <CAPACITY>171</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PITT MEADOWS GOLF CLUB</NAME>
+            <ADDRESS>13615 HARRIS RD</ADDRESS>
+            <CAPACITY>198</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ROOSTER'S COUNTRY CABARET</NAME>
+            <ADDRESS>UNIT 4 19040 LOUGHEED HWY</ADDRESS>
+            <CAPACITY>350</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Samz Neighbourhood Pub</NAME>
+            <BRANCH>Pitt Meadows</BRANCH>
+            <ADDRESS>19267 Lougheed Hwy</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Swaneset Bay Resort &amp; Country Club</NAME>
+            <ADDRESS>16651 Rannie Rd</ADDRESS>
+            <CAPACITY>154</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Port Coquitlam">
+        <BAR>
+            <NAME>ARMS PUB</NAME>
+            <ADDRESS>3261 COAST MERIDIAN RD</ADDRESS>
+            <CAPACITY>202</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CARNOUSTIE GOLF &amp; RACQUETBALL CLUB</NAME>
+            <ADDRESS>533 DOMINION AVE</ADDRESS>
+            <CAPACITY>295</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cat &amp; Fiddle Pub &amp; Bistro</NAME>
+            <ADDRESS>1979 Brown St</ADDRESS>
+            <CAPACITY>287</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GILLNETTER PUB</NAME>
+            <ADDRESS>1864 ARGUE AVE</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Poco Inn and Suites &amp; Conference Centre</NAME>
+            <ADDRESS>1545 LOUGHEED HWY</ADDRESS>
+            <CAPACITY>56</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 133</BRANCH>
+            <ADDRESS>2675 SHAUGHNESSY ST</ADDRESS>
+            <CAPACITY>180</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Samz Neighbourhood Pub </NAME>
+            <BRANCH>Port Coquitlam</BRANCH>
+            <ADDRESS>2342 Elgin Avenue</ADDRESS>
+            <CAPACITY>171</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Shaughnessy Pub &amp; Beer &amp; Wine Store</NAME>
+            <ADDRESS>2089 Lougheed Hwy</ADDRESS>
+            <CAPACITY>186</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Port Moody">
+        <BAR>
+            <NAME>Golden Spike Pub</NAME>
+            <ADDRESS>3224 ST  JOHN'S ST</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PORT MOODY CURLING CENTRE</NAME>
+            <ADDRESS>300 IOCO RD</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 119</BRANCH>
+            <ADDRESS>2513 Clarke St</ADDRESS>
+            <CAPACITY>195</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>St. James's Well</NAME>
+            <ADDRESS>248 Newport Drive</ADDRESS>
+            <CAPACITY>160</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Burrard Public House</NAME>
+            <ADDRESS>2414 St. John's Street</ADDRESS>
+            <CAPACITY>242</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Point Neighbourhood Pub</NAME>
+            <ADDRESS>2524 St Johns Street</ADDRESS>
+            <CAPACITY>261</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Richmond">
+        <BAR>
+            <NAME>#12 (Vancouver) Service Batalion</NAME>
+            <ADDRESS>5500 No. 4 Rd</ADDRESS>
+            <CAPACITY>210</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>A.N.A.F. # 284</NAME>
+            <ADDRESS>105 - 11900 No. 1 Road</ADDRESS>
+            <CAPACITY>325</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ABERCORN INNS</NAME>
+            <ADDRESS>9260 BRIDGEPORT RD</ADDRESS>
+            <CAPACITY>70</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>AIR CANADA</NAME>
+            <BRANCH>INTERNATIONAL MAPLE LEAF LOUNGE #2</BRANCH>
+            <ADDRESS>6001 GRANT MCCONACHIE WAY</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>AIR CANADA</NAME>
+            <BRANCH>MAPLE LEAF LOUNGE (DTB) 'C' FINGER</BRANCH>
+            <ADDRESS>VANCOUVER INT'L AIRPORT (DTB)</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>AIR CANADA</NAME>
+            <BRANCH>TRANSBORDER MAPLE LEAF LOUNGE</BRANCH>
+            <ADDRESS>3211 GRANT MCCONACHIE WAY</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>AUSTRIA VANCOUVER CLUB</NAME>
+            <ADDRESS>5851 WESTMINSTER HWY</ADDRESS>
+            <CAPACITY>470</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>British Airways Executive Club</NAME>
+            <ADDRESS>Room D4227.1</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CATHAY PACIFIC LOUNGE</NAME>
+            <ADDRESS>3211 GRANT MCCONACHIE WAY</ADDRESS>
+            <CAPACITY>121</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Delta Vancouver Airport Hotel &amp; Marina</NAME>
+            <ADDRESS>3500 Cessna Drive</ADDRESS>
+            <CAPACITY>188</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Empress Hotel Lounge</NAME>
+            <ADDRESS>Unit A2 8711 Alexandra Road</ADDRESS>
+            <CAPACITY>70</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Euro Cafe</NAME>
+            <ADDRESS>International Terminal Bldg</ADDRESS>
+            <CAPACITY>17</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Executive Inn (Richmond)</NAME>
+            <ADDRESS>7311 Westminster Highway</ADDRESS>
+            <CAPACITY>30</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Flying Beaver</NAME>
+            <ADDRESS>4760 Inglis Dr</ADDRESS>
+            <CAPACITY>65</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Four Points Sheraton Vancouver Airport Hotel</NAME>
+            <ADDRESS>8368 Alexandra Road</ADDRESS>
+            <CAPACITY>29</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Garage Entertainment Bar &amp; Grill</NAME>
+            <ADDRESS>1450 - 8260 Westminster Highway</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Greenacres Golf Course</NAME>
+            <ADDRESS>5040 No. 6 Road</ADDRESS>
+            <CAPACITY>406</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Holiday Inn</NAME>
+            <BRANCH>Vancouver Airport</BRANCH>
+            <ADDRESS>10720 Cambie Road</ADDRESS>
+            <CAPACITY>51</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Kingswood Arms Pub</NAME>
+            <ADDRESS>10 - 9371 No 5 Road</ADDRESS>
+            <CAPACITY>140</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Koho Express Bar</NAME>
+            <ADDRESS>Unit C3093.0  Level 3 - ITB</ADDRESS>
+            <CAPACITY>29</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Legend's Neighbourhood Pub</NAME>
+            <ADDRESS>6511 Buswell Street</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Legends Pub</NAME>
+            <ADDRESS>9031 Blundell Road</ADDRESS>
+            <CAPACITY>160</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MAYFAIR LAKES GOLF COURSE</NAME>
+            <ADDRESS>5460 NO  7 RD</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Millennium Karaoke</NAME>
+            <ADDRESS>#201 - 4451 No. 3 Road</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MYLORA GOLF COURSE</NAME>
+            <ADDRESS>9911 SIDAWAY RD</ADDRESS>
+            <CAPACITY>254</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>O'hare's Pub</NAME>
+            <ADDRESS>5031 Steveston Highway</ADDRESS>
+            <CAPACITY>96</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pioneers Pub </NAME>
+            <ADDRESS>200 - 10111 No.3 Road</ADDRESS>
+            <CAPACITY>140</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pumphouse Pub</NAME>
+            <ADDRESS>6031 Blundell Road</ADDRESS>
+            <CAPACITY>121</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>QUILCHENA GOLF &amp; COUNTRY CLUB</NAME>
+            <ADDRESS>3551 GRANVILLE AVE</ADDRESS>
+            <CAPACITY>259</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Radisson President Hotel &amp; Suites</NAME>
+            <ADDRESS>8181 Cambie Road</ADDRESS>
+            <CAPACITY>41</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>RICHMOND COUNTRY CLUB</NAME>
+            <ADDRESS>9100 STEVESTON HWY</ADDRESS>
+            <CAPACITY>920</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>RICHMOND WINTER CLUB</NAME>
+            <ADDRESS>5540 HOLLYBRIDGE WAY</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Richmond Yacht Club</NAME>
+            <ADDRESS>7471 River Road</ADDRESS>
+            <CAPACITY>120</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>RIVER CLUB</NAME>
+            <ADDRESS>11111 HORSESHOE WAY</ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>River Rock Casino Resort - Poker Room</NAME>
+            <ADDRESS>105 - 8888 River Road</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>River Rock Theatre</NAME>
+            <ADDRESS>8811 River Road</ADDRESS>
+            <CAPACITY>2057</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 291</BRANCH>
+            <ADDRESS>11131 BRIDGEPORT RD</ADDRESS>
+            <CAPACITY>143</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sandman Hotel</NAME>
+            <ADDRESS>3233 St. Edwards Drive</ADDRESS>
+            <CAPACITY>66</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sandman Signature Hotel &amp; Resort</NAME>
+            <ADDRESS>10251 ST  EDWARDS DR</ADDRESS>
+            <CAPACITY>291</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SHADY ISLAND SEAFOOD BAR &amp; GRILL</NAME>
+            <ADDRESS>#112 - 3800 BAYVIEW ST</ADDRESS>
+            <CAPACITY>63</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sheraton Vancouver Airport Hotel &amp; Conference Centre</NAME>
+            <ADDRESS>7551 WESTMINSTER HWY</ADDRESS>
+            <CAPACITY>52</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SPORT CENTRAL</NAME>
+            <ADDRESS>2611 VISCOUNT WAY</ADDRESS>
+            <CAPACITY>109</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sportstown Bistro</NAME>
+            <ADDRESS>4991 NO  5 RD</ADDRESS>
+            <CAPACITY>103</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Stanley's Sports Bar</NAME>
+            <ADDRESS>14140 Triangle Rd</ADDRESS>
+            <CAPACITY>220</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>STEVESTON HOTEL</NAME>
+            <ADDRESS>12111 3RD AVE</ADDRESS>
+            <CAPACITY>277</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Tugboat Annie's Pub</NAME>
+            <ADDRESS>100 - 6911 Graybar Rd</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vancouver Airport Hilton</NAME>
+            <ADDRESS>5911 Minoru Blvd</ADDRESS>
+            <CAPACITY>42</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER AIRPORT MARRIOTT HOTEL</NAME>
+            <ADDRESS>7571 WESTMINSTER HWY</ADDRESS>
+            <CAPACITY>44</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vino Volo</NAME>
+            <ADDRESS>Vancouver International Airport, ITB</ADDRESS>
+            <CAPACITY>95</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Well Wine Bar</NAME>
+            <ADDRESS>6511 Buswell St</ADDRESS>
+            <CAPACITY>25</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Westin</NAME>
+            <BRANCH>Lounge</BRANCH>
+            <ADDRESS>3099 Corvette Way</ADDRESS>
+            <CAPACITY>10</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ZODIAC KARAOKE CABARET</NAME>
+            <ADDRESS>155 - 8291 ALEXANDRA RD</ADDRESS>
+            <CAPACITY>196</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Zone Bowling Centre - Richmond</NAME>
+            <ADDRESS>180  14200 ENTERTAINMENT BLVD</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Surrey">
+        <BAR>
+            <NAME>Baron Manor Centre </NAME>
+            <ADDRESS>19218 - 96th Avenue</ADDRESS>
+            <CAPACITY>190</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Baselines Pub</NAME>
+            <BRANCH>Surrey - 152 St.</BRANCH>
+            <ADDRESS>1938  152 St.</ADDRESS>
+            <CAPACITY>80</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Baselines Pub</NAME>
+            <BRANCH>Surrey - 166 St.</BRANCH>
+            <ADDRESS>100-8233 166 Street</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bear Creek Pub &amp; Grill</NAME>
+            <ADDRESS>101 - 13588 88th Avenue</ADDRESS>
+            <CAPACITY>72</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Best Western</NAME>
+            <BRANCH>Pacific Inn</BRANCH>
+            <ADDRESS>1160 King George Hwy</ADDRESS>
+            <CAPACITY>65</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bigridge Brewing Co. Pub  </NAME>
+            <ADDRESS>5590 152nd Street</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Brewster's Sports Pub</NAME>
+            <ADDRESS>700  7380 King George Hwy</ADDRESS>
+            <CAPACITY>168</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Brownsville Pub</NAME>
+            <ADDRESS>11940 Old Yale Road</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>B's Public House</NAME>
+            <ADDRESS>5855 176A St.</ADDRESS>
+            <CAPACITY>138</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ceili's Irish Pub</NAME>
+            <BRANCH>Surrey</BRANCH>
+            <ADDRESS>3020 152nd Street</ADDRESS>
+            <CAPACITY>120</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Central City Brew Pub</NAME>
+            <ADDRESS>Suite 190 </ADDRESS>
+            <CAPACITY>500</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Chateau Cargill Lounge</NAME>
+            <ADDRESS>3550 King George Way</ADDRESS>
+            <CAPACITY>20</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Clover Inn</NAME>
+            <ADDRESS>5708  176th Street</ADDRESS>
+            <CAPACITY>26</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Clover Lanes 5 Pin Bowling</NAME>
+            <ADDRESS>5814 176A Street</ADDRESS>
+            <CAPACITY>76</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cloverdale Curling Club</NAME>
+            <ADDRESS>6150 176th St</ADDRESS>
+            <CAPACITY>369</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CLYDESDALE INN</NAME>
+            <ADDRESS>17630 56TH AVE</ADDRESS>
+            <CAPACITY>134</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>COMPASS POINT INN</NAME>
+            <ADDRESS>9850 KING GEORGE HWY</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CRESCENT BEACH YACHT CLUB</NAME>
+            <ADDRESS>12555 CRESCENT RD</ADDRESS>
+            <CAPACITY>124</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Dell Lanes Sports Lounge</NAME>
+            <ADDRESS>10576 King George Highway</ADDRESS>
+            <CAPACITY>40</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Derby Bar and Grill (The)</NAME>
+            <ADDRESS>17637 1st Avenue</ADDRESS>
+            <CAPACITY>141</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Donegal's Pub</NAME>
+            <ADDRESS>12054  96th Ave</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Dublin Crossing  Irish Pub</NAME>
+            <ADDRESS>101 - 18789 Fraser Hwy</ADDRESS>
+            <CAPACITY>196</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Edith + Arthur Neighbourhood Public House</NAME>
+            <ADDRESS>8410 160 St</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Flamingo Motor Hotel</NAME>
+            <ADDRESS>10768 King George Hwy</ADDRESS>
+            <CAPACITY>108</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Flamingo Motor Hotel</NAME>
+            <ADDRESS>10768 King George Hwy</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>FOX AND FIDDLE</NAME>
+            <ADDRESS>19530 LANGLEY BYPASS</ADDRESS>
+            <CAPACITY>167</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GREEN TIMBERS PUB</NAME>
+            <ADDRESS>9167 148TH ST</ADDRESS>
+            <CAPACITY>143</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GUILDFORD GOLF &amp; COUNTRY CLUB</NAME>
+            <ADDRESS>7919 152ND ST</ADDRESS>
+            <CAPACITY>52</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Guildford Station Pub</NAME>
+            <ADDRESS>10176  154th St</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HAZELMERE GOLF AND TENNIS CLUB</NAME>
+            <ADDRESS>18120 - 8th Ave</ADDRESS>
+            <CAPACITY>78</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Heather Stables</NAME>
+            <ADDRESS>14200 Green Timbers Way</ADDRESS>
+            <CAPACITY>535</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HOOK AND LADDER NEIGHBOURHOOD PUB</NAME>
+            <ADDRESS>8593 132ND ST</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Jack's Public House</NAME>
+            <ADDRESS>9082 B  152nd St</ADDRESS>
+            <CAPACITY>174</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Jolly Mac's Pub</NAME>
+            <ADDRESS>14817  108 Ave</ADDRESS>
+            <CAPACITY>184</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Kelly's</NAME>
+            <ADDRESS>113 - 7218 King George Highway</ADDRESS>
+            <CAPACITY>110</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>M Bar</NAME>
+            <ADDRESS>10608 - 151A Street</ADDRESS>
+            <CAPACITY>63</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Mirage Cabaret</NAME>
+            <ADDRESS>15330  102A Ave</ADDRESS>
+            <CAPACITY>450</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Moose Sports Pub &amp; Grill</NAME>
+            <ADDRESS>14974 104th Ave</ADDRESS>
+            <CAPACITY>170</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>MORGAN CREEK GOLF COURSE</NAME>
+            <ADDRESS>3500 MORGAN CREEK WAY</ADDRESS>
+            <CAPACITY>72</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Morgan's Public House</NAME>
+            <ADDRESS>VJ2, 2444 160th Street</ADDRESS>
+            <CAPACITY>295</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Niteshift Cabaret</NAME>
+            <ADDRESS>155 176 St</ADDRESS>
+            <CAPACITY>313</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ocean Park Village Pub</NAME>
+            <ADDRESS>12822 16th Avenue</ADDRESS>
+            <CAPACITY>160</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pancho &amp; Lefty's</NAME>
+            <ADDRESS>10768 King George VI Hwy</ADDRESS>
+            <CAPACITY>244</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Parkside Inn</NAME>
+            <ADDRESS>7300 King George Highway</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PEACE PORTAL GOLF COURSE</NAME>
+            <ADDRESS>16900 4TH AVE</ADDRESS>
+            <CAPACITY>282</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 240</BRANCH>
+            <ADDRESS>2643 128TH ST</ADDRESS>
+            <CAPACITY>190</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 8</BRANCH>
+            <ADDRESS>2290 152nd St</ADDRESS>
+            <CAPACITY>287</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 229</BRANCH>
+            <ADDRESS>13525 106TH AVE</ADDRESS>
+            <CAPACITY>558</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 6</BRANCH>
+            <ADDRESS>17567 57th Ave</ADDRESS>
+            <CAPACITY>579</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Rusty's Neighbourhood Pub</NAME>
+            <ADDRESS>101 - 17770 No. 10 Highway</ADDRESS>
+            <CAPACITY>282</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Samz Neighbourhood Pub</NAME>
+            <BRANCH>Surrey</BRANCH>
+            <ADDRESS>19580 56 Ave</ADDRESS>
+            <CAPACITY>120</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sawbuck's Neighbourhood Pub</NAME>
+            <ADDRESS>1626  152 St</ADDRESS>
+            <CAPACITY>161</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SCOTTSDALE BOWLING LANES</NAME>
+            <ADDRESS>12033 84TH AVE</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Secret Resto Lounge</NAME>
+            <ADDRESS>12025  72nd Avenue</ADDRESS>
+            <CAPACITY>109</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Shakerz Show Lounge</NAME>
+            <ADDRESS>10458 WHALLEY BLVD</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SHERATON GUILDFORD HOTEL</NAME>
+            <ADDRESS>15269 104TH AVE</ADDRESS>
+            <CAPACITY>32</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sunrise Golf &amp; Racquet Club</NAME>
+            <ADDRESS>5640 188 Street</ADDRESS>
+            <CAPACITY>35</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Fin Sports &amp; Entertainment Bar</NAME>
+            <ADDRESS>229 - 7115  138th Street</ADDRESS>
+            <CAPACITY>179</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Town Hall Public House</NAME>
+            <BRANCH>Surrey</BRANCH>
+            <ADDRESS>3140 King George Hwy</ADDRESS>
+            <CAPACITY>145</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Tudor Ale House</NAME>
+            <ADDRESS>187 Pacific Highway</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Turf Hotel</NAME>
+            <ADDRESS>12411 King George Blvd</ADDRESS>
+            <CAPACITY>70</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Waterstone Lounge</NAME>
+            <ADDRESS>Unit 104, 15388 24th Avenue</ADDRESS>
+            <CAPACITY>26</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Wheelhouse Inn</NAME>
+            <ADDRESS>12867 96 Avenue</ADDRESS>
+            <CAPACITY>334</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "Vancouver">
+        <BAR>
+            <NAME>15TH FIELD ARTILLERY REGIMENT </NAME>
+            <ADDRESS>2025 W. 11TH AVE</ADDRESS>
+            <CAPACITY>235</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>A.N.Z.A. CLUBROOMS</NAME>
+            <ADDRESS>3 W  8TH AVE</ADDRESS>
+            <CAPACITY>177</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Academic Public House (The)</NAME>
+            <ADDRESS>1619 West Broadway</ADDRESS>
+            <CAPACITY>182</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Afterglow</NAME>
+            <ADDRESS>1079 Mainland Street</ADDRESS>
+            <CAPACITY>39</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ARBUTUS CLUB</NAME>
+            <ADDRESS>2001 NANTON AVE</ADDRESS>
+            <CAPACITY>664</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ARMY, NAVY &amp; AIR FORCE VETERANS IN CANADA</NAME>
+            <BRANCH>Branch No. 298</BRANCH>
+            <ADDRESS>3917 MAIN ST</ADDRESS>
+            <CAPACITY>195</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ARMY, NAVY &amp; AIR FORCE VETERANS IN CANADA</NAME>
+            <BRANCH>Branch No. 100</BRANCH>
+            <ADDRESS>2211 KINGSWAY</ADDRESS>
+            <CAPACITY>344</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Astoria</NAME>
+            <ADDRESS>769 East Hastings Street</ADDRESS>
+            <CAPACITY>220</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Au Bar</NAME>
+            <ADDRESS>674 Seymour Street</ADDRESS>
+            <CAPACITY>267</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>AVANTI'S PUB</NAME>
+            <ADDRESS>1601 COMMERCIAL DR</ADDRESS>
+            <CAPACITY>173</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Balmoral Hotel (Vancouver)</NAME>
+            <ADDRESS>159 East  Hastings Street</ADDRESS>
+            <CAPACITY>269</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bar None Cabaret</NAME>
+            <ADDRESS>1222 Hamilton St</ADDRESS>
+            <CAPACITY>237</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Barcelona</NAME>
+            <ADDRESS>1176 Granville Street</ADDRESS>
+            <CAPACITY>330</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BARCLAY HOTEL</NAME>
+            <ADDRESS>1348-1368 ROBSON ST</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bellaggio Cafe and Wine Bar</NAME>
+            <ADDRESS>Unit 26 - 1055 Canada Place Way</ADDRESS>
+            <CAPACITY>82</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bentall Centre Athletic Club</NAME>
+            <ADDRESS>1055 Dunsmuir St</ADDRESS>
+            <CAPACITY>30</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bimini Neighbourhood Pub</NAME>
+            <ADDRESS>2018 4th Ave W</ADDRESS>
+            <CAPACITY>185</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bismarck Bar</NAME>
+            <ADDRESS>526 Abbott Street</ADDRESS>
+            <CAPACITY>71</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Blarney Stone</NAME>
+            <ADDRESS>216 Carrall Street</ADDRESS>
+            <CAPACITY>301</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Blue Horizon Hotel</NAME>
+            <ADDRESS>1225 Robson Street</ADDRESS>
+            <CAPACITY>72</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BLVD 22</NAME>
+            <ADDRESS>Unit 8 - 750 Pacific Blvd.</ADDRESS>
+            <CAPACITY>216</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Boss Night Club</NAME>
+            <ADDRESS>1320 Richards Street</ADDRESS>
+            <CAPACITY>376</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Brandi's Show Lounge</NAME>
+            <ADDRESS>Suite 600, 5th Floor, 595 Hornby St</ADDRESS>
+            <CAPACITY>199</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Brickhouse at Hogan's Alley</NAME>
+            <ADDRESS>730 Main St</ADDRESS>
+            <CAPACITY>130</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Bridges</NAME>
+            <ADDRESS>1676 Duranleau St</ADDRESS>
+            <CAPACITY>100</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BRITISH COLUMBIA REGIMENT (DCO)</NAME>
+            <ADDRESS>620 BEATTY ST.</ADDRESS>
+            <CAPACITY>157</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BRITISH EX-SERVICEMEN'S ASSOCIATION</NAME>
+            <ADDRESS>1143 KINGSWAY</ADDRESS>
+            <CAPACITY>146</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>BROCKTON CLUBHOUSE</NAME>
+            <ADDRESS>STANLEY PARK</ADDRESS>
+            <CAPACITY>144</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cabana</NAME>
+            <ADDRESS>1163 Granville Street</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cambie 340</NAME>
+            <ADDRESS>340 Cambie Street</ADDRESS>
+            <CAPACITY>112</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CAMBIE HOTEL</NAME>
+            <ADDRESS>314 CAMBIE ST</ADDRESS>
+            <CAPACITY>191</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cambrian Hall</NAME>
+            <ADDRESS>215 E  17th. Ave.</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Caprice Nightclub</NAME>
+            <ADDRESS>965 GRANVILLE STREET</ADDRESS>
+            <CAPACITY>405</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cedar Cottage Pub</NAME>
+            <ADDRESS>3728 Clark Drive</ADDRESS>
+            <CAPACITY>229</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ceili's Irish Pub</NAME>
+            <BRANCH>Vancouver - West 7th</BRANCH>
+            <ADDRESS>1774 West 7th Avenue</ADDRESS>
+            <CAPACITY>65</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ceili's Irish Pub</NAME>
+            <BRANCH>Vancouver - Smithe</BRANCH>
+            <ADDRESS>670 Smithe St</ADDRESS>
+            <CAPACITY>220</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CELEBRITIES (VANCOUVER)</NAME>
+            <ADDRESS>1022 DAVIE ST</ADDRESS>
+            <CAPACITY>385</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Century</NAME>
+            <ADDRESS>432 Richards Street</ADDRESS>
+            <CAPACITY>101</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Century Plaza Hotel</NAME>
+            <ADDRESS>403  1015 Burrard Street</ADDRESS>
+            <CAPACITY>163</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Charles Bar (The)</NAME>
+            <ADDRESS>136 W. Cordova Street</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CHATEAU GRANVILLE</NAME>
+            <ADDRESS>1100 GRANVILLE ST</ADDRESS>
+            <CAPACITY>92</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cinema Public House</NAME>
+            <ADDRESS>901 Granville Street </ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>CLUB 23 WEST</NAME>
+            <ADDRESS>23 W  CORDOVA ST</ADDRESS>
+            <CAPACITY>261</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Coast Plaza at Stanley Park</NAME>
+            <ADDRESS>1733 Comox Street</ADDRESS>
+            <CAPACITY>218</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Coast Vancouver Airport Hotel</NAME>
+            <ADDRESS>1041 Marine Drive SW</ADDRESS>
+            <CAPACITY>167</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Cobalt Hotel</NAME>
+            <ADDRESS>917 Main Street</ADDRESS>
+            <CAPACITY>219</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Colony</NAME>
+            <ADDRESS>3255 W Broadway</ADDRESS>
+            <CAPACITY>114</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Commodore Ballroom &amp; Restaurant</NAME>
+            <ADDRESS>870 Granville Street</ADDRESS>
+            <CAPACITY>900</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DAKOTA HOTEL</NAME>
+            <ADDRESS>678 Nelson Street</ADDRESS>
+            <CAPACITY>221</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DARBY D. DAWES NEIGHBOURHOOD PUBLIC HOUSE</NAME>
+            <ADDRESS>2001 MACDONALD</ADDRESS>
+            <CAPACITY>148</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Days Inn Vancouver Downtown</NAME>
+            <ADDRESS>921 West Pender St</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>DELTA VANCOUVER SUITE HOTEL</NAME>
+            <ADDRESS>550 WEST HASTINGS ST</ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Dominion Hotel (Vancouver)</NAME>
+            <ADDRESS>210 Abbott St</ADDRESS>
+            <CAPACITY>218</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Dover Arms</NAME>
+            <ADDRESS>961 Denman Street</ADDRESS>
+            <CAPACITY>99</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>East Side Craft House</NAME>
+            <ADDRESS>1445 East 41st Avenue</ADDRESS>
+            <CAPACITY>129</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Edgewater Casino</NAME>
+            <ADDRESS>760 Pacific Blvd</ADDRESS>
+            <CAPACITY>2530</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>ELDORADO MOTOR HOTEL</NAME>
+            <ADDRESS>2330 KINGSWAY</ADDRESS>
+            <CAPACITY>265</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Elephant &amp; Castle Pub</NAME>
+            <ADDRESS>385 Burrard Street</ADDRESS>
+            <CAPACITY>31</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Empire Landmark Hotel &amp; Conference Centre</NAME>
+            <ADDRESS>1400 Robson Street</ADDRESS>
+            <CAPACITY>99</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Empire Night Club</NAME>
+            <ADDRESS>66 Water Street</ADDRESS>
+            <CAPACITY>300</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>EXECUTIVE INN (1379 HOWE ST.)</NAME>
+            <ADDRESS>1379 HOWE ST</ADDRESS>
+            <CAPACITY>33</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fairmont Lobby Lounge</NAME>
+            <ADDRESS>1038 Canada Place</ADDRESS>
+            <CAPACITY>36</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fan Club</NAME>
+            <ADDRESS>1050 Granville Street</ADDRESS>
+            <CAPACITY>295</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Five Sixty</NAME>
+            <ADDRESS>556 Seymour Street</ADDRESS>
+            <CAPACITY>449</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fortune Sound Club</NAME>
+            <ADDRESS>#300 147 East Pender Street</ADDRESS>
+            <CAPACITY>294</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fountainhead Pub</NAME>
+            <ADDRESS>1025 Davie Street</ADDRESS>
+            <CAPACITY>147</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Four Seasons Hotel</NAME>
+            <ADDRESS>791 W  GEORGIA ST</ADDRESS>
+            <CAPACITY>135</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Fraser Arms Hotel</NAME>
+            <ADDRESS>1450 Marine Dr SW</ADDRESS>
+            <CAPACITY>30</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Gallery Show Lounge</NAME>
+            <ADDRESS>1312 Marine Drive SW</ADDRESS>
+            <CAPACITY>352</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GATEWAY HOTEL</NAME>
+            <ADDRESS>1221 GRANVILLE ST</ADDRESS>
+            <CAPACITY>70</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Georgian Court Hotel</NAME>
+            <ADDRESS>773 Beatty St</ADDRESS>
+            <CAPACITY>182</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Gossip Nightclub</NAME>
+            <ADDRESS>B105 - 750 Pacific Blvd.</ADDRESS>
+            <CAPACITY>947</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>GRAND UNION HOTEL</NAME>
+            <ADDRESS>74 W  HASTINGS ST</ADDRESS>
+            <CAPACITY>240</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Granville Island Hotel</NAME>
+            <ADDRESS>1253 Johnston Street</ADDRESS>
+            <CAPACITY>60</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Granville Room </NAME>
+            <ADDRESS>957 Granville Street</ADDRESS>
+            <CAPACITY>30</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Guilt &amp; Company</NAME>
+            <ADDRESS>1 Alexander Street (basement)</ADDRESS>
+            <CAPACITY>110</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hildon Hotel</NAME>
+            <ADDRESS>50 West Cordova Street</ADDRESS>
+            <CAPACITY>302</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Holiday Inn</NAME>
+            <BRANCH>Howe St.</BRANCH>
+            <ADDRESS>1110 Howe St</ADDRESS>
+            <CAPACITY>172</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Holiday Inn</NAME>
+            <BRANCH>Express Vancouver</BRANCH>
+            <ADDRESS>2889 E  HASTINGS ST</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Holiday Inn</NAME>
+            <BRANCH>Vancouver Centre</BRANCH>
+            <ADDRESS>711 W  Broadway</ADDRESS>
+            <CAPACITY>80</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hollywood North Cabaret</NAME>
+            <ADDRESS>856 Seymour St</ADDRESS>
+            <CAPACITY>106</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hooker's Green</NAME>
+            <ADDRESS>1141 Hamilton Street</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hotel Georgia</NAME>
+            <ADDRESS>801 West Georgia St</ADDRESS>
+            <CAPACITY>139</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hotel Vancouver</NAME>
+            <ADDRESS>900 W  Georgia St</ADDRESS>
+            <CAPACITY>336</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Howard Johnson Plaza Hotel</NAME>
+            <ADDRESS>395 Kingsway</ADDRESS>
+            <CAPACITY>75</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hyatt Regency Vancouver Hotel</NAME>
+            <ADDRESS>655 Burrard St</ADDRESS>
+            <CAPACITY>362</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Hycroft</NAME>
+            <ADDRESS>1489 McRae Avenue</ADDRESS>
+            <CAPACITY>833</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ivanhoe Hotel</NAME>
+            <ADDRESS>1038 Main St</ADDRESS>
+            <CAPACITY>260</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Jericho Garrison Combined Mess</NAME>
+            <ADDRESS>4050 4th Ave W</ADDRESS>
+            <CAPACITY>246</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Jericho Tennis Club</NAME>
+            <ADDRESS>3837 Point Grey Rd</ADDRESS>
+            <CAPACITY>480</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Jimmy's Tap House</NAME>
+            <ADDRESS>433 Robson Street</ADDRESS>
+            <CAPACITY>134</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Joe's Apartment</NAME>
+            <ADDRESS>919 Granville Street</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Joey's Global Grill (Kitsilano)</NAME>
+            <ADDRESS>1424 W  Broadway</ADDRESS>
+            <CAPACITY>97</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Joseph Richard</NAME>
+            <ADDRESS>1082 Granville Street</ADDRESS>
+            <CAPACITY>185</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>keefer bar</NAME>
+            <ADDRESS>135 Keefer Street</ADDRESS>
+            <CAPACITY>72</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Killjoy</NAME>
+            <ADDRESS>106 - 1120 Hamilton Street</ADDRESS>
+            <CAPACITY>60</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Kingston Hotel</NAME>
+            <ADDRESS>755-757 Richards Street</ADDRESS>
+            <CAPACITY>190</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>LAW COURTS INN</NAME>
+            <ADDRESS>800 SMITHE ST  4TH FL</ADDRESS>
+            <CAPACITY>325</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lennox Pub</NAME>
+            <ADDRESS>800 Granville Street</ADDRESS>
+            <CAPACITY>197</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Library Square Public House</NAME>
+            <ADDRESS>330 West Georgia Street</ADDRESS>
+            <CAPACITY>272</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lift Bar Grill View</NAME>
+            <ADDRESS>333 Menchions Mews</ADDRESS>
+            <CAPACITY>65</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Live Bait Yacht &amp; Marine Pub</NAME>
+            <ADDRESS>1583 Coal Harbour Quay</ADDRESS>
+            <CAPACITY>65</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Loden Vancouver</NAME>
+            <ADDRESS>1177 Melville Street</ADDRESS>
+            <CAPACITY>45</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Lola's Cabaret</NAME>
+            <ADDRESS>2291 W Broadway</ADDRESS>
+            <CAPACITY>138</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>London Public House</NAME>
+            <ADDRESS>700 Main Street</ADDRESS>
+            <CAPACITY>166</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Magic Charm</NAME>
+            <ADDRESS>1601 Bayshore Drive</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Mahony &amp; Sons Public House</NAME>
+            <ADDRESS>5990 University Boulevard</ADDRESS>
+            <CAPACITY>255</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Mahony &amp; Sons Public House</NAME>
+            <ADDRESS>Unit 36, 1055 Canada Place</ADDRESS>
+            <CAPACITY>487</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Malone's Bar &amp; Grill - Downtown</NAME>
+            <ADDRESS>515 SEYMOUR ST</ADDRESS>
+            <CAPACITY>180</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Manchester Pub &amp; Eatery</NAME>
+            <ADDRESS>1941 West Broadway Street</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Marine Drive Golf Club </NAME>
+            <ADDRESS>7425 Yew St</ADDRESS>
+            <CAPACITY>226</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Marpole Curling Club</NAME>
+            <ADDRESS>8730 Heather St</ADDRESS>
+            <CAPACITY>135</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Media Club</NAME>
+            <ADDRESS>Lower Level, 695 Cambie St</ADDRESS>
+            <CAPACITY>118</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Met Pub </NAME>
+            <ADDRESS>320 Abbott St</ADDRESS>
+            <CAPACITY>171</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Metro Theatre Centre</NAME>
+            <ADDRESS>1370 Marine Dr SW</ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>METROPOLITAN HOTEL</NAME>
+            <ADDRESS>645 HOWE ST</ADDRESS>
+            <CAPACITY>140</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Moda Hotel</NAME>
+            <BRANCH>Seymour St.</BRANCH>
+            <ADDRESS>900 Seymour St.</ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Moda Hotel</NAME>
+            <BRANCH>Smithe St.</BRANCH>
+            <ADDRESS>560 Smithe Street</ADDRESS>
+            <CAPACITY>166</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Moxie's Classic Grill</NAME>
+            <ADDRESS>1160 Davie Street</ADDRESS>
+            <CAPACITY>46</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>New Brandiz Pub</NAME>
+            <ADDRESS>122 E Hastings Street</ADDRESS>
+            <CAPACITY>160</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>NO. 5 ORANGE STREET HOTEL</NAME>
+            <ADDRESS>205 MAIN ST</ADDRESS>
+            <CAPACITY>186</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Numbers</NAME>
+            <ADDRESS>1042 Davie St</ADDRESS>
+            <CAPACITY>195</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Oasis Pub (Vancouver)</NAME>
+            <ADDRESS>1240 Thurlow Street</ADDRESS>
+            <CAPACITY>140</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>On the Edge Pub</NAME>
+            <ADDRESS>303 Columbia Street</ADDRESS>
+            <CAPACITY>175</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Opus Hotel</NAME>
+            <ADDRESS>322 Davie St</ADDRESS>
+            <CAPACITY>135</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Orpheum Annex</NAME>
+            <ADDRESS>823 Seymour Street</ADDRESS>
+            <CAPACITY>369</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Oscar's Pub</NAME>
+            <ADDRESS>3684 East Hastings Street</ADDRESS>
+            <CAPACITY>80</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ouisi Bistro</NAME>
+            <ADDRESS>3014 Granville Street</ADDRESS>
+            <CAPACITY>20</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PALACE HOTEL (VANCOUVER)</NAME>
+            <ADDRESS># 35 - 37 West Hastings St</ADDRESS>
+            <CAPACITY>189</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pan Pacific Vancouver Hotel</NAME>
+            <ADDRESS>300 - 999 Canada Place</ADDRESS>
+            <CAPACITY>311</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Park Inn &amp; Suites by Radisson</NAME>
+            <ADDRESS>898 W Broadway</ADDRESS>
+            <CAPACITY>75</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PATRICIA HOTEL (VANCOUVER)</NAME>
+            <ADDRESS>403 E  HASTINGS ST</ADDRESS>
+            <CAPACITY>245</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PENTHOUSE</NAME>
+            <ADDRESS>1019 SEYMOUR ST</ADDRESS>
+            <CAPACITY>176</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pierre's</NAME>
+            <ADDRESS>1035 Mainland Street</ADDRESS>
+            <CAPACITY>60</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PLAZA 500</NAME>
+            <ADDRESS>500 W  12TH AVE</ADDRESS>
+            <CAPACITY>55</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Point Grey Golf and Country Club</NAME>
+            <ADDRESS>3350 Marine Dr SW</ADDRESS>
+            <CAPACITY>465</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Poker Room</NAME>
+            <ADDRESS>106-750 Pacific Blvd.</ADDRESS>
+            <CAPACITY>405</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>POLISH COMMUNITY CENTRE</NAME>
+            <ADDRESS>4015 FRASER ST</ADDRESS>
+            <CAPACITY>405</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>POLISH VETERAN'S HALL</NAME>
+            <ADDRESS>1134 KINGSWAY</ADDRESS>
+            <CAPACITY>266</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pop Opera</NAME>
+            <ADDRESS>686 West Hastings St</ADDRESS>
+            <CAPACITY>226</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Princeton Hotel</NAME>
+            <ADDRESS>1901 Powell St</ADDRESS>
+            <CAPACITY>115</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Pumpjack Pub</NAME>
+            <ADDRESS>1167 Davie Street</ADDRESS>
+            <CAPACITY>126</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>QUALITY INN DOWNTOWN (VANCOUVER)</NAME>
+            <ADDRESS>1335 HOWE ST</ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Railway Club</NAME>
+            <ADDRESS>2nd Floor, 579 Dunsmuir St</ADDRESS>
+            <CAPACITY>156</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Ramada Limited Downtown Vancouver</NAME>
+            <ADDRESS>435 W  Pender St</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Raw Canvas</NAME>
+            <ADDRESS>106 - 1046 Hamilton Street</ADDRESS>
+            <CAPACITY>37</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Regent Hotel</NAME>
+            <ADDRESS>160 East  Hastings Street</ADDRESS>
+            <CAPACITY>227</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Relish the Lounge</NAME>
+            <ADDRESS>Unit G3 - 888 Nelson Street</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Romer's Burger Bar</NAME>
+            <ADDRESS>1039 Mainland Street</ADDRESS>
+            <CAPACITY>40</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Rosie's On Robson</NAME>
+            <ADDRESS>298 Robson St</ADDRESS>
+            <CAPACITY>117</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Roxy Cabaret</NAME>
+            <ADDRESS>932 Granville Street</ADDRESS>
+            <CAPACITY>275</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 48</BRANCH>
+            <ADDRESS>400-3624 Fraser Street</ADDRESS>
+            <CAPACITY>95</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 30</BRANCH>
+            <ADDRESS>2177 W  42ND AVE</ADDRESS>
+            <CAPACITY>190</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 176</BRANCH>
+            <ADDRESS>1407 LABURNUM ST</ADDRESS>
+            <CAPACITY>372</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 142</BRANCH>
+            <ADDRESS>3679 W  BROADWAY</ADDRESS>
+            <CAPACITY>393</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 179</BRANCH>
+            <ADDRESS>2205 COMMERCIAL DR</ADDRESS>
+            <CAPACITY>595</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Hotel ( Vancouver)</NAME>
+            <ADDRESS>1025 Granville  St</ADDRESS>
+            <CAPACITY>259</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Vancouver Yacht Club</NAME>
+            <ADDRESS>3811 Point Grey Rd</ADDRESS>
+            <CAPACITY>367</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sandman Inn (180 W Georgia St.)</NAME>
+            <ADDRESS>180 W  GEORGIA ST</ADDRESS>
+            <CAPACITY>117</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SANDS MOTOR HOTEL</NAME>
+            <ADDRESS>1755 DAVIE ST</ADDRESS>
+            <CAPACITY>177</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SAVOY HOTEL</NAME>
+            <ADDRESS>258 E  HASTINGS ST</ADDRESS>
+            <CAPACITY>125</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Score on Davie</NAME>
+            <ADDRESS>1262 Davie Street</ADDRESS>
+            <CAPACITY>139</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Seaforth Highlanders of Canada</NAME>
+            <ADDRESS>1650 Burrard St.</ADDRESS>
+            <CAPACITY>385</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Shangri-La Hotel</NAME>
+            <ADDRESS>1128 West Georgia St.</ADDRESS>
+            <CAPACITY>17</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Shark Club Bar &amp; Grill</NAME>
+            <ADDRESS>180 W Georgia St</ADDRESS>
+            <CAPACITY>408</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SHAUGHNESSY GOLF AND COUNTRY CLUB</NAME>
+            <ADDRESS>4300 S W  MARINE DR</ADDRESS>
+            <CAPACITY>1033</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sheraton Vancouver Wall Centre Hotel</NAME>
+            <ADDRESS>1088 Burrard Street</ADDRESS>
+            <CAPACITY>120</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Shine</NAME>
+            <ADDRESS>364 Water St</ADDRESS>
+            <CAPACITY>200</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Soho</NAME>
+            <ADDRESS>1283 Hamilton Street</ADDRESS>
+            <CAPACITY>117</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>St. Regis Hotel</NAME>
+            <ADDRESS>602 Dunsmuir St</ADDRESS>
+            <CAPACITY>108</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Stanley Theatre</NAME>
+            <ADDRESS>2750 Granville St</ADDRESS>
+            <CAPACITY>127</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Steamworks</NAME>
+            <ADDRESS>375 Water Street</ADDRESS>
+            <CAPACITY>199</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sunset Grill</NAME>
+            <ADDRESS>2204 York Street</ADDRESS>
+            <CAPACITY>39</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Super 8 Vancouver</NAME>
+            <ADDRESS>725 S  E  MARINE DR</ADDRESS>
+            <CAPACITY>92</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sutton Place Hotel</NAME>
+            <ADDRESS>845 Burrard St</ADDRESS>
+            <CAPACITY>215</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>SYLVIA HOTEL</NAME>
+            <ADDRESS>1154 GILFORD ST</ADDRESS>
+            <CAPACITY>52</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>TERMINAL CITY CLUB</NAME>
+            <ADDRESS>888 W CORDOVA ST</ADDRESS>
+            <CAPACITY>180</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Alexander</NAME>
+            <ADDRESS>91 Powell St</ADDRESS>
+            <CAPACITY>243</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Biltmore Cabaret</NAME>
+            <ADDRESS>395 Kingsway</ADDRESS>
+            <CAPACITY>352</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Commodore </NAME>
+            <ADDRESS>870 GRANVILLE STREET</ADDRESS>
+            <CAPACITY>85</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Cove Neighbourhood Pub </NAME>
+            <ADDRESS>3681 West  4th Avenue</ADDRESS>
+            <CAPACITY>101</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Distillery Bar</NAME>
+            <ADDRESS>1131 Mainland Street</ADDRESS>
+            <CAPACITY>149</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>THE FAIRMONT WATERFRONT</NAME>
+            <ADDRESS>900 CANADA PLACE WAY</ADDRESS>
+            <CAPACITY>50</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Fringe Cafe</NAME>
+            <ADDRESS>3124 West Broadway</ADDRESS>
+            <CAPACITY>55</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Imperial </NAME>
+            <ADDRESS>319 Main Street</ADDRESS>
+            <CAPACITY>372</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Improv Centre</NAME>
+            <ADDRESS>1502 Duranleau</ADDRESS>
+            <CAPACITY>264</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Irish Heather Gastro Pub</NAME>
+            <ADDRESS>212 CARRALL ST</ADDRESS>
+            <CAPACITY>136</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Junction Public House</NAME>
+            <ADDRESS>1138 Davie Street</ADDRESS>
+            <CAPACITY>220</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Mission to Seafarers in the Diocese of New Westminster</NAME>
+            <ADDRESS>401 WATERFRONT RD E</ADDRESS>
+            <CAPACITY>235</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Orpheum</NAME>
+            <ADDRESS>884 Granville St</ADDRESS>
+            <CAPACITY>860</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Pint Public House</NAME>
+            <ADDRESS>475 Abbott Street</ADDRESS>
+            <CAPACITY>486</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Portside Pub</NAME>
+            <ADDRESS>7 Alexander St</ADDRESS>
+            <CAPACITY>246</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Queen's Republic </NAME>
+            <ADDRESS>958 GRANVILLE ST</ADDRESS>
+            <CAPACITY>277</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Red Room</NAME>
+            <ADDRESS>398 Richards Street</ADDRESS>
+            <CAPACITY>435</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Regal Beagle Bar &amp; Grill</NAME>
+            <ADDRESS>2283 West Broadway</ADDRESS>
+            <CAPACITY>40</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Rickshaw </NAME>
+            <ADDRESS>254 East Hastings Street</ADDRESS>
+            <CAPACITY>490</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Rio Theatre</NAME>
+            <ADDRESS>1660 East Broadway Street</ADDRESS>
+            <CAPACITY>582</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Three Brits Public House </NAME>
+            <ADDRESS>1780 Davie Street</ADDRESS>
+            <CAPACITY>65</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Wicklow Public House</NAME>
+            <ADDRESS>610 STAMP'S LANDING</ADDRESS>
+            <CAPACITY>205</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Wine Room at Joey Bentall One</NAME>
+            <ADDRESS>507 Burrard Street</ADDRESS>
+            <CAPACITY>73</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Winking Judge Pub</NAME>
+            <ADDRESS>103 - 888 Burrard Street</ADDRESS>
+            <CAPACITY>90</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Yard</NAME>
+            <ADDRESS>8482 Granville Street</ADDRESS>
+            <CAPACITY>59</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Tobys Pub &amp; Grill</NAME>
+            <ADDRESS>2733 Commercial Drive</ADDRESS>
+            <CAPACITY>146</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Tunnel Bar &amp; Multi-Lounge</NAME>
+            <ADDRESS>620 West Pender Street</ADDRESS>
+            <CAPACITY>147</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>U.B.C. - Thea Koerner House</NAME>
+            <ADDRESS>UBC</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>UBC Alma Mater Society (Gallery Lounge)</NAME>
+            <ADDRESS>6138 SUB Blvd</ADDRESS>
+            <CAPACITY>123</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>UNIVERSITY GOLF CLUB</NAME>
+            <ADDRESS>5185 UNIVERSITY BLVD</ADDRESS>
+            <CAPACITY>11</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER ALPEN CLUB</NAME>
+            <ADDRESS>4875 VICTORIA DR</ADDRESS>
+            <CAPACITY>423</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER CLUB</NAME>
+            <ADDRESS>915 W  HASTINGS ST</ADDRESS>
+            <CAPACITY>165</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vancouver Curling Club</NAME>
+            <ADDRESS>4575 Clancy Loranger Way</ADDRESS>
+            <CAPACITY>206</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER EAST CULTURAL CENTRE</NAME>
+            <ADDRESS>1895 VENABLES ST</ADDRESS>
+            <CAPACITY>377</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vancouver Lawn Tennis and Badminton Club</NAME>
+            <ADDRESS>1630 15th Ave W</ADDRESS>
+            <CAPACITY>225</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vancouver Marriott Pinnacle Hotel</NAME>
+            <ADDRESS>1128 WEST HASTINGS ST</ADDRESS>
+            <CAPACITY>55</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER RACQUETS CLUB</NAME>
+            <ADDRESS>4867 ONTARIO ST</ADDRESS>
+            <CAPACITY>102</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vancouver Renaissance Hotel</NAME>
+            <ADDRESS>1133 W  Hastings St</ADDRESS>
+            <CAPACITY>58</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>VANCOUVER ROWING CLUB</NAME>
+            <ADDRESS>450 Stanley Park Dr.</ADDRESS>
+            <CAPACITY>555</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Venue Nightclub</NAME>
+            <ADDRESS>881 Granville St</ADDRESS>
+            <CAPACITY>356</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Village Pub</NAME>
+            <ADDRESS>7725 CHAMPLAIN CRES</ADDRESS>
+            <CAPACITY>117</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Vogue Theatre</NAME>
+            <ADDRESS>918 Granville Street</ADDRESS>
+            <CAPACITY>1281</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>W.I.S.E. (Wales, Ireland, Scotland, England)</NAME>
+            <ADDRESS>1882 ADANAC ST</ADDRESS>
+            <CAPACITY>348</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WALDORF HOTEL</NAME>
+            <ADDRESS>1489 E  HASTINGS ST</ADDRESS>
+            <CAPACITY>90</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WATERFRONT THEATRE</NAME>
+            <ADDRESS>1412 CARTWRIGHT ST</ADDRESS>
+            <CAPACITY>66</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WEDGEWOOD HOTEL</NAME>
+            <ADDRESS>845 HORNBY ST</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>West Hotel &amp; Bar</NAME>
+            <ADDRESS>488 Carrall St</ADDRESS>
+            <CAPACITY>150</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Westin</NAME>
+            <BRANCH>Bayshore</BRANCH>
+            <ADDRESS>1601 Bayshore Drive</ADDRESS>
+            <CAPACITY>370</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Westin</NAME>
+            <BRANCH>Grand Hotel</BRANCH>
+            <ADDRESS>433 Robson Street</ADDRESS>
+            <CAPACITY>30</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>YALE HOTEL (VANCOUVER)</NAME>
+            <ADDRESS>1300 GRANVILLE ST</ADDRESS>
+            <CAPACITY>272</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Yaletown Brewing Co. Pub &amp; Restaurant</NAME>
+            <ADDRESS>1111 Mainland Street</ADDRESS>
+            <CAPACITY>123</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Yuk Yuk's Comedy Club</NAME>
+            <ADDRESS>500 W  12TH AVE</ADDRESS>
+            <CAPACITY>184</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "West Vancouver">
+        <BAR>
+            <NAME>CAPILANO GOLF AND COUNTRY CLUB</NAME>
+            <ADDRESS>420 SOUTHBOROUGH DR</ADDRESS>
+            <CAPACITY>612</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Capilano Rugby Football Club</NAME>
+            <ADDRESS>305 Klahanie Court</ADDRESS>
+            <CAPACITY>56</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Crazy Raven Bar &amp; Grill</NAME>
+            <ADDRESS>CYPRESS PROVINCIAL PARK</ADDRESS>
+            <CAPACITY>312</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HOLLYBURN COUNTRY CLUB</NAME>
+            <ADDRESS>950 CROSS CREEK RD</ADDRESS>
+            <CAPACITY>707</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>HUGO RAY PAVILION</NAME>
+            <ADDRESS>1290 3RD ST</ADDRESS>
+            <CAPACITY>108</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Kay Meek Centre</NAME>
+            <ADDRESS>1700 Mathers Avenue</ADDRESS>
+            <CAPACITY>675</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Mist Ultra Bar</NAME>
+            <ADDRESS>100 Park Royal S</ADDRESS>
+            <CAPACITY>244</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Royal Canadian Legion</NAME>
+            <BRANCH>Branch No. 60</BRANCH>
+            <ADDRESS>580 18th St</ADDRESS>
+            <CAPACITY>149</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Square Rigger</NAME>
+            <ADDRESS>150 1425 Marine Drive</ADDRESS>
+            <CAPACITY>123</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Troller Ale House</NAME>
+            <ADDRESS>6342 Bay St</ADDRESS>
+            <CAPACITY>157</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Village Taphouse</NAME>
+            <ADDRESS>900 Main Street</ADDRESS>
+            <CAPACITY>167</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>WEST VANCOUVER YACHT CLUB</NAME>
+            <ADDRESS>5854 MARINE DR</ADDRESS>
+            <CAPACITY>385</CAPACITY>
+        </BAR>
+    </CITY>
+    <CITY name = "White Rock">
+        <BAR>
+            <NAME>BENEVOLENT AND PROTECTIVE ORDER OF ELKS, NO. 431</NAME>
+            <ADDRESS>1469 GEORGE ST</ADDRESS>
+            <CAPACITY>300</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>PEACE ARCH CURLING CLUB</NAME>
+            <ADDRESS>Unit 2, 1475 Anderson Street </ADDRESS>
+            <CAPACITY>133</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>Sandpiper Pub</NAME>
+            <ADDRESS>15595 Marine Drive</ADDRESS>
+            <CAPACITY>117</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>The Hemingway Waterfront Public House </NAME>
+            <ADDRESS>14995 MARINE DR</ADDRESS>
+            <CAPACITY>250</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>White Rock Lawn Bowling Club</NAME>
+            <ADDRESS>1079 Dolphin Street</ADDRESS>
+            <CAPACITY>146</CAPACITY>
+        </BAR>
+        <BAR>
+            <NAME>White Rock Players Club</NAME>
+            <ADDRESS>1532 Johnston Road</ADDRESS>
+            <CAPACITY>129</CAPACITY>
+        </BAR>
+    </CITY>
+</ESTABLISHMENTS>

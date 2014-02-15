@@ -1,0 +1,22 @@
+<!--
+    DTD to validate bar and pub listings.
+-->
+
+<!-- "ESTABLISHMENTS" is the root element. It holds bars which consist of bar names, branch if applicable, address and capacity -->
+<!ELEMENT ESTABLISHMENTS (CITY)+>
+<!-- "ESTABLISHMENTS" has a single attribute, an HREF for the source of the data -->
+<!ATTLIST ESTABLISHMENTS
+    source CDATA    #REQUIRED
+>
+<!-- "city" has a single attribute, the name of the city the establishment is in.  To be used for sorting -->
+<!ELEMENT CITY (BAR)+>
+<!ATTLIST CITY	name 	CDATA 	#REQUIRED>
+
+<!-- Bars are defined in nested elements; bar names, branch if applicable, address and capacity-->
+<!ELEMENT BAR (NAME, BRANCH?, ADDRESS, CAPACITY)>
+
+<!ELEMENT NAME (#PCDATA)>
+<!ELEMENT BRANCH (#PCDATA)>
+<!ELEMENT ADDRESS (#PCDATA)>
+<!ELEMENT CAPACITY (#PCDATA)>
+
