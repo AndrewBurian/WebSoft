@@ -66,7 +66,8 @@ if (!defined('APPPATH'))
                         {menubar}
                     </ul>
 
-                    <p><strong>Design: <a href="http://www.google.com/">Baranda</a></strong> <span>|</span> <strong>Code: <a href="http://www.google.com" title="PSD to (X)HTML, PSD to CMS service">Slicejack</a></strong></p>
+                    <!--<p><strong>Design: <a href="http://www.google.com/">Baranda</a></strong> <span>|</span> <strong>Code: <a href="http://www.google.com" title="PSD to (X)HTML, PSD to CMS service">Slicejack</a></strong></p> -->
+                    <p><strong>Session ID: {session_id}</strong></p>
                 </div>
                 <!--  Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>. -->
             </div>
