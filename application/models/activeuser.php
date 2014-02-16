@@ -58,7 +58,8 @@ class Activeuser extends _Mymodel {
         }
     }
 
-    function login($username, $role){
+    function login($id, $username, $role){
+        $this->session->set_userdata('id', $id);
         $this->session->set_userdata('username', $username);
         $this->session->set_userdata('userrole', $role);
     }
