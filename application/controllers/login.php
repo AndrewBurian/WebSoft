@@ -27,8 +27,8 @@ class Login extends Application {
         $this->data['pageDescrip'] = 'Log In to our site';
 
         if ($this->activeuser->isLoggedIn()) {
-            $this->buildAlreadyLoggedIn();
-            $this->data['pagebody'] = 'login/alreadyloggedin';
+            $this->data['user_name'] = $this->activeuser->getName();
+            $this->data['pagebody'] = 'login/already_logged_in';
             $this->data['login'] = $this->activeuser->buildLoginBar();
         } else {
             $this->data['pagebody'] = 'login/login';

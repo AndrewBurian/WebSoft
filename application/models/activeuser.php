@@ -23,7 +23,7 @@ class Activeuser extends _Mymodel {
             $result .= '<a href="/login">You need to login, son</a>';
         }else{
             // return login name
-            $result .= "Welcome back commander";
+            $result .= $this->session->userdata('username');
         }
         
         return $result;
@@ -31,6 +31,10 @@ class Activeuser extends _Mymodel {
     
     function getID(){
         return $this->session->userdata('id');
+    }
+    
+    function getName(){
+        return $this->session->userdata('username');
     }
     
     function isLoggedIn(){
@@ -62,5 +66,9 @@ class Activeuser extends _Mymodel {
         $this->session->set_userdata('id', $id);
         $this->session->set_userdata('username', $username);
         $this->session->set_userdata('userrole', $role);
+    }
+    
+    function logout(){
+        $this->session->sess_destroy();
     }
 }
