@@ -12,6 +12,7 @@ class Bars extends Application {
     function __construct() {
         parent::__construct();
         $this->load->model('barsmodel');
+        $this->activeuser->restrict(array(ROLE_ADMIN, ROLE_USER));
     }
 
     //-------------------------------------------------------------

@@ -46,7 +46,7 @@ class Activeuser extends _Mymodel {
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
                 if (!in_array($userRole, $roleNeeded)) {
-                    redirect();
+                    redirect('/#'.$userRole);
                     exit;
                 }
             } else
@@ -65,7 +65,7 @@ class Activeuser extends _Mymodel {
     function login($id, $username, $role){
         $this->session->set_userdata('id', $id);
         $this->session->set_userdata('username', $username);
-        $this->session->set_userdata('userrole', $role);
+        $this->session->set_userdata('role', $role);
     }
     
     function logout(){
