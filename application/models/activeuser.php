@@ -15,46 +15,50 @@ class Activeuser extends _Mymodel {
         parent::__construct();
         //$this->load->model('user_dao');
     }
-    
-    function buildLoginBar(){
+
+    function buildLoginBar() {
         $result = "";
-        if($this->session->userdata('id') == null){
+        if ($this->session->userdata('id') == null) {
             // return login bar
-            $result .= '<a href="/login">You need to login, son</a>';
-        }else{
+            $result .= '<a href="/login">Log In</a>';
+        } else {
             // return login name
             $result .= $this->session->userdata('username');
+            $result .= ' | <a href="/logout">Log Out</a>';
         }
-        
+
         return $result;
     }
-    
-    function getID(){
+
+    function getID() {
         return $this->session->userdata('id');
     }
-    
-    function getName(){
+
+    function getName() {
         return $this->session->userdata('username');
     }
-    
-    function isLoggedIn(){
+
+    function isLoggedIn() {
         return(!($this->getID() == null));
     }
-    
+
     function restrict($roleNeeded = null, $directOnFailURL = null) {
         $userRole = $this->session->userdata('role');
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
                 if (!in_array($userRole, $roleNeeded)) {
-                    redirect('/#'.$userRole);
+                    if ($directOnFailURL == null) {
+                        redirect("/");
+                    } else {
+                        reditect($directOnFailURL);
+                    }
                     exit;
                 }
             } else
             if ($userRole != $roleNeeded) {
-                if($directOnFailURL == null){
+                if ($directOnFailURL == null) {
                     redirect("/");
-                }
-                else{
+                } else {
                     reditect($directOnFailURL);
                 }
                 exit;
@@ -62,13 +66,14 @@ class Activeuser extends _Mymodel {
         }
     }
 
-    function login($id, $username, $role){
+    function login($id, $username, $role) {
         $this->session->set_userdata('id', $id);
         $this->session->set_userdata('username', $username);
         $this->session->set_userdata('role', $role);
     }
-    
-    function logout(){
+
+    function logout() {
         $this->session->sess_destroy();
     }
+
 }
