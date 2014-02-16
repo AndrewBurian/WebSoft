@@ -1,51 +1,61 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * controllers/login.php
+ *
+ * Login manager 
+ *
+ * @package		Java-Geeks
+ * @author		JLP
+ * @copyright           Copyright (c) 2010-2013, J.L. Parry
+ * @since		Version 2.0.0
+ * ------------------------------------------------------------------------
  */
-
 class Login extends Application {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('users_dao');
     }
 
     //-------------------------------------------------------------
-    //  The normal pages
+    //  Default entry point. 
+    //  We should never get here, since the login form is in the sidebar
     //-------------------------------------------------------------
-
 
     function index() {
-
-        $this->data['title'] = "Bars in Greater Vancouver";
-        $this->data['page'] = 'Bars';
-        $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = 'Log In';
-        $this->data['pageDescrip'] = 'Log In to our site';
-
-        if ($this->activeuser->isLoggedIn()) {
-            $this->data['user_name'] = $this->activeuser->getName();
-            $this->data['pagebody'] = 'login/already_logged_in';
-            $this->data['login'] = $this->activeuser->buildLoginBar();
-        } else {
-            $this->data['pagebody'] = 'login/login';
-            $this->data['login'] = 'Logging in now';
-        }
-        $this->render();
-    }
-
-    function submit() {
-        $userID = $this->users_dao->getUserID($_POST['username']);
-        if ($userID != NULL) {
-            if ($this->users_dao->authenticateUser($userID, $_POST['password'])) {
-                $this->activeuser->login($userID, $_POST['username'], 
-                        $this->users_dao->getUserRole($userID));
-            }
-        }
         redirect('/');
     }
-
+    
+    // Process a login
+    function submit() {
+        $key = $_POST['id'];
+        $password = md5($_POST['password']);
+       // echo 'key: '.$key.'<br/>';
+       // echo 'password: '.$password.'<br/>';
+       // exit;
+       $user = $this->users->get($key);
+         // what if no such user
+        if ($user == null) {
+        echo 'No such user<br/>';
+        // redirect('/');
+  exit;    
+        }
+        //check the password
+        if ($password == (string) $user->password) {
+            // we have a winner!
+            $this->session->set_userdata('id', $key);
+            $this->session->set_userdata('userName', $user->name);
+            $this->session->set_userdata('userRole', $user->role);
+                      
+            redirect("/");
+        } else {
+        echo 'Password does not match<br/>';
+            // password doesn't match
+            redirect("/");
+        }
+    }
+    
 }
+
+/* End of file login.php */
+/* Location: application/controllers/login.php */

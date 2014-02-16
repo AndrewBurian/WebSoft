@@ -24,8 +24,8 @@ class About extends Application {
         $this->data['pageDescrip'] = 'Nullam tempor semper nisl in tristique';
         $this->data['pagebody'] = 'about';
         
-        $this->data['session_id'] = $this->activeuser->getID();
-        $this->data['login'] = $this->activeuser->buildLoginBar();
+       // $this->data['session_id'] = $this->activeuser->getID();
+       // $this->data['login'] = $this->activeuser->buildLoginBar();
         
         $this->render();
     }

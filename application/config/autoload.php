@@ -112,7 +112,7 @@ $autoload['language'] = array();
   |
  */
 
-$autoload['model'] = array('_mymodel', '_mymodel2', 'posts', 'media', 'activeuser');
+$autoload['model'] = array('_mymodel', '_mymodel2', 'posts', 'media', 'users');
 
 
 /* End of file autoload.php */

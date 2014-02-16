@@ -33,7 +33,7 @@ class _Mymodel extends CI_Model {
 //  Table management functions
 //---------------------------------------------------------------------------
     // Load contents from & associate this object with a table
-    function setTable($table, $key = 'id') {
+    function setTable($table, $key='id') {
         // prime our state
         $this->_tableName = $table;
         $this->_keyField = $key;
@@ -69,7 +69,7 @@ class _Mymodel extends CI_Model {
     // Retrieve an existing DB record as an associative array
     function get_array($key) {
         $this->db->where($this->_keyField, $key);
-        $query = $this->db->get($this->_tableName);
+        $query = $this->db->query($this->_tableName);
         if ($query->num_rows() < 1)
             return null;
         // using a bogus iterator to get the first row
@@ -136,6 +136,13 @@ class _Mymodel extends CI_Model {
         return $query->result_array();
     }
 
+    // Return all records as an array of associative arrays, in reverse order
+    function getAll_array_reversed() {
+        $this->db->order_by($this->_keyField, 'desc');
+        $query = $this->db->get($this->_tableName);
+        return $query->result_array();
+    }
+
     // Return all records as a result set
     function queryAll() {
         $this->db->order_by($this->_keyField, 'asc');
@@ -172,13 +179,15 @@ class _Mymodel extends CI_Model {
         return $query->result_array();
     }
 
-    // Return the number of records in this table
+   // Return the number of records in this table
     function size() {
         $query = $this->db->get($this->_tableName);
         return $query->num_rows();
     }
 
 }
+
+
 
 /* End of file Mymodel.php */
 /* Location: application/models/mymodel.php */

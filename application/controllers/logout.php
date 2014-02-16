@@ -1,11 +1,16 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * controllers/login.php
+ *
+ * Logout manager 
+ *
+ * @package		Java-Geeks
+ * @author		JLP
+ * @copyright           Copyright (c) 2010-2013, J.L. Parry
+ * @since		Version 2.0.0
+ * ------------------------------------------------------------------------
  */
-
 class Logout extends Application {
 
     function __construct() {
@@ -13,20 +18,15 @@ class Logout extends Application {
     }
 
     //-------------------------------------------------------------
-    //  The normal pages
+    //  bye bye
     //-------------------------------------------------------------
 
-
     function index() {
-
-        $this->data['title'] = "Bars in Greater Vancouver";
-        $this->data['page'] = 'Bars';
-        $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = 'Log Out';
-        $this->data['pageDescrip'] = 'Come Back Soon!';
-
-        $this->activeuser->logout();
-        redirect('/login');
-        $this->render();
+        $this->session->sess_destroy();
+        redirect('/');
     }
+
 }
+
+/* End of file logout.php */
+/* Location: application/controllers/logout.php */

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Generic domain model, with composite (2-part) key
  *
@@ -22,7 +21,7 @@ class _Mymodel2 extends _Mymodel {
 //  Table management functions
 //---------------------------------------------------------------------------
     // Load contents from & associate this object with a table
-    function setTable($table, $key1 = 'id', $key2 = 'id') {
+    function setTable($table, $key1='id', $key2='id') {
         // prime our state
         $this->_tableName = $table;
         $this->_keyField = $key1;

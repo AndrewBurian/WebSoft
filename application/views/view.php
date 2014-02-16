@@ -10,9 +10,6 @@ if (!defined('APPPATH'))
  * @author		JLP
  * @copyright           Copyright (c) 2013, J.L. Parry
  * @since		Version 2.0.0
- * 
- * Modified Chris Holisky Feb 9, 2014 
- * Repurposed code for web page project
  * ------------------------------------------------------------------------
  */
 ?>
@@ -20,7 +17,7 @@ if (!defined('APPPATH'))
 {posts}
 <div class="row-fluid">
     <div class="span12">
-        #{uid} <a href="/view/post/{uid}">{ptitle}</a> {pdate} {tags}<br/>
+        #{uid} <a href="/view/post/{uid}">{ptitle}</a> {pdate} {ptags} {buttons}<br/>
         <p>{slug}</p>
     </div>
 </div>

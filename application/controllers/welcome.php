@@ -25,8 +25,8 @@ class Welcome extends Application {
         $this->data['pagebody'] = 'welcome';
         $this->data['posts'] = $this->posts->newest();
         
-        $this->data['session_id'] = $this->activeuser->getID();
-        $this->data['login'] = $this->activeuser->buildLoginBar();
+     //  $this->data['session_id'] = $this->users->get($id);
+       // $this->data['login'] = $this->users->buildLoginBar();
        
         $this->render();
     }

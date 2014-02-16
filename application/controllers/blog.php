@@ -24,8 +24,8 @@ class Blog extends Application {
         $this->data['pageDescrip'] = 'Donec ac dui eu augue faucibus sagittis ';
         $this->data['pagebody'] = 'blog';
         
-        $this->data['session_id'] = $this->activeuser->getID();
-        $this->data['login'] = $this->activeuser->buildLoginBar();
+       // $this->data['session_id'] = $this->activeuser->getID();
+       // $this->data['login'] = $this->activeuser->buildLoginBar();
         
         $this->render();
     }
