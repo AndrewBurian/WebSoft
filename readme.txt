@@ -51,3 +51,4 @@ Lab 6 Updates:
 ???
 
 Added login bar to controllers other than welcome and bars
+Another test
