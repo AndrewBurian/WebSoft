@@ -12,6 +12,7 @@ class Bars extends Application {
     function __construct() {
         parent::__construct();
         $this->load->model('barsmodel');
+        $this->activeuser->restrict(array(ROLE_ADMIN, ROLE_USER));
     }
 
     //-------------------------------------------------------------
@@ -27,7 +28,7 @@ class Bars extends Application {
         $this->data['pageTitle'] = 'Bars in the Lower Mainland';
         $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
         $this->data['pagebody'] = 'bars/bars';
-        
+        $this->data['login'] = $this->activeuser->buildLoginBar();
         $this->data['report_heading'] = $this->build_report_header();
         $this->data['report_body'] = $this->build_report_body();
         

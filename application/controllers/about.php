@@ -23,6 +23,7 @@ class About extends Application {
         $this->data['pageTitle'] = 'About us';
         $this->data['pageDescrip'] = 'Nullam tempor semper nisl in tristique';
         $this->data['pagebody'] = 'about';
+        $this->data['login'] = $this->activeuser->buildLoginBar();
         $this->render();
     }
 

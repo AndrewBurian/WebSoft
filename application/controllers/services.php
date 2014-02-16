@@ -23,6 +23,7 @@ class Services extends Application {
         $this->data['pageTitle'] = 'Services';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->data['pagebody'] = 'services';
+        $this->data['login'] = $this->activeuser->buildLoginBar();
         $this->render();
     }
 
