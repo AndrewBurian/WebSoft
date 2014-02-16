@@ -25,6 +25,10 @@ class Friends extends Application {
         $this->data['pageDescrip'] = 'Donec ac dui eu augue faucibus sagittis ';
         $this->data['pagebody'] = 'friends_list';
         $this->data['contacts'] = $this->contacts->getAll_array();
+        
+        $this->data['session_id'] = $this->activeuser->getID();
+        $this->data['login'] = $this->activeuser->buildLoginBar();
+        
         $this->render();
     }
 

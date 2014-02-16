@@ -1,5 +1,5 @@
 <!-- the Overall report wrapper -->
-<table>
+<table id="table">
     {report_heading}
     {report_body}
 </table>

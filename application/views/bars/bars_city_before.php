@@ -1,5 +1,5 @@
 <!-- city start -->
 
 <tr>
-    <th><b>{city_name}</b></th>
+    <th><h2>{city_name}</h2></th>
 </tr>

@@ -82,6 +82,31 @@ INSERT INTO `posts` (`uid`, `thumb`, `ptitle`, `pdate`, `tags`, `slug`, `story`)
 (2, 'img02.jpg', 'The second pub', '2014.09.2', 'm', 'This one had decent food.', '<p>So we decided to eat at this one to help soak up some alchohol.  The plan was that we remember what happened this time.</p>\r\n<p>We ate and I recall that we made exclaimations over the food but we also sampled from alll 278 taps.</p>\r\n<p>Now I''m just trying to fill some space so that this looks a little more like a real post.  Yay for creative writing!</p>'),
 (3, 'img03.jpg', 'Another pub', '2014.09.1', 'b', 'Another pub.', '<p>There was beer to be had and we went to drink it.</p>\r\n<p>It was good but we didn''t write anything down.  We forgot in the joy of the sweet amber elixer.</p>\r\n<p>If you want to enjoy forgetfulness, try this pub.</p>');
 
+---
+--- Table for users
+---
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` varchar(10) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `role` varchar(20) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `lastvisit` varchar(10) NOT NULL,
+  `status` varchar(1) NOT NULL,
+  `token` varchar(32) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `password`, `role`, `email`, `lastvisit`, `status`, `token`) VALUES
+('donald', 'The Boss Duck', md5('duck'), 'admin', 'donald@disney.com', '2013-10-17', 'A', ''),
+('mickey', 'Typical Mouse', md5('mouse'), 'user', 'mickey@disney.com', '2013-10-17', 'A', '');
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
