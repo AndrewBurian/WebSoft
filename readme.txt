@@ -43,3 +43,11 @@ Added supplied models/posts and models/media files
 Modified views/view, controlers/view and added views/view1 to show posts from database
 Modified controllers/welcome to use posts from database
 Shed several tears
+
+-------------------------------------------------------------------------------------------
+
+Lab 6 Updates:
+
+???
+
+Added login bar to controllers other than welcome and bars

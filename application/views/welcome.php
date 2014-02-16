@@ -16,13 +16,22 @@ if (!defined('APPPATH'))
  * ------------------------------------------------------------------------
  */
 ?>
-<h1>Greater Vancouver Pub Reviews</h1>
-<p>This site will contain reviews of Greater Vancouver bars and pubs by people who enjoy going to them, rather than reviews by professionals who will never get the real social experience.</p>
+
+<h2>Greater Vancouver Pub Reviews</h2>
+<p>This site will contain reviews of Greater Vancouver bars and pubs by people who enjoy going to them, rather than reviews by professionals who will never truly understand the experience.</p>
+<!--
 <div class="alone"></div>
+-->
+<!--
 <div class="row-fluid">
-    {posts}
+-->
+<div>
+{posts}
+<!--
     <div class="span4">
-        <a href="/view/post/{uid}"><img src="/assets/images/thumbs/{thumb}"/></a><br/>
+-->
+<div class="span4">
+<a href="/view/post/{uid}"><img src="/assets/images/thumbs/{thumb}"/></a><br/>
         <h4>{ptitle}</h4>
         <p>{pdate} {tags}</p>
         <p>{slug}</p>

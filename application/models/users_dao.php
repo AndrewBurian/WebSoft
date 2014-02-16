@@ -19,10 +19,10 @@ class Users_dao extends _Mymodel{
     function authenticateUser($userID, $password){
         
         // Check to see if user exists at all
-        if(!$this->exists($userID)){
+        if(!($this->exists($userID))){
             return false;
         }
-        
+
         // Get the users details
         $userInfo = $this->get_array($userID);
         
