@@ -44,6 +44,9 @@ class Activeuser extends _Mymodel {
 
     function restrict($roleNeeded = null, $directOnFailURL = null) {
         $userRole = $this->session->userdata('role');
+        if($userRole == null){
+            $userRole = ROLE_VISITOR;
+        }
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
                 if (!in_array($userRole, $roleNeeded)) {
@@ -64,6 +67,25 @@ class Activeuser extends _Mymodel {
                 exit;
             }
         }
+    }
+    
+    function isAuthorized($roleNeeded){
+        $userRole = $this->session->userdata('role');
+        if($userRole == null){
+            $userRole = ROLE_VISITOR;
+        }
+        if ($roleNeeded != null) {
+            if (is_array($roleNeeded)) {
+                if (!in_array($userRole, $roleNeeded)) {
+                    return false;
+                }
+            } else
+            if ($userRole != $roleNeeded) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 
     function login($id, $username, $role) {
