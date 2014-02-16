@@ -5,10 +5,6 @@
  *
  * User table maintenance
  *
- * @package		Java-Geeks
- * @author		JLP
- * @copyright           Copyright (c) 2013, J.L. Parry
- * @since		Version 2.0.0
  * ------------------------------------------------------------------------
  */
 class Usermtce extends Application {
@@ -23,7 +19,7 @@ class Usermtce extends Application {
     //-------------------------------------------------------------
 
     function index() {
-        $this->data['pageTitle'] = "Java-Geeks ~ Users";
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Users";
         $users = $this->users->getAll_array();
         $this->data['users'] = $users;
         $this->data['pagebody'] = 'userlist';
@@ -35,7 +31,7 @@ class Usermtce extends Application {
     //-------------------------------------------------------------
 
     function add() {
-        $this->data['pageTitle'] = "Java-Geeks ~ Add a User";
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a User";
         $user = (array) $this->users->create();
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = 'new';
@@ -45,7 +41,7 @@ class Usermtce extends Application {
 
     // Request a user edit
     function edit($id) {
-        $this->data['pageTitle'] = "Java-Geeks ~ Edit a User";
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a User";
         $user = (array) $this->users->get($id);
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = $user['id'];
@@ -75,7 +71,7 @@ class Usermtce extends Application {
         if (empty($_POST['id'])) {
             $this->data['errors'][] = 'You need to specify a userid';
         }
-         if ($_POST['id'] == 'new') {
+        if ($_POST['id'] == 'new') {
             $this->data['errors'][] = 'new is not a valid userid';
         }
         if ($id == null && $this->users->exists($_POST['id'])) {
@@ -97,9 +93,9 @@ class Usermtce extends Application {
             $this->data = array_merge($this->data, (array) $user);
             $this->data['pagebody'] = 'useredit';
             $this->render();
-             foreach ($this->data['errors'] as $booboo)
-            echo '<p>' . $booboo . '</p>';
-             exit;
+            foreach ($this->data['errors'] as $booboo)
+                echo '<p>' . $booboo . '</p>';
+            exit;
         }
         // handle the password specially, as it needs to be encrypted
         $new_password = $_POST['password'];
@@ -121,6 +117,7 @@ class Usermtce extends Application {
         // redisplay the list of users
         redirect('/usermtce');
     }
+
     // Delete a user
     function delete($id) {
         $this->users->delete($id);

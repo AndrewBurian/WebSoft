@@ -24,9 +24,9 @@ class View extends Application {
         $this->data['pageTitle'] = 'Greater Vancouver Pub Reviews ~ Recent Posts';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
 
-     //   $this->data['session_id'] = $this->activeuser->getID();
-     //   $this->data['login'] = $this->activeuser->buildLoginBar();
-        
+        //   $this->data['session_id'] = $this->activeuser->getID();
+        //   $this->data['login'] = $this->activeuser->buildLoginBar();
+
         $this->render();
     }
 

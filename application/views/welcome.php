@@ -26,12 +26,12 @@ if (!defined('APPPATH'))
 <div class="row-fluid">
 -->
 <div>
-{posts}
-<!--
+    {posts}
+    <!--
+        <div class="span4">
+    -->
     <div class="span4">
--->
-<div class="span4">
-<a href="/view/post/{uid}"><img src="/assets/images/thumbs/{thumb}"/></a><br/>
+        <a href="/view/post/{uid}"><img src="/assets/images/thumbs/{thumb}"/></a><br/>
         <h4>{ptitle}</h4>
         <p>{pdate} {tags}</p>
         <p>{slug}</p>

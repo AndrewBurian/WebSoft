@@ -57,9 +57,9 @@ if (!defined('APPPATH'))
                         {content}
                     </div>
                     <!-- //#content-inner -->
-		<div id="sidebar" class="span3">
-                    {sidebar}
-                </div>
+                    <div id="sidebar" class="span3">
+                        {sidebar}
+                    </div>
                 </div>
             </div>
             <!-- <div id="footer" class="span12">  -->

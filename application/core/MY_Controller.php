@@ -63,10 +63,10 @@ class Application extends CI_Controller {
             // show user name etc
             $side_data = $this->session->all_userdata();
             $side_data['secret_menu'] = '';
-            if($this->session->userdata('userRole')== 'user')
-                 $side_data['secret_menu'] = $this->parser->parse('_user', $side_data, true);
+            if ($this->session->userdata('userRole') == 'user')
+                $side_data['secret_menu'] = $this->parser->parse('_user', $side_data, true);
             else if ($this->session->userdata('userRole') == 'admin')
-               $side_data['secret_menu'] = $this->parser->parse('_admin', $side_data, true);
+                $side_data['secret_menu'] = $this->parser->parse('_admin', $side_data, true);
             $result .= $this->parser->parse('_loggedin', $side_data, true);
         } else {
             // show the login form
@@ -74,7 +74,7 @@ class Application extends CI_Controller {
         }
 
         // links
-     //   $result .= $this->link_away();
+        //   $result .= $this->link_away();
 
         return $result;
     }

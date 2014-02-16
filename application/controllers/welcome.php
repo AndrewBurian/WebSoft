@@ -24,10 +24,10 @@ class Welcome extends Application {
         $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
         $this->data['pagebody'] = 'welcome';
         $this->data['posts'] = $this->posts->newest();
-        
-     //  $this->data['session_id'] = $this->users->get($id);
-       // $this->data['login'] = $this->users->buildLoginBar();
-       
+
+        //  $this->data['session_id'] = $this->users->get($id);
+        // $this->data['login'] = $this->users->buildLoginBar();
+
         $this->render();
     }
 

@@ -21,7 +21,7 @@ if (isset($errors) && count($errors) > 0) {
 <?php }
 ?>
 
- 
+
 <form action="/postmtce/submit/{uid}" method="post">
     <button type="submit">Submit</button>     
     <a href="/postmtce"><input type="button" value="Cancel"></input></a>

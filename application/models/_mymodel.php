@@ -33,7 +33,7 @@ class _Mymodel extends CI_Model {
 //  Table management functions
 //---------------------------------------------------------------------------
     // Load contents from & associate this object with a table
-    function setTable($table, $key='id') {
+    function setTable($table, $key = 'id') {
         // prime our state
         $this->_tableName = $table;
         $this->_keyField = $key;
@@ -179,15 +179,13 @@ class _Mymodel extends CI_Model {
         return $query->result_array();
     }
 
-   // Return the number of records in this table
+    // Return the number of records in this table
     function size() {
         $query = $this->db->get($this->_tableName);
         return $query->num_rows();
     }
 
 }
-
-
 
 /* End of file Mymodel.php */
 /* Location: application/models/mymodel.php */

@@ -12,7 +12,7 @@ class Bars extends Application {
     function __construct() {
         parent::__construct();
         $this->load->model('barsmodel');
-       // $this->activeuser->restrict(array(ROLE_ADMIN, ROLE_USER));
+        // $this->activeuser->restrict(array(ROLE_ADMIN, ROLE_USER));
     }
 
     //-------------------------------------------------------------
@@ -32,8 +32,8 @@ class Bars extends Application {
         $this->data['report_heading'] = $this->build_report_header();
         $this->data['report_body'] = $this->build_report_body();
 
-      //  $this->data['session_id'] = $this->activeuser->getID();
-       // $this->data['login'] = $this->activeuser->buildLoginBar();
+        //  $this->data['session_id'] = $this->activeuser->getID();
+        // $this->data['login'] = $this->activeuser->buildLoginBar();
 
         $this->render();
     }

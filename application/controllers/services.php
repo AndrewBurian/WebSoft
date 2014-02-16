@@ -23,10 +23,10 @@ class Services extends Application {
         $this->data['pageTitle'] = 'Services';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->data['pagebody'] = 'services';
-        
-      //  $this->data['session_id'] = $this->activeuser->getID();
-       // $this->data['login'] = $this->activeuser->buildLoginBar();
-        
+
+        //  $this->data['session_id'] = $this->activeuser->getID();
+        // $this->data['login'] = $this->activeuser->buildLoginBar();
+
         $this->render();
     }
 

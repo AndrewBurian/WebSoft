@@ -24,7 +24,7 @@ class Postmtce extends Application {
     //-------------------------------------------------------------
 
     function index() {
-          $this->data['pageTitle'] = "Java-Geeks ~ Posts";
+        $this->data['pageTitle'] = "Java-Geeks ~ Posts";
         $posts = $this->posts->getAll_array();
         $this->data['posts'] = $posts;
         $this->data['pagebody'] = 'postlist';
@@ -57,7 +57,7 @@ class Postmtce extends Application {
     // Process an add/edit form submission
     function submit($uid = null) {
         // the form fields we are interested in
-       $post_fields = array('thumb', 'ptitle', 'pdate', 'slug','story');
+        $post_fields = array('thumb', 'ptitle', 'pdate', 'slug', 'story');
 
         // either create or retrieve the relevant user record
         if ($uid == null || $uid == 'new')
@@ -81,7 +81,6 @@ class Postmtce extends Application {
 //            $this->data['errors'][] = 'The email address is missing the domain';
 //        if ($id == null && empty($user->password))
 //            $this->data['errors'][] = 'You must specify a password';
-
         // if errors, redisplay the form
         if (count($this->data['errors']) > 0) {
             // over-ride the view parameters to reflect our data
@@ -94,8 +93,7 @@ class Postmtce extends Application {
         // either add or update the posting record, as appropriate
         if ($uid == null) {
             $this->posts->add($posting);
-        }
-        else
+        } else
             $this->posts->update($posting);
 
         // redisplay the list of users

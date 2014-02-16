@@ -23,10 +23,10 @@ class Contact extends Application {
         $this->data['pageTitle'] = 'Contact';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->data['pagebody'] = 'contact';
-        
-       // $this->data['session_id'] = $this->activeuser->getID();
-       // $this->data['login'] = $this->activeuser->buildLoginBar();
-        
+
+        // $this->data['session_id'] = $this->activeuser->getID();
+        // $this->data['login'] = $this->activeuser->buildLoginBar();
+
         $this->render();
     }
 

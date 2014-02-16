@@ -6,7 +6,6 @@ if (!defined('APPPATH'))
  *
  * Manage member settings
  *
- * @author		JLP
  * ------------------------------------------------------------------------
  */
 if (isset($errors) && count($errors) > 0) {
