@@ -22,7 +22,10 @@ class Usermtce extends Application {
     //-------------------------------------------------------------
 
     function index() {
+        $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Users";
+        $this->data['pageDescrip'] = "User maintenance functions";
+
         $users = $this->users_dao->getAll_array();
         $this->data['users'] = $users;
         $this->data['pagebody'] = 'userlist';
@@ -34,7 +37,10 @@ class Usermtce extends Application {
     //-------------------------------------------------------------
 
     function add() {
+        $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a User";
+        $this->data['pageDescrip'] = "Add user";
+
         $user = (array) $this->users_dao->create();
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = 'new';
@@ -44,7 +50,10 @@ class Usermtce extends Application {
 
     // Request a user edit
     function edit($id) {
+        $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a User";
+        $this->data['pageDescrip'] = "Edt user";
+
         $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = $user['id'];
