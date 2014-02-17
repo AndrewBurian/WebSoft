@@ -23,7 +23,6 @@ class View extends Application {
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Greater Vancouver Pub Reviews ~ Recent Posts';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
-
         $this->render();
     }
 

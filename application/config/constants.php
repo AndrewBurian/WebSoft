@@ -11,6 +11,7 @@ define('XML_FOLDER', DATA_FOLDER . '/xml/');
 define('ROLE_VISITOR', 'visitor');
 define('ROLE_USER', 'user');
 define('ROLE_ADMIN', 'admin');
+define('ROLE_GUEST', 'guest');
 
 // blog constants
 define('POSTS_PER_PAGE', 6);

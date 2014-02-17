@@ -17,10 +17,13 @@ if (!defined('APPPATH'))
         <title>{title}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
+        <!--
+            <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
+            <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
+            <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
+            <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+        -->
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
-        <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 
     </head>
     <body>
@@ -38,9 +41,7 @@ if (!defined('APPPATH'))
                         </fieldset>
                     </form>
                     <ul id="social-media">
-                        <li class="item-1"><a href="#">Facebook</a></li>
-                        <li class="item-2"><a href="#">Twitter</a></li>
-                        <li class="item-3"><a href="#">RSS</a></li>
+                        <li>{login}</li>
                     </ul>
 
                     <h2>{pageTitle}<span>{pageDescrip}</span></h2>
@@ -56,6 +57,11 @@ if (!defined('APPPATH'))
                         {content}
                     </div>
                     <!-- //#content-inner -->
+                    <!--
+                    <div id="sidebar" class="span3">
+                        {sidebar}
+                    </div>
+                    -->
                 </div>
             </div>
             <!-- <div id="footer" class="span12">  -->
@@ -66,7 +72,8 @@ if (!defined('APPPATH'))
                         {menubar}
                     </ul>
 
-                    <p><strong>Design: <a href="http://www.google.com/">Baranda</a></strong> <span>|</span> <strong>Code: <a href="http://www.google.com" title="PSD to (X)HTML, PSD to CMS service">Slicejack</a></strong></p>
+                    <!--<p><strong>Design: <a href="http://www.google.com/">Baranda</a></strong> <span>|</span> <strong>Code: <a href="http://www.google.com" title="PSD to (X)HTML, PSD to CMS service">Slicejack</a></strong></p> -->
+                    <p><strong>Session ID: {session_id}</strong></p>
                 </div>
                 <!--  Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>. -->
             </div>

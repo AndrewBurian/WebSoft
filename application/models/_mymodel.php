@@ -69,7 +69,7 @@ class _Mymodel extends CI_Model {
     // Retrieve an existing DB record as an associative array
     function get_array($key) {
         $this->db->where($this->_keyField, $key);
-        $query = $this->db->query($this->_tableName);
+        $query = $this->db->get($this->_tableName);
         if ($query->num_rows() < 1)
             return null;
         // using a bogus iterator to get the first row
