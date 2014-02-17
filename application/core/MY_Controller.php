@@ -35,7 +35,7 @@ class Application extends CI_Controller {
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['session_id'] = $this->session->userdata('session_id');
         $this->data['login'] = $this->activeuser->buildLoginBar();
-        
+
 // finally, build the browser page!
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);
@@ -52,10 +52,10 @@ class Application extends CI_Controller {
         // if($this->session->userdata['role']=='admin')
         if ($this->activeuser->isLoggedIn()) {
             if ($this->activeuser->isAuthorized(ROLE_ADMIN)) {
-                $menudata['menudata'][] = array('menulink' => '/usermtce', 'menuname' => 'User Management');
+                $menudata['menudata'][] = array('menulink' => '/usermtce', 'menuname' => 'User Man.');
             }
-            if ($this->activeuser->isAuthorized(ROLE_USER)) {
-                $menudata['menudata'][] = array('menulink' => '/postmtce', 'menuname' => 'Post Management');
+            if ($this->activeuser->isAuthorized(ROLE_USER) || $this->activeuser->isAuthorized(ROLE_ADMIN)) {
+                $menudata['menudata'][] = array('menulink' => '/postmtce', 'menuname' => 'Post Man.');
             }
         }
         return $this->parser->parse('_menubar', $menudata, true);

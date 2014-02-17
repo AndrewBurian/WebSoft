@@ -28,12 +28,11 @@
             <td>{pdate}</td>
             <td>{slug}</td>
             <td>{story}</td>
-
         </tr>
         {/posts}
     </table>
 </div>
 <div>
-    <a href="/postrmtce/add"><input type="button" value="Add a new post"></input></a>
+    <a href="/postmtce/add"><input type="button" value="Add a new post"></input></a>
     <!--  <a href="/usermtce/add">Add a new user</a> -->
 </div>

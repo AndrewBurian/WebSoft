@@ -40,8 +40,7 @@ class Login extends Application {
         $userID = $this->users_dao->getUserID($_POST['username']);
         if ($userID != NULL) {
             if ($this->users_dao->authenticateUser($userID, $_POST['password'])) {
-                $this->activeuser->login($userID, $_POST['username'], 
-                        $this->users_dao->getUserRole($userID));
+                $this->activeuser->login($userID, $_POST['username'], $this->users_dao->getUserRole($userID));
             }
         }
         redirect('/');

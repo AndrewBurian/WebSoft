@@ -24,8 +24,8 @@ class Activeuser extends _Mymodel {
         } else {
             $name = $this->session->userdata('username');
             // return login name and logout button
-      $result.='<a>'.$name.' |</a><a href="/logout"><input type="button" value="Log Out"></input></a>';
-                        }
+            $result.='<a>' . $name . ' |</a><a href="/logout"><input type="button" value="Log Out"></input></a>';
+        }
 
         return $result;
     }
@@ -44,7 +44,7 @@ class Activeuser extends _Mymodel {
 
     function restrict($roleNeeded = null, $directOnFailURL = null) {
         $userRole = $this->session->userdata('role');
-        if($userRole == null){
+        if ($userRole == null) {
             $userRole = ROLE_VISITOR;
         }
         if ($roleNeeded != null) {
@@ -68,10 +68,10 @@ class Activeuser extends _Mymodel {
             }
         }
     }
-    
-    function isAuthorized($roleNeeded){
+
+    function isAuthorized($roleNeeded) {
         $userRole = $this->session->userdata('role');
-        if($userRole == null){
+        if ($userRole == null) {
             $userRole = ROLE_VISITOR;
         }
         if ($roleNeeded != null) {
@@ -84,7 +84,7 @@ class Activeuser extends _Mymodel {
                 return false;
             }
         }
-        
+
         return true;
     }
 
