@@ -45,7 +45,7 @@ class Activeuser extends _Mymodel {
     function restrict($roleNeeded = null, $directOnFailURL = null) {
         $userRole = $this->session->userdata('role');
         if ($userRole == null) {
-            $userRole = ROLE_VISITOR;
+            $userRole = ROLE_GUEST;
         }
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
@@ -72,7 +72,7 @@ class Activeuser extends _Mymodel {
     function isAuthorized($roleNeeded) {
         $userRole = $this->session->userdata('role');
         if ($userRole == null) {
-            $userRole = ROLE_VISITOR;
+            $userRole = ROLE_GUEST;
         }
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
