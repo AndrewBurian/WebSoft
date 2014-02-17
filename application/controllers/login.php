@@ -29,7 +29,6 @@ class Login extends Application {
         if ($this->activeuser->isLoggedIn()) {
             $this->data['user_name'] = $this->activeuser->getName();
             $this->data['pagebody'] = 'login/already_logged_in';
-            $this->data['login'] = $this->activeuser->buildLoginBar();
         } else {
             $this->data['pagebody'] = 'login/login';
             $this->data['login'] = 'Logging in now';
@@ -41,8 +40,7 @@ class Login extends Application {
         $userID = $this->users_dao->getUserID($_POST['username']);
         if ($userID != NULL) {
             if ($this->users_dao->authenticateUser($userID, $_POST['password'])) {
-                $this->activeuser->login($userID, $_POST['username'], 
-                        $this->users_dao->getUserRole($userID));
+                $this->activeuser->login($userID, $_POST['username'], $this->users_dao->getUserRole($userID));
             }
         }
         redirect('/');

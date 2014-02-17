@@ -23,7 +23,6 @@ class Blog extends Application {
         $this->data['pageTitle'] = 'Blog';
         $this->data['pageDescrip'] = 'Donec ac dui eu augue faucibus sagittis ';
         $this->data['pagebody'] = 'blog';
-        $this->data['login'] = $this->activeuser->buildLoginBar();
         $this->render();
     }
 

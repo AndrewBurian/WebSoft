@@ -17,10 +17,13 @@ if (!defined('APPPATH'))
         <title>{title}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
+        <!--
+            <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
+            <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
+            <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
+            <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+        -->
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
-        <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
 
     </head>
     <body>
@@ -54,6 +57,11 @@ if (!defined('APPPATH'))
                         {content}
                     </div>
                     <!-- //#content-inner -->
+                    <!--
+                    <div id="sidebar" class="span3">
+                        {sidebar}
+                    </div>
+                    -->
                 </div>
             </div>
             <!-- <div id="footer" class="span12">  -->

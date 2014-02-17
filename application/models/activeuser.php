@@ -20,11 +20,11 @@ class Activeuser extends _Mymodel {
         $result = "";
         if ($this->session->userdata('id') == null) {
             // return login bar
-            $result .= '<a href="/login">Log In</a>';
+            $result .= '<a href="/login"><input type = "button" value="Log In"></input></a>';
         } else {
-            // return login name
-            $result .= $this->session->userdata('username');
-            $result .= ' | <a href="/logout">Log Out</a>';
+            $name = $this->session->userdata('username');
+            // return login name and logout button
+            $result.='<a>' . $name . ' |</a><a href="/logout"><input type="button" value="Log Out"></input></a>';
         }
 
         return $result;
@@ -44,8 +44,8 @@ class Activeuser extends _Mymodel {
 
     function restrict($roleNeeded = null, $directOnFailURL = null) {
         $userRole = $this->session->userdata('role');
-        if($userRole == null){
-            $userRole = ROLE_VISITOR;
+        if ($userRole == null) {
+            $userRole = ROLE_GUEST;
         }
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
@@ -68,11 +68,11 @@ class Activeuser extends _Mymodel {
             }
         }
     }
-    
-    function isAuthorized($roleNeeded){
+
+    function isAuthorized($roleNeeded) {
         $userRole = $this->session->userdata('role');
-        if($userRole == null){
-            $userRole = ROLE_VISITOR;
+        if ($userRole == null) {
+            $userRole = ROLE_GUEST;
         }
         if ($roleNeeded != null) {
             if (is_array($roleNeeded)) {
@@ -84,7 +84,7 @@ class Activeuser extends _Mymodel {
                 return false;
             }
         }
-        
+
         return true;
     }
 

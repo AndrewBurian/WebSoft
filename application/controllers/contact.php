@@ -23,7 +23,6 @@ class Contact extends Application {
         $this->data['pageTitle'] = 'Contact';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->data['pagebody'] = 'contact';
-        $this->data['login'] = $this->activeuser->buildLoginBar();
         $this->render();
     }
 
