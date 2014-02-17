@@ -16,7 +16,7 @@ class Postmtce extends Application {
 
     function __construct() {
         parent::__construct();
-        $this->restrict(ROLE_USER);
+        $this->activeuser->restrict(ROLE_USER);
     }
 
     //-------------------------------------------------------------

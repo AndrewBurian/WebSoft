@@ -20,12 +20,12 @@ class Activeuser extends _Mymodel {
         $result = "";
         if ($this->session->userdata('id') == null) {
             // return login bar
-            $result .= '<a href="/login">Log In</a>';
+            $result .= '<a href="/login"><input type = "button" value="Log In"></input></a>';
         } else {
-            // return login name
-            $result .= $this->session->userdata('username');
-            $result .= ' | <a href="/logout">Log Out</a>';
-        }
+            $name = $this->session->userdata('username');
+            // return login name and logout button
+      $result.='<a>'.$name.' |</a><a href="/logout"><input type="button" value="Log Out"></input></a>';
+                        }
 
         return $result;
     }

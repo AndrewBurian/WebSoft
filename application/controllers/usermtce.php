@@ -1,5 +1,8 @@
 <?php
 
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
 /**
  * controllers/usermtce.php
  *
@@ -11,7 +14,7 @@ class Usermtce extends Application {
 
     function __construct() {
         parent::__construct();
-        $this->restrict(ROLE_ADMIN);
+        $this->activeuser->restrict(ROLE_ADMIN);
     }
 
     //-------------------------------------------------------------
@@ -20,7 +23,7 @@ class Usermtce extends Application {
 
     function index() {
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Users";
-        $users = $this->users->getAll_array();
+        $users = $this->users_dao->getAll_array();
         $this->data['users'] = $users;
         $this->data['pagebody'] = 'userlist';
         $this->render();
@@ -32,7 +35,7 @@ class Usermtce extends Application {
 
     function add() {
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a User";
-        $user = (array) $this->users->create();
+        $user = (array) $this->users_dao->create();
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = 'new';
         $this->data['pagebody'] = 'useredit';
@@ -42,7 +45,7 @@ class Usermtce extends Application {
     // Request a user edit
     function edit($id) {
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a User";
-        $user = (array) $this->users->get($id);
+        $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = $user['id'];
         $this->data['password'] = ''; // assume password to remain the same
@@ -59,9 +62,9 @@ class Usermtce extends Application {
         // either create or retrieve the relevant user record
         if ($id == null || $id == 'new') {
             $id = null;
-            $user = $this->users->create();
+            $user = $this->users_dao->create();
         } else {
-            $user = $this->users->get($id);
+            $user = $this->users_dao->get($id);
         }
 
         // over-ride the user record fields with submitted values
@@ -74,7 +77,7 @@ class Usermtce extends Application {
         if ($_POST['id'] == 'new') {
             $this->data['errors'][] = 'new is not a valid userid';
         }
-        if ($id == null && $this->users->exists($_POST['id'])) {
+        if ($id == null && $this->users_dao->exists($_POST['id'])) {
             $this->data['errors'][] = 'That userid is already used';
         }
         if (strlen($user->name) < 1) {
@@ -110,9 +113,9 @@ class Usermtce extends Application {
         // either add or update the user record, as appropriate
         if ($id == null) {
             $user->id = $_POST['id'];
-            $this->users->add($user);
+            $this->users_dao->add($user);
         } else {
-            $this->users->update($user);
+            $this->users_dao->update($user);
         }
         // redisplay the list of users
         redirect('/usermtce');
@@ -120,7 +123,7 @@ class Usermtce extends Application {
 
     // Delete a user
     function delete($id) {
-        $this->users->delete($id);
+        $this->users_dao->delete($id);
         $this->index();
     }
 
