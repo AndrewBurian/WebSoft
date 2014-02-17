@@ -24,7 +24,10 @@ class Postmtce extends Application {
     //-------------------------------------------------------------
 
     function index() {
-        $this->data['pageTitle'] = "Java-Geeks ~ Posts";
+        $this->data['title'] = "Greater Vancouver Pub Reviews";
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Posts";
+        $this->data['pageDescrip'] = "Post maintenance functions";
+
         $posts = $this->posts->getAll_array();
         $this->data['posts'] = $posts;
         $this->data['pagebody'] = 'postlist';
@@ -36,7 +39,10 @@ class Postmtce extends Application {
     //-------------------------------------------------------------
 
     function add() {
-        $this->data['pageTitle'] = "Java-Geeks ~ Add a Posting";
+        $this->data['title'] = "Greater Vancouver Pub Reviews";
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a Posting";
+        $this->data['pageDescrip'] = "Add post";
+
         $posting = (array) $this->posts->create();
         $this->data = array_merge($this->data, $posting);
         $this->data['uid'] = 'new';
@@ -46,7 +52,10 @@ class Postmtce extends Application {
 
     // Request a post edit
     function edit($uid) {
-        $this->data['pageTitle'] = "Java-Geeks ~ Edit a Posting";
+        $this->data['title'] = "Greater Vancouver Pub Reviews";
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a Posting";
+        $this->data['pageDescrip'] = "Edit post";
+
         $posting = (array) $this->posts->get($uid);
         $this->data = array_merge($this->data, $posting);
         $this->data['uid'] = $posting['uid'];
@@ -91,7 +100,7 @@ class Postmtce extends Application {
         }
 
         // either add or update the posting record, as appropriate
-        if ($uid == null) {
+        if ($uid == 'new') {
             $this->posts->add($posting);
         } else
             $this->posts->update($posting);
