@@ -1,2 +1,2 @@
-{user_name} | <a href="/logout">Logout</a>
+{user_name} | {logout_btn}
 <!--<a href="/logout"><input type="button" value="Log Out"/></a>-->

@@ -22,6 +22,7 @@ class Activeuser extends _Mymodel {
         if ($this->isLoggedIn()) {
             // return user bar
             $viewParams['user_name'] = $this->getName();
+            $viewParams['logout_btn'] = makeLinkButton('Logout', '/logout', 'logout');
             $result .= $this->parser->parse('login/_userBar', $viewParams, true);
         } else {
             // return login bar

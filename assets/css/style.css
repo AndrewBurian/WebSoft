@@ -30,3 +30,8 @@ p { color: black; font-family: Arial, Verdana, Helvetica ; font-size:11pt}
 #sidebar {margin:10px;padding-left:5px;}
 .myside {padding:5px;}
 .myfumble {display:none}
+
+/* pricing report styling */
+.myreport th {text-align:center;}
+.myreport tr td {text-align:right;}
+.myreport tr td:first-child {text-align:center;}

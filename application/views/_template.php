@@ -17,12 +17,8 @@ if (!defined('APPPATH'))
         <title>{title}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"/>
-        <!--
-            <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
-            <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
-            <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
-            <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
-        -->
+        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
 
     </head>
@@ -40,9 +36,9 @@ if (!defined('APPPATH'))
                             <input type="text" value="Type your search term here..." class="input-text" />
                         </fieldset>
                     </form>
-                    <ul id="social-media">
-                        <li>{login}</li>
-                    </ul>
+                    <div id="social-media">
+                        {login}
+                    </div>
 
                     <h2>{pageTitle}<span>{pageDescrip}</span></h2>
 
@@ -78,5 +74,7 @@ if (!defined('APPPATH'))
                 <!--  Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>. -->
             </div>
         </div>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
     </body>
 </html>
