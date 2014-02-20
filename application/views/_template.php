@@ -16,6 +16,7 @@ if (!defined('APPPATH'))
     <head>
         <title>{title}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+        <link href="/assets/images/icons/favicon.ico" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
