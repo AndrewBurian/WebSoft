@@ -8,14 +8,14 @@ body { background: url(/assets/images/layout/body.gif) top repeat-x; font-family
 #header h1 a:hover { color: #addbd8; }
 #header strong { font-size: 13px; color: #b7b7b7; }
 
-#header #main-nav { position: absolute; left: 0; top: 152px; }
+#header #main-nav { position: absolute; left: 0; top: 142px; }
 #header #main-nav li { display: inline; }
 #header #main-nav li a { display: block; float: left; font-size: 15px;  text-decoration: none; padding: 17px 20px 16px 20px; color: #535353; }
 #header #main-nav li a:hover,#header #main-nav li a.active { background: url(/assets/images/layout/main_nav_hover.gif) top repeat-x; color: #fff; }
 
 #header fieldset .input-text { background: url(/assets/images/layout/search.gif) no-repeat; width: 151px; height: 21px; border: none; font-size: 11px; position: absolute; right: 0; top: 69px; padding: 5px 38px 0 8px; color: #999; }
 
-#social-media { position: absolute; top: 161px; right: 0;}
+#social-media { position: absolute; top: 155px; right: 0;}
 #social-media li { display: inline; }
 .social-media li a { display: block; float: left; /*text-indent: -5000px; width: 30px;*/width:auto; height: 32px; margin-left: 12px; }
 #social-media li { font: "Times New Roman", Times, serif; text-decoration: none; padding: 8px; display: block; float: left; font-size: 15px;}
@@ -23,7 +23,7 @@ body { background: url(/assets/images/layout/body.gif) top repeat-x; font-family
 #social-media li.item-2 a { background: url(/assets/images/icons/twitter.gif) no-repeat; }
 #social-media li.item-3 a { background: url(/assets/images/icons/rss.gif) no-repeat; }
 
-#header h2, #content-inner .column h2 { font:  36px "Times New Roman", Times, serif; color: #3a3a3a; text-shadow: 1px 1px 1px #fff; position: absolute; top: 230px; left: 0; }
+#header h2, #content-inner .column h2 { font:  36px "Times New Roman", Times, serif; color: #3a3a3a; text-shadow: 1px 1px 1px #fff; position: absolute; top: 210px; left: 0; }
 #header h2 span { font: 13px Arial, Helvetica, sans-serif; display: block; text-shadow: none; }
 
 
