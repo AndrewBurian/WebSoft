@@ -26,6 +26,7 @@ class Activeuser extends _Mymodel {
             $result .= $this->parser->parse('login/_userBar', $viewParams, true);
         } else {
             // return login bar
+            $viewParams['login_btn'] = makeLinkButton('Login', '/login', 'login');
             $result .= $this->parser->parse('login/_loginBar', $viewParams, true);
         }
 

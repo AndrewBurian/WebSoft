@@ -8,14 +8,14 @@ body { background: url(/assets/images/layout/body.gif) top repeat-x; font-family
 #header h1 a:hover { color: #addbd8; }
 #header strong { font-size: 13px; color: #b7b7b7; }
 
-#header #main-nav { position: absolute; left: 0; top: 142px; }
+#header #main-nav { position: absolute; left: 0; top: 142px; margin-left: 0px; }
 #header #main-nav li { display: inline; }
 #header #main-nav li a { display: block; float: left; font-size: 15px;  text-decoration: none; padding: 17px 20px 16px 20px; color: #535353; }
 #header #main-nav li a:hover,#header #main-nav li a.active { background: url(/assets/images/layout/main_nav_hover.gif) top repeat-x; color: #fff; }
 
 #header fieldset .input-text { background: url(/assets/images/layout/search.gif) no-repeat; width: 151px; height: 21px; border: none; font-size: 11px; position: absolute; right: 0; top: 69px; padding: 5px 38px 0 8px; color: #999; }
 
-#social-media { position: absolute; top: 155px; right: 0;}
+#social-media { position: absolute; top: 152px; right: 0;}
 #social-media li { display: inline; }
 .social-media li a { display: block; float: left; /*text-indent: -5000px; width: 30px;*/width:auto; height: 32px; margin-left: 12px; }
 #social-media li { font: "Times New Roman", Times, serif; text-decoration: none; padding: 8px; display: block; float: left; font-size: 15px;}
