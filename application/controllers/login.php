@@ -31,7 +31,9 @@ class Login extends Application {
             $this->data['pagebody'] = 'login/already_logged_in';
         } else {
             $this->data['pagebody'] = 'login/login';
-            $this->data['login'] = 'Logging in now';
+            $this->data['password_field'] = makePasswordField('Password:', 'password', '');
+            $this->data['username_field'] = makeTextField('Username:', 'username', '');
+            $this->data['submit'] = makeSubmitButton('Login', 'Login');
         }
         $this->render();
     }
