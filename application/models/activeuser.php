@@ -36,7 +36,11 @@ class Activeuser extends _Mymodel {
     function getID() {
         return $this->session->userdata('id');
     }
-
+   
+    function GetRole() {
+        return $this->session->userdata('role');
+    }
+    
     function getName() {
         return $this->session->userdata('username');
     }
