@@ -58,7 +58,7 @@ class Postmtce extends Application {
 
         $posting = (array) $this->posts->get($uid);
         $this->data = array_merge($this->data, $posting);
-        $this->data['uid'] = $posting['uid'];
+        $this->data['id'] = $posting['id'];
         $this->data['pagebody'] = 'postedit';
         $this->render();
     }
