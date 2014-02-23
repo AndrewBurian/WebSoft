@@ -65,11 +65,7 @@ class Images_dao extends _Mymodel {
         return NULL;
     }
 
-    function add($record) {
-        parent::add($record);
-    }
-
-    function safeAddFile($file) {
+    function addFile($file) {
         try {
 
             // Undefined | Multiple Files | $_FILES Corruption Attack
@@ -127,7 +123,8 @@ class Images_dao extends _Mymodel {
             echo 'File is uploaded successfully.';
         } catch (RuntimeException $e) {
             echo $e->getMessage();
-            return false;
+            // image failed to add
+            return 0;
         }
         
         $Imgdata = array();
@@ -136,7 +133,17 @@ class Images_dao extends _Mymodel {
         $Imgdata['author'] = $this->activeuser->getName();
         
         $this->add($Imgdata);
-        return true;
+        
+        $allImages = $this->getAll_array();
+        foreach ($allImages as $pic) {
+            if ($pic['filename'] == $file['name']) {
+                // image added. Return id.
+                return $pic['id'];
+            }
+        }
+        
+        // failed to add to database
+        return 0;
     }
 
 }

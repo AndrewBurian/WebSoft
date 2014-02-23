@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `users`
     `role`      VARCHAR(10)     NOT NULL,
     `email`     VARCHAR(40)     NOT NULL,
     `status`    VARCHAR(1)      NOT NULL,
-    `pic`       int(11)         NULL,
+    `pic`       int(11)         NOT NULL,
     PRIMARY KEY (`id`),
     CONSTRAINT fk_user_pic FOREIGN KEY (`pic`) REFERENCES images(`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -64,10 +64,10 @@ INSERT INTO `users` (`id`, `name`, `password`, `role`, `email`, `status`, `pic`)
 (1, 'ABurian', md5('AB'), 'admin', 'a@b.com', 'A', 0),
 (2, 'CHolisky', md5('CH'), 'user', 'c@h.com', 'A', 0);
 
-INSERT INTO `images` (`id`, `filename`, `author`, `date`, `caption`, `licence`, `thumbnail`, `file`) VALUES
-(1, 'img01.jpg', 'Who knows', '2014.09.3', 'A flower', 'CCL', 0, NULL),
-(2, 'img02.jpg', 'Who knows', '2014.09.2', 'A balloon', 'CCL', 0, NULL),
-(3, 'img03.jpg', 'Who knows', '2014.09.1', 'More than one balloon', 'CCL', 0, NULL);
+INSERT INTO `images` (`id`, `filename`, `author`, `date`, `caption`, `licence`, `thumbnail`) VALUES
+(1, 'img01.jpg', 'Who knows', '2014.09.3', 'A flower', 'CCL', 0),
+(2, 'img02.jpg', 'Who knows', '2014.09.2', 'A balloon', 'CCL', 0),
+(3, 'img03.jpg', 'Who knows', '2014.09.1', 'More than one balloon', 'CCL', 0);
 
 INSERT INTO `posts` (`id`, `user`, `title`, `slug`, `story`, `updated`, `created`, `pic`) VALUES
 (1,'1', 'The first pub', 'The waitresses were pretty but kinda slow.', '<p>Seriously, folks.  Why do so many places hire pretty girls that can pass light between their ears?</p>\r\n<p>If I want overpriced beer and pretty girls I don''t go to a pub, I go to Sammy J Peppers.</p>\r\n<p>Right now all I''m doing is filling space.</p>',  '2014.09.3',  '2014.09.3', 1),

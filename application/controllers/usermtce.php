@@ -42,27 +42,28 @@ class Usermtce extends Application {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a User";
         $this->data['pageDescrip'] = "Add user";
+        $this->data['pagebody'] = 'useredit';
 
         $user = (array) $this->users_dao->create();
         $this->data = array_merge($this->data, $user);
-        $this->data['id'] = 'new';
-         
+
+        $this->data['field_errors'] = $this->getErrors();
         $this->data['field_name'] = makeTextField('User Name', 'name', '');
         $this->data['field_password'] = makeTextField('Password', 'password', '');
         $this->data['field_password_new'] = '';
-        
+
         // See if the user is authorized to set a role
-        if($this->activeuser->isAuthorized(ROLE_ADMIN)){
+        if ($this->activeuser->isAuthorized(ROLE_ADMIN)) {
             $this->data['field_role'] = makeComboField('Role', 'role', ROLE_USER, $this->users_dao->allRoles);
-        } else{
+        } else {
             $this->data['field_role'] = makeComboField('Role', 'role', ROLE_USER, array(ROLE_USER), '', 40, 25, true);
         }
-        
+
         $this->data['field_email'] = makeTextField('Email', 'email', $user['email']);
-        $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A','D'), 'A- Active, D- Dormant', 1, 3);
+        $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
-        
+
         $this->render();
     }
 
@@ -74,31 +75,33 @@ class Usermtce extends Application {
 
         $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
-        $this->data['id'] = $user['id'];
         $this->data['pagebody'] = 'useredit';
-        
+
+        $this->data['field_errors'] = $this->getErrors();
         $this->data['field_name'] = makeTextField('User Name', 'name', $user['name']);
         $this->data['field_password'] = makePasswordField('Current Password', 'password', '', 'Required to make changes');
         $this->data['field_password_new'] = makePasswordField('New Password', 'newpassword', '', 'Leave this blank if you do not wish to change your password');
         // See if the user is authorized to set a role
-        if($this->activeuser->isAuthorized(ROLE_ADMIN)){
+        if ($this->activeuser->isAuthorized(ROLE_ADMIN)) {
             $this->data['field_role'] = makeComboField('Role', 'role', $user['role'], $this->users_dao->allRoles);
-        } else{
+        } else {
             $this->data['field_role'] = makeComboField('Role', 'role', $user['role'], array(ROLE_USER), '', 40, 25, true);
         }
         $this->data['field_email'] = makeTextField('Email', 'email', $user['email']);
-        $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A','D'), 'A- Active, D- Dormant', 1, 3);
+        $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
-        
+
         $this->render();
     }
 
     // Process an add/edit form submission
     function submit($id = null) {
+
+        $errors = array();
+
         // the form fields we are interested in
-        $user_fields = array('name', 'email', 'role', 'status',
-            'lastvisited');
+        $user_fields = array('name', 'role', 'email', 'status', 'pic');
 
         // either create or retrieve the relevant user record
         if ($id == null || $id == 'new') {
@@ -107,62 +110,86 @@ class Usermtce extends Application {
         } else {
             $user = $this->users_dao->get($id);
         }
-        
-        if(isset($_FILES['pic'])){
-            if(!$this->images_dao->safeAddFile($_FILES['pic'])){
-                // image failed to upload
-                redirect('/usermtce');
-                exit;
-                // should be handled better
-            }
-        }
-        
+
         // over-ride the user record fields with submitted values
         fieldExtract($_POST, $user, $user_fields);
 
-        // validate the user fields
-        if (empty($_POST['id'])) {
-            $this->data['errors'][] = 'You need to specify a userid';
+        $user = (array) $user;
+
+        if ($user['name'] == '') {
+            $errors[] = 'name';
         }
-        if ($_POST['id'] == 'new') {
-            $this->data['errors'][] = 'new is not a valid userid';
+        
+        if ($_POST['password'] == '') {
+            $errors[] = 'password';
+        } else {
+
+            // If they're editing a user, password required
+            if ($id != null) {
+                if (!$this->users_dao->authenticateUser($id, $_POST['password'])) {
+                    $errors[] = 'passchk';
+                } else {
+                    if (isset($_POST['password_new'])) {
+                        // their old password is correct and there is a new one
+                        $user['password'] = md5($_POST['password_new']);
+                    }
+                }
+            } else {
+                // new user, just accept new password
+                $user['password'] = md5($_POST['password']);
+            }
         }
-        if ($id == null && $this->users_dao->exists($_POST['id'])) {
-            $this->data['errors'][] = 'That userid is already used';
-        }
-        if (strlen($user->name) < 1) {
-            $this->data['errors'][] = 'You need a user name';
-        }
-        if (strlen($user->email) < 1) {
-            $this->data['errors'][] = 'You need an email address';
-        }
-        if (!strpos($user->email, '@')) {
-            $this->data['errors'][] = 'The email address is missing the domain';
+        switch ($user['role']) {
+            case 0:
+                $user['role'] = ROLE_USER;
+                break;
+            case 1:
+                $user['role'] = ROLE_ADMIN;
+                break;
+            case 2:
+                $user['role'] = ROLE_VISITOR;
+                break;
+            case 3:
+                $user['role'] = ROLE_GUEST;
+                break;
         }
 
-        // if errors, redisplay the form
-        if (count($this->data['errors']) > 0) {
-            // over-ride the view parameters to reflect our data
-            $this->data = array_merge($this->data, (array) $user);
-            $this->data['pagebody'] = 'useredit';
-            $this->render();
-            foreach ($this->data['errors'] as $booboo)
-                echo '<p>' . $booboo . '</p>';
+        switch ($user['status']) {
+            case 0: $user['status'] = 'A';
+                break;
+            case 1: $user['status'] = 'D';
+                break;
+        }
+
+        if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
+            $errors[] = 'email';
+        }
+
+        if ($user['pic'] == '') {
+            $user['pic'] = 0;
+        }
+
+        // only attempt to upload image if no other errors
+        if (count($errors) == 0) {
+            if ($_FILES['pic']['name'] != '') {
+                $imgid = $this->images_dao->addFile($_FILES['pic']);
+                if ($imgid == 0) {
+                    // image failed to upload
+                    $errors[] = 'pic';
+                } else {
+                    $user['pic'] = $imgid;
+                }
+            }
+        }
+
+        // if there are errors, redirect
+        if (count($errors) > 0) {
+            $this->redirectErrors($errors, $id);
             exit;
         }
-        // handle the password specially, as it needs to be encrypted
-        $new_password = $_POST['password'];
-        if (!empty($new_password)) {
-            $new_password = md5($new_password);
-            //  if ($new_password != $user['password'])
-            $user->password = $new_password;
-        }
-        if ($id == null && empty($user->password)) {
-            $this->data['errors'][] = 'You must specify a password';
-        }
+
         // either add or update the user record, as appropriate
         if ($id == null) {
-            $user->id = $_POST['id'];
             $this->users_dao->add($user);
         } else {
             $this->users_dao->update($user);
@@ -175,6 +202,51 @@ class Usermtce extends Application {
     function delete($id) {
         $this->users_dao->delete($id);
         $this->index();
+    }
+
+    function redirectErrors($errors, $id = null) {
+        $get = '?';
+        foreach ($errors as $error) {
+            $get .= $error . '=err&';
+        }
+        if ($id != null) {
+            redirect('/usermtce/edit/' . $id . $get);
+        } else {
+            redirect('/usermtce/add' . $get);
+        }
+    }
+
+    function getErrors() {
+        $result = '';
+        $viewParams = array();
+        $viewParams['error_msg'] = '';
+
+        if (isset($_GET['name'])) {
+            $viewParams['error_msg'] = 'Your name cannot be empty';
+            $result .= $this->parser->parse('error_fragment', $viewParams, true);
+        }
+
+        if (isset($_GET['password'])) {
+            $viewParams['error_msg'] = 'Your passowrd cannot be empty';
+            $result .= $this->parser->parse('error_fragment', $viewParams, true);
+        }
+
+        if (isset($_GET['email'])) {
+            $viewParams['error_msg'] = 'Your email is not valid';
+            $result .= $this->parser->parse('error_fragment', $viewParams, true);
+        }
+
+        if (isset($_GET['pic'])) {
+            $viewParams['error_msg'] = 'Your picture could not be uploaded. It may be too big or an unsupported format';
+            $result .= $this->parser->parse('error_fragment', $viewParams, true);
+        }
+
+        if (isset($_GET['passchk'])) {
+            $viewParams['error_msg'] = 'Your password is incorrect';
+            $result .= $this->parser->parse('error_fragment', $viewParams, true);
+        }
+
+        return $result;
     }
 
 }
