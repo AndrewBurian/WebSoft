@@ -24,6 +24,10 @@ class Posts extends _Mymodel {
         $query = $this->db->get($this->_tableName);
         return $query->result_array();
     }
+    
+    function add($params){
+        $this->create();
+    }
 
 }
 
