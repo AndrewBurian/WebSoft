@@ -7,6 +7,7 @@
             <span class="btn btn-file">
                 <span class="fileupload-new">Select image</span>
                 <span class="fileupload-exists">Change</span>
+                <input type="hidden" name="MAX_FILE_SIZE" value="900000" />
                 <input type="file" name="{name}"/>
             </span>
             <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>

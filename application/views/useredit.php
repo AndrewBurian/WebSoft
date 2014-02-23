@@ -19,10 +19,11 @@ if (isset($errors) && count($errors) > 0) {
     </div>
 <?php }
 ?>
-<form action="/usermtce/submit/{id}" method="post">
+<form enctype="multipart/form-data" action="/usermtce/submit/{id}" method="post">
     {field_errors}
     {field_name}
     {field_password}
+    {field_password_new}
     {field_role}
     {field_email}
     {field_status}

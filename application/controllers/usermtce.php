@@ -16,6 +16,7 @@ class Usermtce extends Application {
         parent::__construct();
         $this->activeuser->restrict(ROLE_ADMIN);
         $this->load->model('users_dao');
+        $this->load->model('images_dao');
     }
 
     //-------------------------------------------------------------
@@ -45,11 +46,10 @@ class Usermtce extends Application {
         $user = (array) $this->users_dao->create();
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = 'new';
-        $this->data['pagebody'] = 'useredit';
-        
          
         $this->data['field_name'] = makeTextField('User Name', 'name', '');
-        $this->data['field_password'] = makePasswordField('Password', 'password', '');
+        $this->data['field_password'] = makeTextField('Password', 'password', '');
+        $this->data['field_password_new'] = '';
         
         // See if the user is authorized to set a role
         if($this->activeuser->isAuthorized(ROLE_ADMIN)){
@@ -75,11 +75,11 @@ class Usermtce extends Application {
         $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = $user['id'];
-        $this->data['password'] = ''; // assume password to remain the same
         $this->data['pagebody'] = 'useredit';
         
         $this->data['field_name'] = makeTextField('User Name', 'name', $user['name']);
-        $this->data['field_password'] = makePasswordField('Password', 'password', '');
+        $this->data['field_password'] = makePasswordField('Current Password', 'password', '', 'Required to make changes');
+        $this->data['field_password_new'] = makePasswordField('New Password', 'newpassword', '', 'Leave this blank if you do not wish to change your password');
         // See if the user is authorized to set a role
         if($this->activeuser->isAuthorized(ROLE_ADMIN)){
             $this->data['field_role'] = makeComboField('Role', 'role', $user['role'], $this->users_dao->allRoles);
@@ -107,7 +107,16 @@ class Usermtce extends Application {
         } else {
             $user = $this->users_dao->get($id);
         }
-
+        
+        if(isset($_FILES['pic'])){
+            if(!$this->images_dao->safeAddFile($_FILES['pic'])){
+                // image failed to upload
+                redirect('/usermtce');
+                exit;
+                // should be handled better
+            }
+        }
+        
         // over-ride the user record fields with submitted values
         fieldExtract($_POST, $user, $user_fields);
 
