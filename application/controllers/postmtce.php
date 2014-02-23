@@ -16,7 +16,8 @@ class Postmtce extends Application {
 
     function __construct() {
         parent::__construct();
-        $this->activeuser->restrict(ROLE_USER || ROLE_ADMIN);
+        $this->activeuser->restrict(array(ROLE_USER, ROLE_ADMIN));
+        $this->load->model('images_dao');
     }
 
     //-------------------------------------------------------------
@@ -29,6 +30,9 @@ class Postmtce extends Application {
         $this->data['pageDescrip'] = "Post maintenance functions";
 
         $posts = $this->posts->getAll_array();
+        foreach ($posts as &$post) {
+            $post['picname'] = $this->images_dao->getName($post['pic']);
+        }
         $this->data['posts'] = $posts;
         $this->data['pagebody'] = 'postlist';
         $this->render();
@@ -47,6 +51,14 @@ class Postmtce extends Application {
         $this->data = array_merge($this->data, $posting);
         $this->data['uid'] = 'new';
         $this->data['pagebody'] = 'postedit';
+
+        $this->data['field_pic'] = makeImageUploader('Thumbnail', 'pic', '');
+        $this->data['field_title'] = makeTextField('Post Title', 'title', $posting['title'], 'Title of the post');
+        $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting');
+        $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
+        $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
+
         $this->render();
     }
 
@@ -58,52 +70,44 @@ class Postmtce extends Application {
 
         $posting = (array) $this->posts->get($uid);
         $this->data = array_merge($this->data, $posting);
-        $this->data['uid'] = $posting['uid'];
+        $this->data['id'] = $posting['id'];
         $this->data['pagebody'] = 'postedit';
+        $this->data['field_pic'] = makeImageUploader('Thumbnail', 'pic', 'Leave blank to use existing');
+        $this->data['field_title'] = makeTextField('Post Title', 'title', $posting['title'], 'Title of the post');
+        $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting', 10, TRUE);
+        $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
+        $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->render();
     }
 
     // Process an add/edit form submission
-    function submit($uid = null) {
+    function submit($id = null) {
         // the form fields we are interested in
-        $post_fields = array('thumb', 'ptitle', 'pdate', 'slug', 'story');
-
+        $post_fields = array('id', 'user', 'title', 'slug', 'story', 'created', 'updated', 'pic');
+        $posting = array();
+        
         // either create or retrieve the relevant user record
-        if ($uid == null || $uid == 'new')
-            $posting = $this->posts->create();
-        else
-            $posting = $this->posts->get($uid);
+        if ($id == null || $id == 'new') {
+            $id = 'new';
+            $posting = (array)$this->posts->create();
+        } else {
+            $posting = (array)$this->posts->get($id);
+        }
 
         // over-ride the user record fields with submitted values
         fieldExtract($_POST, $posting, $post_fields);
-
-        // validate the posting fields
-//        if ($_POST['id'] == 'new' || empty($_POST['id']))
-//            $this->data['errors'][] = 'You need to specify a userid';
-//        if ($id == null && $this->users->exists($_POST['id']))
-//            $this->data['errors'][] = 'That userid is already used';
-//        if (strlen($user->name) < 1)
-//            $this->data['errors'][] = 'You need a user name';
-//        if (strlen($user->email) < 1)
-//            $this->data['errors'][] = 'You need an email address';
-//        if (!strpos($user->email, '@'))
-//            $this->data['errors'][] = 'The email address is missing the domain';
-//        if ($id == null && empty($user->password))
-//            $this->data['errors'][] = 'You must specify a password';
-        // if errors, redisplay the form
-        if (count($this->data['errors']) > 0) {
-            // over-ride the view parameters to reflect our data
-            $this->data = array_merge($this->data, (array) $posting);
-            $this->data['pagebody'] = 'postedit';
-            $this->render();
-            exit;
+        
+        if(!isset($posting['user'])){
+            $posting['user'] = $this->activeuser->getID();
         }
 
         // either add or update the posting record, as appropriate
-        if ($uid == 'new') {
+        if ($id == 'new') {
             $this->posts->add($posting);
-        } else
+        } else {
             $this->posts->update($posting);
+        }
 
         // redisplay the list of users
         redirect('/postmtce');
