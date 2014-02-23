@@ -15,6 +15,7 @@ class Usermtce extends Application {
     function __construct() {
         parent::__construct();
         $this->activeuser->restrict(ROLE_ADMIN);
+        $this->load->model('users_dao');
     }
 
     //-------------------------------------------------------------
@@ -45,6 +46,23 @@ class Usermtce extends Application {
         $this->data = array_merge($this->data, $user);
         $this->data['id'] = 'new';
         $this->data['pagebody'] = 'useredit';
+        
+         
+        $this->data['field_name'] = makeTextField('User Name', 'name', '');
+        $this->data['field_password'] = makePasswordField('Password', 'password', '');
+        
+        // See if the user is authorized to set a role
+        if($this->activeuser->isAuthorized(ROLE_ADMIN)){
+            $this->data['field_role'] = makeComboField('Role', 'role', ROLE_USER, $this->users_dao->allRoles);
+        } else{
+            $this->data['field_role'] = makeComboField('Role', 'role', ROLE_USER, array(ROLE_USER), '', 40, 25, true);
+        }
+        
+        $this->data['field_email'] = makeTextField('Email', 'email', $user['email']);
+        $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A','D'), 'A- Active, D- Dormant', 1, 3);
+        $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
+        $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        
         $this->render();
     }
 
@@ -59,6 +77,20 @@ class Usermtce extends Application {
         $this->data['id'] = $user['id'];
         $this->data['password'] = ''; // assume password to remain the same
         $this->data['pagebody'] = 'useredit';
+        
+        $this->data['field_name'] = makeTextField('User Name', 'name', $user['name']);
+        $this->data['field_password'] = makePasswordField('Password', 'password', '');
+        // See if the user is authorized to set a role
+        if($this->activeuser->isAuthorized(ROLE_ADMIN)){
+            $this->data['field_role'] = makeComboField('Role', 'role', $user['role'], $this->users_dao->allRoles);
+        } else{
+            $this->data['field_role'] = makeComboField('Role', 'role', $user['role'], array(ROLE_USER), '', 40, 25, true);
+        }
+        $this->data['field_email'] = makeTextField('Email', 'email', $user['email']);
+        $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A','D'), 'A- Active, D- Dormant', 1, 3);
+        $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
+        $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        
         $this->render();
     }
 
