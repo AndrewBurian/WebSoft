@@ -14,7 +14,7 @@ class Posts extends _Mymodel {
     // Constructor
     function __construct() {
         parent::__construct();
-        $this->setTable('posts', 'uid');
+        $this->setTable('posts', 'id');
     }
 
     // Return the latest 3 posts, in revverse order (newest first)
@@ -23,6 +23,10 @@ class Posts extends _Mymodel {
         $this->db->limit(3);
         $query = $this->db->get($this->_tableName);
         return $query->result_array();
+    }
+    
+    function add($params){
+        $this->create();
     }
 
 }

@@ -58,7 +58,7 @@ class Postmtce extends Application {
 
         $posting = (array) $this->posts->get($uid);
         $this->data = array_merge($this->data, $posting);
-        $this->data['uid'] = $posting['uid'];
+        $this->data['id'] = $posting['id'];
         $this->data['pagebody'] = 'postedit';
         $this->data['field_thumbnail'] = makeImageUploader('Thumbnail', 'pthumb', 'Leave blank to use existing');
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
