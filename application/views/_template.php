@@ -19,9 +19,11 @@ if (!defined('APPPATH'))
         <link href="/assets/images/icons/favicon.ico" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" media="screen"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/> 
+        {caboose_styles}
+        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/assets/css/jasny-bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
-
+        
     </head>
     <body>
         <div id="wrapper">
@@ -77,5 +79,9 @@ if (!defined('APPPATH'))
         </div>
         <script src="/assets/js/jquery.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/bootstrap-datepicker.js"></script>
+        <script src="/assets/js/jasny-bootstrap.min.js"></script>
+        {caboose_scripts}
+        {caboose_trailings}
     </body>
 </html>

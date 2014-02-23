@@ -31,3 +31,10 @@ if (isset($errors) && count($errors) > 0) {
     {field_submit_btn}
 </form>
 
+<script>
+    $(function(){
+        $('.datepicker').datepicker({
+            format: 'yyyy-mm-dd'
+        });
+    });
+</script>
