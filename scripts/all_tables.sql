@@ -1,7 +1,7 @@
-DROP TABLE `images`;
-DROP TABLE `users`;
-DROP TABLE `posts`;
-DROP TABLE `comments`;
+DROP TABLE IF EXISTS `images`;
+DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `posts`;
+DROP TABLE IF EXISTS `comments`;
 
 CREATE TABLE IF NOT EXISTS `images`
 (
