@@ -18,8 +18,8 @@
         {posts}
         <tr>
             <td>
-                <a href="/postmtce/edit/{uid}"><input type="button" value="Edit"></input></a>
-                <a href="/postmtce/delete/{uid}"><input type="button" value="Delete"></input></a>
+                <a href="/postmtce/edit/{id}"><input type="button" value="Edit"></input></a>
+                <a href="/postmtce/delete/{id}"><input type="button" value="Delete"></input></a>
              <!--  <a class="btn btn-mini" href="/usermtce/delete/{id}"><i  class="icon-trash"></i></a></td> -->
             </td>
             <td>{uid}</td>
