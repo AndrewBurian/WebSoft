@@ -45,7 +45,7 @@ class Login extends Application {
                 $this->activeuser->login($userID, $_POST['username'], $this->users_dao->getUserRole($userID));
             }
         }
-        redirect('/');
+        redirect("/");
     }
 
 }

@@ -114,7 +114,7 @@ class Postmtce extends Application {
             $this->posts->update($posting);
         }
 
-        // redisplay the list of posts
+        // redisplay the list of users
         redirect("/postmtce");
     }
 
