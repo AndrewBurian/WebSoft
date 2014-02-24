@@ -14,6 +14,7 @@ class Users_dao extends _Mymodel {
     function __construct() {
         parent::__construct();
         $this->setTable('users', 'id');
+        $this->allRoles = array(ROLE_USER, ROLE_ADMIN, ROLE_VISITOR, ROLE_GUEST);
     }
 
     function authenticateUser($userID, $password) {

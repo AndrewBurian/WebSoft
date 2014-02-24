@@ -55,7 +55,7 @@ $autoload['packages'] = array();
   |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
  */
 
-$autoload['libraries'] = array('database', 'parser', 'session');
+$autoload['libraries'] = array('database', 'parser', 'session', 'caboose');
 
 
 /*
@@ -67,7 +67,7 @@ $autoload['libraries'] = array('database', 'parser', 'session');
   |	$autoload['helper'] = array('url', 'file');
  */
 
-$autoload['helper'] = array('url', 'display', 'common');
+$autoload['helper'] = array('url', 'display', 'common', 'formfields');
 
 
 /*
@@ -112,7 +112,7 @@ $autoload['language'] = array();
   |
  */
 
-$autoload['model'] = array('_mymodel', '_mymodel2', 'posts', 'media', 'activeuser', 'users_dao');
+$autoload['model'] = array('_mymodel', '_mymodel2', 'posts', 'media', 'activeuser', 'users_dao','images_dao');
 
 
 /* End of file autoload.php */

@@ -18,13 +18,16 @@ class Activeuser extends _Mymodel {
 
     function buildLoginBar() {
         $result = "";
-        if ($this->session->userdata('id') == null) {
-            // return login bar
-            $result .= '<a href="/login"><input type = "button" value="Log In"></input></a>';
+        $viewParams = array();
+        if ($this->isLoggedIn()) {
+            // return user bar
+            $viewParams['user_name'] = $this->getName();
+            $viewParams['logout_btn'] = makeLinkButton('Logout', '/logout', 'logout');
+            $result .= $this->parser->parse('login/_userBar', $viewParams, true);
         } else {
-            $name = $this->session->userdata('username');
-            // return login name and logout button
-            $result.='<a>' . $name . ' |</a><a href="/logout"><input type="button" value="Log Out"></input></a>';
+            // return login bar
+            $viewParams['login_btn'] = makeLinkButton('Login', '/login', 'login');
+            $result .= $this->parser->parse('login/_loginBar', $viewParams, true);
         }
 
         return $result;
@@ -33,7 +36,11 @@ class Activeuser extends _Mymodel {
     function getID() {
         return $this->session->userdata('id');
     }
-
+   
+    function GetRole() {
+        return $this->session->userdata('role');
+    }
+    
     function getName() {
         return $this->session->userdata('username');
     }
