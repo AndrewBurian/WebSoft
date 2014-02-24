@@ -13,25 +13,25 @@ class Images_dao extends _Mymodel {
 
     function __construct() {
         parent::__construct();
-        $this->setTable('images', 'id');
+        $this->setTable('images', 'iid');
     }
 
-    function getName($id) {
+    function getName($iid) {
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
-            if ($pic['id'] == $id) {
+            if ($pic['iid'] == $iid) {
                 return $pic['filename'];
             }
         }
         return NULL;
     }
 
-    function getPath($id) {
+    function getPath($iid) {
         $result = "/data/images/";
         $found = false;
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
-            if ($pic['id'] == $id) {
+            if ($pic['iid'] == $iid) {
                 $result .= $pic['filename'];
                 $found = true;
             }
@@ -43,10 +43,10 @@ class Images_dao extends _Mymodel {
         return $result;
     }
 
-    function getCaption($id) {
+    function getCaption($iid) {
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
-            if ($pic['id'] == $id) {
+            if ($pic['iid'] == $iid) {
                 return $pic['caption'];
             }
         }
@@ -54,10 +54,10 @@ class Images_dao extends _Mymodel {
         return "Not Found";
     }
 
-    function getDate($id) {
+    function getDate($iid) {
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
-            if ($pic['id'] == $id) {
+            if ($pic['iid'] == $iid) {
                 return $pic['date'];
             }
         }
@@ -138,7 +138,7 @@ class Images_dao extends _Mymodel {
         foreach ($allImages as $pic) {
             if ($pic['filename'] == $file['name']) {
                 // image added. Return id.
-                return $pic['id'];
+                return $pic['iid'];
             }
         }
         

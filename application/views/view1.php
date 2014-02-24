@@ -19,13 +19,13 @@ if (!defined('APPPATH'))
 <h1>{ptitle}</h1>
 <div class="row-fluid">
     <div class="span12">
-        #{uid} <a href="/view/post/{uid}">{ptitle}</a> {pdate} {tags}<br/>
         <div class="right">
-            {media}
-            <a href="/assets/images/other/{filename}"><img src="/assets/images/other/{thumbnail}" title="{caption}"/></a>
-            {/media}
+            #{pid} <a href="/view/post/{pid}">{ptitle}</a> {updated}<br/>
+            <div>
+                <a href="{img_src}"><img src="{img_src}" title="{caption}"/></a><br/>
+            </div>
         </div>
         <h4>{slug}</h4>
-        <p>{story}</p>
+        <p>{story}</p> 
     </div>
 </div>

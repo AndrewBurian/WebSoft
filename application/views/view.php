@@ -20,7 +20,7 @@ if (!defined('APPPATH'))
 {posts}
 <div class="row-fluid">
     <div class="span12">
-        #{uid} <a href="/view/post/{uid}">{ptitle}</a> {pdate} {tags}<br/>
+        #{pid} <a href="/view/post/{pid}">{ptitle}</a> {updated}<br/>
         <p>{slug}</p>
     </div>
 </div>
