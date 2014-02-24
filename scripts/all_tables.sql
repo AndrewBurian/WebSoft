@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `posts`;
 DROP TABLE IF EXISTS `comments`;
 DROP TABLE IF EXISTS `ci_sessions`;
-DROP TABLE IF EXISTS `media`
+DROP TABLE IF EXISTS `media`;
 
 
 -- To-do: Create thumbnails table
@@ -23,14 +23,12 @@ CREATE TABLE IF NOT EXISTS `images`
     `iid`       INTEGER(18)     NOT NULL    AUTO_INCREMENT,
     `filename`  VARCHAR(64)     NOT NULL    UNIQUE,
     `author`    VARCHAR(64)     NULL,
-    `date`      DATETIME        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `date`      TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     `caption`   VARCHAR(256)    NOT NULL,
     `licence`   VARCHAR(64)     NULL,
     `thumbnail` int(11)         NULL,
-  --`file`      LONGBLOB        NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`iid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
 
 
 CREATE TABLE IF NOT EXISTS `users`
@@ -53,19 +51,19 @@ CREATE TABLE IF NOT EXISTS `posts`
     `ptitle`    VARCHAR(80)     NOT NULL    UNIQUE,
     `slug`      VARCHAR(100)    NOT NULL,
     `story`     TEXT            NULL,
-    `created`   DATETIME        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `created`   TIMESTAMP        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     `updated`   TIMESTAMP       NOT NULL,
     `pic`       INT(11)         NOT NULL,
-    PRIMARY KEY (`id`),
+    PRIMARY KEY (`pid`),
     CONSTRAINT fk_user FOREIGN KEY (`user`) REFERENCES users(`id`),
-    CONSTRAINT fk_pic FOREIGN KEY(`pic`) REFERENCES images(`id`)
+    CONSTRAINT fk_pic FOREIGN KEY(`pic`) REFERENCES images(`iid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `comments`
 (
     `post`      INTEGER(18)     NOT NULL,
     `user`      VARCHAR(18)     NOT NULL,
-    `time`      DATETIME        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `time`      TIMESTAMP        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     `comment`   TEXT            NULL,
     PRIMARY KEY (`post`, `user`, `time`),
     CONSTRAINT fk_user FOREIGN KEY (`user`) REFERENCES users(`id`),
