@@ -4,13 +4,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/models/images_dao.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/models/activeuser.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/scripts/all_tables.sql</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/views/_fields/image_upload.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/controllers/usermtce.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/models/users_dao.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/views/useredit.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/images_dao.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/welcome.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/core/MY_Controller.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/_mymodel.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/view.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/posts.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/users_dao.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/view.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/view1.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/config/autoload.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/media.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/welcome.php</file>
         </group>
     </open-files>
 </project-private>
