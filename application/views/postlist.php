@@ -18,12 +18,16 @@
         {posts}
         <tr>
             <td>
-                <a href="/postmtce/edit/{id}"><input type="button" value="Edit"></input></a>
-                <a href="/postmtce/delete/{id}"><input type="button" value="Delete"></input></a>
+                <!--
+                <a href="/postmtce/edit/{pid}"><input type="button" value="Edit"></input></a>
+                <a href="/postmtce/delete/{pid}"><input type="button" value="Delete"></input></a>
+                -->
+                {post_edit}
+                {post_delete}
             </td>
-            <td>{id}</td>
+            <td>{pid}</td>
             <td>{picname}</td>
-            <td>{title}</td>
+            <td>{ptitle}</td>
             <td>{updated}</td>
             <td>{slug}</td>
             <td>{story}</td>
@@ -32,5 +36,8 @@
     </table>
 </div>
 <div>
+    <!--
     <a href="/postmtce/add"><input type="button" value="Add a new post"></input></a>
+    -->
+    {post_add}
 </div>

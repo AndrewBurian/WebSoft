@@ -32,9 +32,14 @@ class Postmtce extends Application {
         $posts = $this->posts->getAll_array();
         foreach ($posts as &$post) {
             $post['picname'] = $this->images_dao->getName($post['pic']);
+            $this->data['post_edit'] = makeLinkButton('Edit', '/postmtce/edit/{pid}', 'Edit');
+            $this->data['post_delete'] = makeLinkButton('Delete', '/postmtce/delete/{pid}', 'Delete');
         }
         $this->data['posts'] = $posts;
         $this->data['pagebody'] = 'postlist';
+
+        $this->data['post_add'] = makeLinkButton('Add a post', '/postmtce/add', 'Add a post');
+
         $this->render();
     }
 
@@ -49,11 +54,11 @@ class Postmtce extends Application {
 
         $posting = (array) $this->posts->create();
         $this->data = array_merge($this->data, $posting);
-        $this->data['uid'] = 'new';
+        $this->data['pid'] = 'new';
         $this->data['pagebody'] = 'postedit';
 
         $this->data['field_pic'] = makeImageUploader('Thumbnail', 'pic', '');
-        $this->data['field_title'] = makeTextField('Post Title', 'title', $posting['title'], 'Title of the post');
+        $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting');
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
         $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
@@ -63,17 +68,17 @@ class Postmtce extends Application {
     }
 
     // Request a post edit
-    function edit($uid) {
+    function edit($pid) {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a Posting";
         $this->data['pageDescrip'] = "Edit post";
 
-        $posting = (array) $this->posts->get($uid);
+        $posting = (array) $this->posts->get($pid);
         $this->data = array_merge($this->data, $posting);
-        $this->data['id'] = $posting['id'];
+        $this->data['pid'] = $posting['pid'];
         $this->data['pagebody'] = 'postedit';
         $this->data['field_pic'] = makeImageUploader('Thumbnail', 'pic', 'Leave blank to use existing');
-        $this->data['field_title'] = makeTextField('Post Title', 'title', $posting['title'], 'Title of the post');
+        $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting', 10, TRUE);
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
         $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
@@ -82,28 +87,28 @@ class Postmtce extends Application {
     }
 
     // Process an add/edit form submission
-    function submit($id = null) {
+    function submit($pid = null) {
         // the form fields we are interested in
-        $post_fields = array('id', 'user', 'title', 'slug', 'story', 'created', 'updated', 'pic');
+        $post_fields = array('pid', 'user', 'ptitle', 'slug', 'story', 'created', 'updated', 'pic');
         $posting = array();
-        
+
         // either create or retrieve the relevant user record
-        if ($id == null || $id == 'new') {
-            $id = 'new';
-            $posting = (array)$this->posts->create();
+        if ($pid == null || $pid == 'new') {
+            $pid = 'new';
+            $posting = (array) $this->posts->create();
         } else {
-            $posting = (array)$this->posts->get($id);
+            $posting = (array) $this->posts->get($pid);
         }
 
         // over-ride the user record fields with submitted values
         fieldExtract($_POST, $posting, $post_fields);
-        
-        if(!isset($posting['user'])){
+
+        if (!isset($posting['user'])) {
             $posting['user'] = $this->activeuser->getID();
         }
 
         // either add or update the posting record, as appropriate
-        if ($id == 'new') {
+        if ($pid == 'new') {
             $this->posts->add($posting);
         } else {
             $this->posts->update($posting);
@@ -114,8 +119,8 @@ class Postmtce extends Application {
     }
 
     // Delete a posting
-    function delete($uid) {
-        $this->posts->delete($uid);
+    function delete($pid) {
+        $this->posts->delete($pid);
         $this->index();
     }
 

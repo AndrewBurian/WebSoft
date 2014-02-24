@@ -29,8 +29,16 @@ class Usermtce extends Application {
         $this->data['pageDescrip'] = "User maintenance functions";
 
         $users = $this->users_dao->getAll_array();
+        foreach ($users as &$user) {
+            $this->data['user_edit'] = makeLinkButton('Edit', '/usermtce/edit/{id}', 'Edit');
+            $this->data['user_delete'] = makeLinkButton('Delete', '/usermtce/delete/{id}', 'Delete');
+        }
+
         $this->data['users'] = $users;
         $this->data['pagebody'] = 'userlist';
+
+        $this->data['user_add'] = makeLinkButton('Add a user', '/usermtce/add', 'Add a user');
+
         $this->render();
     }
 
@@ -71,7 +79,7 @@ class Usermtce extends Application {
     function edit($id) {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a User";
-        $this->data['pageDescrip'] = "Edt user";
+        $this->data['pageDescrip'] = "Edit user";
 
         $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
@@ -119,7 +127,7 @@ class Usermtce extends Application {
         if ($user['name'] == '') {
             $errors[] = 'name';
         }
-        
+
         if ($_POST['password'] == '') {
             $errors[] = 'password';
         } else {

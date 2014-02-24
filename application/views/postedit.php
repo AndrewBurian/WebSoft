@@ -22,7 +22,7 @@ if (isset($errors) && count($errors) > 0) {
 ?>
 
 
-<form action="/postmtce/submit/{id}" method="post">
+<form action="/postmtce/submit/{pid}" method="post">
     {field_pic}<br/>
     {field_title}<br/>
     {field_date}<br/>
