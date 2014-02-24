@@ -120,6 +120,8 @@ class Usermtce extends Application {
             $errors[] = 'name';
         }
         
+        $user['name'] = htmlspecialchars($user['name']);
+        
         if ($_POST['password'] == '') {
             $errors[] = 'password';
         } else {
@@ -164,6 +166,8 @@ class Usermtce extends Application {
         if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = 'email';
         }
+        
+        $user['email'] = htmlspecialchars($user['email']);
 
         if ($user['pic'] == '') {
             $user['pic'] = 0;

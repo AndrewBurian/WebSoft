@@ -23,7 +23,7 @@
             </td>
             <td>{id}</td>
             <td>{picname}</td>
-            <td>{title}</td>
+            <td>{ptitle}</td>
             <td>{updated}</td>
             <td>{slug}</td>
             <td>{story}</td>
