@@ -14,7 +14,7 @@ class Media extends _Mymodel2 {
     // Constructor
     function __construct() {
         parent::__construct();
-        $this->setTable('media', 'uid', 'filename');
+        $this->setTable('images', 'iid');
     }
 
 }

@@ -23,7 +23,13 @@ class Welcome extends Application {
         $this->data['pageTitle'] = 'Recent articles';
         $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
         $this->data['pagebody'] = 'welcome';
-        $this->data['posts'] = $this->posts->newest();
+        $latest = $this->posts->newest();
+        foreach ($latest as &$post) {
+            $post['img_src'] = $this->images_dao->getPath($post['pic']);
+            $post['caption'] = $this->images_dao->getCaption($post['pic']);
+        }
+        $this->data['posts'] = $latest;
+
         $this->render();
     }
 

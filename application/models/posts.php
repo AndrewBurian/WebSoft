@@ -14,7 +14,7 @@ class Posts extends _Mymodel {
     // Constructor
     function __construct() {
         parent::__construct();
-        $this->setTable('posts', 'id');
+        $this->setTable('posts', 'pid');
     }
 
     // Return the latest 3 posts, in revverse order (newest first)

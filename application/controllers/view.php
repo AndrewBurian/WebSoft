@@ -32,13 +32,13 @@ class View extends Application {
         $record = (array) $this->posts->get($which);
         $this->data = array_merge($this->data, $record);
 
-        //Get associated media
-        $media = $this->media->querySomeMore('uid', $which);
-        $this->data['media'] = $media;
+        //get associated images
+       $this->data['img_src'] = $this->images_dao->getPath($which);
+       $this->data['caption'] = $this->images_dao->getCaption($which);
 
         //the rest of the page
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Post #" . $record['uid'] . ' ' . $record['ptitle'];
+        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Post #" . $record['pid'] . ' ' . $record['ptitle'];
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->data['pagebody'] = 'view1';
         $this->render();

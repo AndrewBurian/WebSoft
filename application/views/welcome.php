@@ -27,15 +27,12 @@ if (!defined('APPPATH'))
 -->
 <div>
     {posts}
-    <!--
-        <div class="span4">
-    -->
     <div class="span4">
-        <a href="/view/post/{uid}"><img src="/assets/images/thumbs/{thumb}"/></a><br/>
+        <a href="/view/post/{pid}"><img src="{img_src}" title="{caption}"/></a><br/>
         <h4>{ptitle}</h4>
-        <p>{pdate} {tags}</p>
+        <p>{updated}</p>
         <p>{slug}</p>
-        <p><a href="/view/post/{uid}">Read more...</a></p>
+        <p><a href="/view/post/{pid}">Read more...</a></p>
     </div>
     {/posts}
 </div>
