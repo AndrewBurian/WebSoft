@@ -43,3 +43,37 @@ Added supplied models/posts and models/media files
 Modified views/view, controlers/view and added views/view1 to show posts from database
 Modified controllers/welcome to use posts from database
 Shed several tears
+
+----------------------------------------------------------------------------------------
+
+Lab 6 Updates
+Added
+    Models:         users_dao, activeuser
+    Controllers:    login, logout, postmtce, usermtce
+    Database:       users, ci_session
+
+Modified:
+    Models:         _mymodel
+    Controllers:    MY_Controller
+
+activeuser is a wrapper for all things session related
+post and user maintenance are accessible to admin,
+post is accessible to user,
+user roles exist for guest and visitor, but currently have no application
+logout controller could be made to show a logout page, but for now just redirects
+
+changed _mymodel get_array($key) to use ->get rather than ->query
+added some more base functionality to MY_Controller for login and such
+
+shed less tears than last time
+
+----------------------------------------------------------------------------------------
+
+Lab7 Updates
+Bootstrap integrated into the framework.
+Field level templating incorporated into controllers.
+Database rebuilt for better functionality.
+Added images model for access to images.
+Added accounts page as a starting point for later profile development.
+Date picker added to post maintenance.
+Image uploaded added to both post maintenance and user maintenance. 
