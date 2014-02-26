@@ -17,6 +17,8 @@ class Postmtce extends Application {
     function __construct() {
         parent::__construct();
         $this->activeuser->restrict(array(ROLE_USER, ROLE_ADMIN));
+        $this->load->model('posts');
+        $this->load->model('images_dao');
     }
 
     //-------------------------------------------------------------

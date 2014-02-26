@@ -6,8 +6,6 @@
  */
 class Login extends Application {
 
-    private $users_dao;
-
     function __construct() {
        
         parent::__construct();

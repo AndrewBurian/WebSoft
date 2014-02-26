@@ -69,12 +69,12 @@ class Images_dao extends _Mymodel {
         try {
 
             // Undefined | Multiple Files | $_FILES Corruption Attack
-            // If this request falls under any of them, treat it invalid.
+            // If this request falls under any of them, treat it invaliid.
             if (
                     !isset($file['error']) ||
                     is_array($file['error'])
             ) {
-                throw new RuntimeException('Invalid parameters.');
+                throw new RuntimeException('Invaliid parameters.');
             }
 
             // Check $_FILES['upfile']['error'] value.
@@ -105,7 +105,7 @@ class Images_dao extends _Mymodel {
               'gif' => 'image/gif',
               ), true
               )) {
-              throw new RuntimeException('Invalid file format.');
+              throw new RuntimeException('Invaliid file format.');
               } */
             $ext = substr($file['type'], 6);
 
@@ -137,7 +137,7 @@ class Images_dao extends _Mymodel {
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
             if ($pic['filename'] == $file['name']) {
-                // image added. Return id.
+                // image added. Return iid.
                 return $pic['iid'];
             }
         }
