@@ -29,4 +29,5 @@ if (isset($errors) && count($errors) > 0) {
     {field_slug}<br/>
     {field_story}<br/>
     {field_submit_btn}
+    {cancel}
 </form>

@@ -23,7 +23,7 @@ if (!defined('APPPATH'))
         <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/jasny-bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
-        
+
     </head>
     <body>
         <div id="wrapper">

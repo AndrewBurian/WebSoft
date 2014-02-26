@@ -39,5 +39,5 @@
     <!--
     <a href="/postmtce/add"><input type="button" value="Add a new post"></input></a>
     -->
-    {post_add}
+    {post_add}{cancel}
 </div>

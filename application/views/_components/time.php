@@ -1,3 +1,3 @@
 $('#{field}').timepicker(
-    {template:false,showMeridian:false}
+{template:false,showMeridian:false}
 );

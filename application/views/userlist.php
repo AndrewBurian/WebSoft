@@ -33,7 +33,7 @@
     </table>
 </div>
 <div>
-    {user_add}
+    {user_add}{cancel}
     <!--
     <a href="/usermtce/add"><input type="button" value="Add a new user"></input></a>
     -->

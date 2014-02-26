@@ -38,12 +38,13 @@ class AccountMan extends Application {
             $result .= $this->parser->parse("/management/_admin", $this->data, true);
         }
         if ($this->activeuser->isAuthorized(ROLE_USER || ROLE_ADMIN)) {
-            
+
             $this->data['postMan'] = makeLinkButton('Post Management', "/postmtce", 'Post Management');
             $result .= $this->parser->parse('management/_user', $this->data, true);
         }
         return $result;
     }
+
 }
 
 /* End of file welcome.php */

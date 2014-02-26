@@ -30,5 +30,6 @@ if (isset($errors) && count($errors) > 0) {
     {field_pic}
     <br/><br/>
     {field_submit_btn}
+    {cancel}
 </form>
 

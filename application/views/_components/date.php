@@ -1,4 +1,4 @@
 $('#{field}').datepicker({
-    format: 'yyyy-mm-dd',
-    todayBtn: 'linked'
+format: 'yyyy-mm-dd',
+todayBtn: 'linked'
 });

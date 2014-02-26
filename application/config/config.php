@@ -31,7 +31,7 @@ $config['menu_choices'] = array(
  */
 $config['base_url'] = '';
 if ($_SERVER['SERVER_NAME'] == 'vancouverpubreviews.bcitxml.com') {
-   $config['base_url'] = 'http://vancouverpubreviews.bcitxml.com/';
+    $config['base_url'] = 'http://vancouverpubreviews.bcitxml.com/';
 }
 
 /*

@@ -38,6 +38,7 @@ class Usermtce extends Application {
         $this->data['pagebody'] = 'userlist';
 
         $this->data['user_add'] = makeLinkButton('Add a user', '/usermtce/add', 'Add a user');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/accountMan", 'Cancel');
 
         $this->render();
     }
@@ -71,6 +72,7 @@ class Usermtce extends Application {
         $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/usermtce", 'Cancel');
 
         $this->render();
     }
@@ -99,6 +101,7 @@ class Usermtce extends Application {
         $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/usermtce", 'Cancel');
 
         $this->render();
     }

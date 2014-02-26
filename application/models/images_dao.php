@@ -97,26 +97,26 @@ class Images_dao extends _Mymodel {
 
             // DO NOT TRUST $_FILES['upfile']['mime'] VALUE !!
             // Check MIME Type by yourself.
-            /*$finfo = new finfo(FILEINFO_MIME_TYPE);
-            if (false === $ext = array_search(
-                    $finfo->file($file['tmp_name']), array(
-                'jpg' => 'image/jpeg',
-                'png' => 'image/png',
-                'gif' => 'image/gif',
-                    ), true
-                    )) {
-                throw new RuntimeException('Invalid file format.');
-            }*/
+            /* $finfo = new finfo(FILEINFO_MIME_TYPE);
+              if (false === $ext = array_search(
+              $finfo->file($file['tmp_name']), array(
+              'jpg' => 'image/jpeg',
+              'png' => 'image/png',
+              'gif' => 'image/gif',
+              ), true
+              )) {
+              throw new RuntimeException('Invalid file format.');
+              } */
             $ext = substr($file['type'], 6);
 
             // You should name it uniquely.
             // DO NOT USE $_FILES['upfile']['name'] WITHOUT ANY VALIDATION !!
             // On this example, obtain safe unique name from its binary data.
-            /*if (!move_uploaded_file(
-                            $file['tmp_name'], sprintf('/data/images/%s.%s', sha1_file($file['tmp_name']), $ext
-                            )
-                    )) {*/
-            if(!move_uploaded_file($file['tmp_name'], 'data/images/' . $file['name'])){
+            /* if (!move_uploaded_file(
+              $file['tmp_name'], sprintf('/data/images/%s.%s', sha1_file($file['tmp_name']), $ext
+              )
+              )) { */
+            if (!move_uploaded_file($file['tmp_name'], 'data/images/' . $file['name'])) {
                 throw new RuntimeException('Failed to move uploaded file.');
             }
 
@@ -126,14 +126,14 @@ class Images_dao extends _Mymodel {
             // image failed to add
             return 0;
         }
-        
+
         $Imgdata = array();
         $Imgdata['caption'] = $file['tmp_name'];
-        $Imgdata['filename'] = $file['name'];//sprintf('/data/images/%s.%s', sha1_file($file['tmp_name']), $ext);
+        $Imgdata['filename'] = $file['name']; //sprintf('/data/images/%s.%s', sha1_file($file['tmp_name']), $ext);
         $Imgdata['author'] = $this->activeuser->getName();
-        
+
         $this->add($Imgdata);
-        
+
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
             if ($pic['filename'] == $file['name']) {
@@ -141,7 +141,7 @@ class Images_dao extends _Mymodel {
                 return $pic['iid'];
             }
         }
-        
+
         // failed to add to database
         return 0;
     }
