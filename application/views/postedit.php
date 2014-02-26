@@ -15,7 +15,7 @@ if (isset($errors) && count($errors) > 0) {
         <p><strong></strong></p>
         <?php
         foreach ($errors as $booboo)
-            echo '<p>' . $booboo . '</p>';
+           // echo '<p>' . $booboo . '</p>';
         ?>
     </div>
 <?php }

@@ -120,9 +120,9 @@ class Images_dao extends _Mymodel {
                 throw new RuntimeException('Failed to move uploaded file.');
             }
 
-            echo 'File is uploaded successfully.';
+         //   echo 'File is uploaded successfully.';
         } catch (RuntimeException $e) {
-            echo $e->getMessage();
+           // echo $e->getMessage();
             // image failed to add
             return 0;
         }
