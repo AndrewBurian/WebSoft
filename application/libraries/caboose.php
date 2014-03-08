@@ -57,6 +57,11 @@ class Caboose {
             'css' => 'jRating.jquery.css',
             'js' => 'jRating.jquery.js',
             'template' => 'rating'
+        ),
+        'CKEditor' => array(
+            'css' => '',
+            'js' => 'ckeditor/ckeditor.js',
+            'template' => 'ckeditor'
         )
     );
     // provide for any fields they need. this should be indexed [component][field]

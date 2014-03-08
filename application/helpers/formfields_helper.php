@@ -279,6 +279,27 @@ function makeTextEditor($label, $name, $value, $explain = "", $maxlen = 40, $siz
     return $CI->parser->parse('_fields/textarea', $parms, $keep);
 }
 
+
+function makeCKEditor($label, $name, $value, $explain = "", $maxlen = 1000, $size = 25, $rows = 5, $disabled = false, $keep = TRUE){
+    $CI = &get_instance();
+    $CI->caboose->needed('CKEditor', $name);
+    $height = (int) (strlen($value) / 80) + 1;
+    if ($rows < $height)
+        $rows = $height;
+    $parms = array(
+        'label' => $label,
+        'name' => $name,
+        'value' => htmlentities($value, ENT_COMPAT, 'UTF-8'),
+        'maxlen' => $maxlen,
+        'explain' => $explain,
+        'size' => $size,
+        'rows' => $rows,
+        'disabled' => ($disabled ? 'disabled="disabled"' : '')
+    );
+    return $CI->parser->parse('_fields/ckeditor', $parms, $keep);
+}
+
+
 /**
  * Construct a form row to select a file to upload.
  * 

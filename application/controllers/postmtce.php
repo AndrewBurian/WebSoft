@@ -64,7 +64,8 @@ class Postmtce extends Application {
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting');
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
-        $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        //$this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        $this->data['field_story'] = makeCKEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
 
