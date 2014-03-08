@@ -29,8 +29,17 @@ class Usermtce extends Application {
         $this->data['pageDescrip'] = "User maintenance functions";
 
         $users = $this->users_dao->getAll_array();
+        foreach ($users as &$user) {
+            $this->data['user_edit'] = makeLinkButton('Edit', '/usermtce/edit/{id}', 'Edit');
+            $this->data['user_delete'] = makeLinkButton('Delete', '/usermtce/delete/{id}', 'Delete');
+        }
+
         $this->data['users'] = $users;
         $this->data['pagebody'] = 'userlist';
+
+        $this->data['user_add'] = makeLinkButton('Add a user', '/usermtce/add', 'Add a user');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/accountMan", 'Cancel');
+
         $this->render();
     }
 
@@ -63,6 +72,7 @@ class Usermtce extends Application {
         $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/usermtce", 'Cancel');
 
         $this->render();
     }
@@ -71,7 +81,7 @@ class Usermtce extends Application {
     function edit($id) {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a User";
-        $this->data['pageDescrip'] = "Edt user";
+        $this->data['pageDescrip'] = "Edit user";
 
         $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
@@ -91,6 +101,7 @@ class Usermtce extends Application {
         $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/usermtce", 'Cancel');
 
         $this->render();
     }
@@ -119,9 +130,7 @@ class Usermtce extends Application {
         if ($user['name'] == '') {
             $errors[] = 'name';
         }
-        
-        $user['name'] = htmlspecialchars($user['name']);
-        
+
         if ($_POST['password'] == '') {
             $errors[] = 'password';
         } else {
@@ -166,8 +175,6 @@ class Usermtce extends Application {
         if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = 'email';
         }
-        
-        $user['email'] = htmlspecialchars($user['email']);
 
         if ($user['pic'] == '') {
             $user['pic'] = 0;
@@ -199,7 +206,7 @@ class Usermtce extends Application {
             $this->users_dao->update($user);
         }
         // redisplay the list of users
-        redirect('/usermtce');
+        redirect('usermtce');
     }
 
     // Delete a user

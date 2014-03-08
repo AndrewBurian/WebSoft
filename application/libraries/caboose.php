@@ -181,7 +181,7 @@ class Caboose {
     function trailer($what) {
         $this->result .= $what;
     }
-    
+
     /**
      * Return everything that is supposed to be tacked onto the end.
      * @return string 
@@ -189,6 +189,7 @@ class Caboose {
     function trailings() {
         return $this->result;
     }
+
 }
 
 /* End of file bs_form.php */

@@ -16,8 +16,12 @@
         {users}
         <tr>
             <td>
+                {user_edit}
+                {user_delete}
+                <!--
                 <a href="/usermtce/edit/{id}"><input type="button" value="Edit"></input></a>
                 <a href="/usermtce/delete/{id}"><input type="button" value="Delete"></input></a>
+                -->
              <!--  <a class="btn btn-mini" href="/usermtce/delete/{id}"><i  class="icon-trash"></i></a></td> -->
             </td>
             <td>{id}</td>
@@ -29,6 +33,9 @@
     </table>
 </div>
 <div>
+    {user_add}{cancel}
+    <!--
     <a href="/usermtce/add"><input type="button" value="Add a new user"></input></a>
+    -->
     <!--  <a href="/usermtce/add">Add a new user</a> -->
 </div>

@@ -92,6 +92,8 @@ $db['hosted']['stricton'] = FALSE;
 if ($_SERVER['SERVER_NAME'] == "vancouverpubreviews.bcitxml.com") {
     $active_group = "hosted";
 }
-
+else if ($_SERVER['SERVER_NAME'] == "www.vancouverpubreviews.bcitxml.com") {
+    $active_group = "hosted";
+}
 /* End of file database.php */
 /* Location: ./application/config/database.php */
