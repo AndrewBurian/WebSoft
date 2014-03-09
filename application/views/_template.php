@@ -28,7 +28,7 @@ if (!defined('APPPATH'))
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1><a href="#">Greater Vancouver Pub Reviews</a></h1>
+                <h1><a href="/">Greater Vancouver Pub Reviews</a></h1>
                 <strong>Casual reviews of our favorite watering holes</strong>
                 <div class="mynav">
                     <ul id="main-nav">

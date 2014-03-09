@@ -28,7 +28,7 @@ class Postmtce extends Application {
 
     function index() {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Posts";
+        $this->data['pageTitle'] = "Posts";
         $this->data['pageDescrip'] = "Post maintenance functions";
 
         $posts = $this->posts->getAll_array();
@@ -52,7 +52,7 @@ class Postmtce extends Application {
 
     function add() {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a Posting";
+        $this->data['pageTitle'] = "Add a Posting";
         $this->data['pageDescrip'] = "Add post";
         $this->data['pagebody'] = 'postedit';
 
@@ -76,7 +76,7 @@ class Postmtce extends Application {
     // Request a post edit
     function edit($pid) {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a Posting";
+        $this->data['pageTitle'] = "Edit a Posting";
         $this->data['pageDescrip'] = "Edit post";
 
         $posting = (array) $this->posts->get($pid);
@@ -93,7 +93,7 @@ class Postmtce extends Application {
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
 
-        $this->render();
+       $this->render();
     }
 
     // Process an add/edit form submission
@@ -138,7 +138,7 @@ class Postmtce extends Application {
         }
 
         // allow updated to be set by the database
-        unset($posting['updated']);
+        $posting['updated']=NULL;
 
         $posting['story'] = '' . $_POST['story'];
 

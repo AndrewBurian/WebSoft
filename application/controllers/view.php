@@ -21,7 +21,7 @@ class View extends Application {
         //$this->data['page'] = 'View';
         $this->data['pagebody'] = 'view';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = 'Greater Vancouver Pub Reviews ~ Recent Posts';
+        $this->data['pageTitle'] = 'Recent Posts';
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->render();
     }
@@ -38,7 +38,7 @@ class View extends Application {
 
         //the rest of the page
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Post #" . $record['pid'] . ' ' . $record['ptitle'];
+        $this->data['pageTitle'] = "Post #" . $record['pid'] . ' ' . $record['ptitle'];
         $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
         $this->data['pagebody'] = 'view1';
         $this->render();
