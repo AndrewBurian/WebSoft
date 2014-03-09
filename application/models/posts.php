@@ -18,9 +18,9 @@ class Posts extends _Mymodel {
     }
 
     // Return the latest 3 posts, in revverse order (newest first)
-    function newest() {
+    function newest($count = 3) {
         $this->db->order_by($this->_keyField, 'desc');
-        $this->db->limit(3);
+        $this->db->limit($count);
         $query = $this->db->get($this->_tableName);
         return $query->result_array();
     }
