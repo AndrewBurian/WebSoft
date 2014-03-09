@@ -180,17 +180,24 @@ class Usermtce extends Application {
             $user['pic'] = 0;
         }
 
-        // only attempt to upload image if no other errors
-        if (count($errors) == 0) {
-            if ($_FILES['pic']['name'] != '') {
-                $imgid = $this->images_dao->addFile($_FILES['pic']);
-                if ($imgid == 0) {
-                    // image failed to upload
-                    $errors[] = 'pic';
-                } else {
-                    $user['pic'] = $imgid;
-                }
+        // Check to see if there is a valid upload
+        if ($_FILES['pic']['error'] === UPLOAD_ERR_OK) {
+            $imgid = $this->images_dao->addFile($_FILES['pic']);
+            if ($imgid == 0) {
+                // image failed to upload
+                $errors[] = 'pic';
+            } else {
+                $user['pic'] = $imgid;
             }
+        }
+
+        // check to see if there was an error
+        else if ($_FILES['pic']['error'] === UPLOAD_ERR_NO_FILE) {
+            // no file selected
+            // leave file
+        } else {
+            // some other error occured
+            $errors[] = 'pic';
         }
 
         // if there are errors, redirect
