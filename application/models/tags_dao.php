@@ -69,7 +69,9 @@ class Tags_dao extends _Mymodel {
         foreach($tagsToAdd as $tag){
             $tag = trim($tag);
             $record['tag'] = $tag;
-            $this->add($record);
+            if($tag != ''){
+                $this->add($record);
+            }
         }
     }
     
