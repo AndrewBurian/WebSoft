@@ -1,0 +1,58 @@
+Changelog
+---------------------------------------------------------------------
+
+CKEditor
+	Added makeCKEditor() to formfieldhelpers
+	Added CKE to caboose
+	Swapped text area in postmtce for CKE
+KCFinder
+	Added KCFinder to CKEditor
+	probably a mistake. Not useful. Will remove
+Image uploader
+	Redid addFile() backed in images_dao
+	Now works on posts and users
+Tags
+	Added Tags table to database
+	Added tags textfield to postmtce
+	Created tags_dao for backend
+	*Tags cannot yet be removed from a post, only new ones added*
+Blog
+	Added post and tag controller
+	tag sidebar contains all tags known in database
+
+
+
+
+To-Do
+---------------------------------------------------------------------
+Account controller		
+	reformat
+	add user picture (fixed size)
+		Next lab: (user authored posts + user authored pictures)
+
+View controller
+	Picture size (fixed?)
+	add Tags
+	add Author (with author picture)
+
+Post Mtce
+	Updated Time not working
+
+All
+	Take out the flippin latin
+	Take out 'Greater Vancouver Pub Reviews ~' just leave the sub-title
+	Make title bar a link to homepage
+	Remove 'Contact'
+
+Blog
+	Pagination
+	Picture size set to fixed without distortion
+
+Home
+	replace updated time for created time
+	Picture fixed size without distortion
+
+Login
+	Set focus to username right away
+
+Testing
