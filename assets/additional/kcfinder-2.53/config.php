@@ -21,10 +21,10 @@ $_CONFIG = array(
 
 // GENERAL SETTINGS
 
-    'disabled' => true,
+    'disabled' => false,
     'theme' => "oxygen",
     'uploadURL' => "upload",
-    'uploadDir' => "",
+    'uploadDir' => "../../../data/images/",
 
     'types' => array(
 
@@ -71,16 +71,16 @@ $_CONFIG = array(
 
         'files' => array(
             'upload' => true,
-            'delete' => true,
-            'copy'   => true,
-            'move'   => true,
-            'rename' => true
+            'delete' => false,
+            'copy'   => false,
+            'move'   => false,
+            'rename' => false
         ),
 
         'dirs' => array(
-            'create' => true,
-            'delete' => true,
-            'rename' => true
+            'create' => false,
+            'delete' => false,
+            'rename' => false
         )
     ),
 
