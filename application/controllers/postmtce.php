@@ -64,8 +64,8 @@ class Postmtce extends Application {
         $this->data['field_pic'] = makeImageUploader('Thumbnail', 'pic', '');
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting');
-        $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
-        $this->data['field_tags'] = makeTextArea('Tags', 'tags', '', 'Comma Separated Tags');
+        $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 35, 6);
+        $this->data['field_tags'] = makeTextArea('Tags', 'tags', '', 'Comma Separated Tags', 40, 25, 1);
         $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
@@ -87,8 +87,8 @@ class Postmtce extends Application {
         $this->data['field_pic'] = makeImageUploader('Thumbnail', 'pic', 'Leave blank to use existing');
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting', 10, TRUE);
-        $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
-        $this->data['field_tags'] = makeTextArea('Tags', 'tags', $this->tags_dao->getTagsString($pid), 'Comma Separated Tags');
+        $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 35, 6);
+        $this->data['field_tags'] = makeTextArea('Tags', 'tags', $this->tags_dao->getTagsString($pid), 'Comma Separated Tags', 40, 25, 1);
         $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
