@@ -19,6 +19,7 @@ class Postmtce extends Application {
         $this->activeuser->restrict(array(ROLE_USER, ROLE_ADMIN));
         $this->load->model('posts');
         $this->load->model('images_dao');
+        $this->load->model('tags_dao');
     }
 
     //-------------------------------------------------------------
@@ -64,6 +65,7 @@ class Postmtce extends Application {
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting');
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
+        $this->data['field_tags'] = makeTextArea('Tags', 'tags', '', 'Comma Separated Tags');
         $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
@@ -86,6 +88,7 @@ class Postmtce extends Application {
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting', 10, TRUE);
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
+        $this->data['field_tags'] = makeTextArea('Tags', 'tags', $this->tags_dao->getTagsString($pid), 'Comma Separated Tags');
         $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
@@ -129,6 +132,8 @@ class Postmtce extends Application {
         }
 
         $posting['slug'] = htmlspecialchars($posting['slug']);
+        
+        $this->tags_dao->addTags($pid, htmlspecialchars($posting['tags']));
 
         if ($posting['created'] == '') {
             unset($posting['created']);
