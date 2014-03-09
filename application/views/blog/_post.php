@@ -4,6 +4,6 @@
             <h3><a href="/view/post/{pid}">{ptitle}</a></h3>
             <span class="category">Tags: {tags}</span>
             <p>{slug}</p>
-            <p class="read-more"><a href="#">Read more</a></p>
+            <p class="read-more"><a href="/view/post/{pid}">Read more</a></p>
         </div>
     </div>
