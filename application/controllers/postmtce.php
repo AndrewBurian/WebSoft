@@ -132,8 +132,6 @@ class Postmtce extends Application {
         }
 
         $posting['slug'] = htmlspecialchars($posting['slug']);
-        
-        $this->tags_dao->addTags($pid, htmlspecialchars($posting['tags']));
 
         if ($posting['created'] == '') {
             unset($posting['created']);
@@ -174,13 +172,25 @@ class Postmtce extends Application {
             $this->redirectErrors($errors, $pid);
             exit;
         }
-
+        
+        // Save the tags seperatly as they're not part of the posts table
+        $tags = $posting['tags'];
+        unset($posting['tags']);
+        
         // either add or update the posting record, as appropriate
         if ($pid == null) {
+            unset($posting['pid']);
             $this->posts->add($posting);
         } else {
             $this->posts->update($posting);
         }
+        
+        // Tags are added after as they cannot be added to a nonexistant post
+        if($pid == null){
+            $newPost = (array)$this->posts->newest(1);
+            $pid = $newPost[0]['pid'];
+        }
+        $this->tags_dao->addTags($pid, htmlspecialchars($tags));
 
         // redisplay the list of users
         redirect('/postmtce');
