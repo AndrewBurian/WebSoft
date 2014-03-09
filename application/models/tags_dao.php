@@ -20,7 +20,7 @@ class Tags_dao extends _Mymodel {
         $result = '';
         $allPT = $this->getAll_array();
         foreach($allPT as $post){
-            if(($pid == 'all' || $post['pid'] == $pid) && !in_array($post['tag'], $result)){
+            if($pid == 'all' || $post['pid'] == $pid){
                 $result .= $post['tag'] . ', ';
             }
         }
@@ -32,7 +32,7 @@ class Tags_dao extends _Mymodel {
         $result = '';
         $allPT = $this->getAll_array();
         foreach($allPT as $post){
-            if(($pid == 'all' || $post['pid'] == $pid) && !in_array($post['tag'], $result)){
+            if($pid == 'all' || $post['pid'] == $pid){
                 $result .= '<a href="/blog/tag/' . $post['tag'] . '">' . $post['tag'] . '</a>, ';
             }
         }
@@ -44,10 +44,11 @@ class Tags_dao extends _Mymodel {
         $result = array();
         $allPT = $this->getAll_array();
         foreach($allPT as $post){
-            if(($pid == 'all' || $post['pid'] == $pid) && !in_array($post['tag'], $result)){
+            if($pid == 'all' || $post['pid'] == $pid){
                 $result[] = $post['tag'];
             }
         }
+        $result = array_unique($result);
         return $result;
     }
     
