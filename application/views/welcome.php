@@ -28,7 +28,7 @@ if (!defined('APPPATH'))
 <div>
     {posts}
     <div class="span4">
-        <a href="/view/post/{pid}"><img src="{img_src}" title="{caption}"/></a><br/>
+        <a href="/view/post/{pid}"><img style="height:152px; width:300px" src="{img_src}" alt="{caption}"/></a><br/>
         <h4>{ptitle}</h4>
         <p>{updated}</p>
         <p>{slug}</p>

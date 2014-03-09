@@ -17,126 +17,92 @@ class Images_dao extends _Mymodel {
     }
 
     function getName($iid) {
-        $allImages = $this->getAll_array();
-        foreach ($allImages as $pic) {
-            if ($pic['iid'] == $iid) {
-                return $pic['filename'];
-            }
+        $image = (array)$this->get($iid);
+        if($image == NULL){
+            return "Not Found";
         }
-        return NULL;
+        else{
+            return $image['filename'];
+        }
     }
 
     function getPath($iid) {
         $result = "/data/images/";
-        $found = false;
-        $allImages = $this->getAll_array();
-        foreach ($allImages as $pic) {
-            if ($pic['iid'] == $iid) {
-                $result .= $pic['filename'];
-                $found = true;
-            }
+        $image = (array)$this->get($iid);
+        if($image == NULL){
+            $result .= "notFound.jpg";
         }
-        if (!$found) {
-            $result .= "not_found.gif";
+        else{
+            $result .= $image['filename'];
         }
-
         return $result;
     }
 
     function getCaption($iid) {
-        $allImages = $this->getAll_array();
-        foreach ($allImages as $pic) {
-            if ($pic['iid'] == $iid) {
-                return $pic['caption'];
-            }
+        $image = (array)$this->get($iid);
+        if($image == NULL){
+            return "Not Found";
         }
-
-        return "Not Found";
+        else{
+            return $image['caption'];
+        }
     }
 
     function getDate($iid) {
-        $allImages = $this->getAll_array();
-        foreach ($allImages as $pic) {
-            if ($pic['iid'] == $iid) {
-                return $pic['date'];
-            }
+        $image = (array)$this->get($iid);
+        if($image == NULL){
+            return 0;
         }
-
-        return NULL;
+        else{
+            return $image['date'];
+        }
     }
 
     function addFile($file) {
-        try {
-
-            // Undefined | Multiple Files | $_FILES Corruption Attack
-            // If this request falls under any of them, treat it invaliid.
-            if (
-                    !isset($file['error']) ||
-                    is_array($file['error'])
-            ) {
-                throw new RuntimeException('Invaliid parameters.');
-            }
-
-            // Check $_FILES['upfile']['error'] value.
-            switch ($file['error']) {
-                case UPLOAD_ERR_OK:
-                    break;
-                case UPLOAD_ERR_NO_FILE:
-                    throw new RuntimeException('No file sent.');
-                case UPLOAD_ERR_INI_SIZE:
-                case UPLOAD_ERR_FORM_SIZE:
-                    throw new RuntimeException('Exceeded filesize limit.');
-                default:
-                    throw new RuntimeException('Unknown errors.');
-            }
-
-            // You should also check filesize here. 
-            if ($file['size'] > 1000000) {
-                throw new RuntimeException('Exceeded filesize limit.');
-            }
-
-            // DO NOT TRUST $_FILES['upfile']['mime'] VALUE !!
-            // Check MIME Type by yourself.
-            /* $finfo = new finfo(FILEINFO_MIME_TYPE);
-              if (false === $ext = array_search(
-              $finfo->file($file['tmp_name']), array(
-              'jpg' => 'image/jpeg',
-              'png' => 'image/png',
-              'gif' => 'image/gif',
-              ), true
-              )) {
-              throw new RuntimeException('Invaliid file format.');
-              } */
-            $ext = substr($file['type'], 6);
-
-            // You should name it uniquely.
-            // DO NOT USE $_FILES['upfile']['name'] WITHOUT ANY VALIDATION !!
-            // On this example, obtain safe unique name from its binary data.
-            /* if (!move_uploaded_file(
-              $file['tmp_name'], sprintf('/data/images/%s.%s', sha1_file($file['tmp_name']), $ext
-              )
-              )) { */
-            if (!move_uploaded_file($file['tmp_name'], 'data/images/' . $file['name'])) {
-                throw new RuntimeException('Failed to move uploaded file.');
-            }
-
-         //   echo 'File is uploaded successfully.';
-        } catch (RuntimeException $e) {
-           // echo $e->getMessage();
-            // image failed to add
+        // Set the upload directory
+        $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/data/images/';
+        
+        // Check php's built in errors
+        if($file['error'] != 0){
             return 0;
         }
-
+        
+        // Check to make sure it's really an uploaded file
+        if(!is_uploaded_file($file['tmp_name'])){
+            return 0;
+        }
+        
+        // Check to make sure file is an image using imgsize
+        if(getimagesize($file['tmp_name']) == false){
+            return 0;
+        }
+        
+        // Generate a unique name
+        // timestamp-name.ext
+        $timestamp = time();
+        $finalName = '';
+        while(file_exists($finalName = $uploadDir . $timestamp . '-' . $file['name'])){
+            $timestamp++;
+        }
+        
+        // Move uploaded file to it's destination and new name
+        if(move_uploaded_file($file['tmp_name'], $finalName) == false){
+            return 0;
+        }
+        
+        // Collect the image data
         $Imgdata = array();
-        $Imgdata['caption'] = $file['tmp_name'];
-        $Imgdata['filename'] = $file['name']; //sprintf('/data/images/%s.%s', sha1_file($file['tmp_name']), $ext);
+        $Imgdata['caption'] = $file['name'];
+        $Imgdata['filename'] = $timestamp . '-' . $file['name'];
         $Imgdata['author'] = $this->activeuser->getName();
 
+        // Add to database
         $this->add($Imgdata);
 
+        // Check to see if added, and get the iid
         $allImages = $this->getAll_array();
         foreach ($allImages as $pic) {
-            if ($pic['filename'] == $file['name']) {
+            if ($pic['filename'] == $Imgdata['filename']) {
                 // image added. Return iid.
                 return $pic['iid'];
             }

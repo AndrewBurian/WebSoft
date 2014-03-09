@@ -64,7 +64,8 @@ class Postmtce extends Application {
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting');
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
-        $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        //$this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        $this->data['field_story'] = makeCKEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
 
@@ -86,7 +87,8 @@ class Postmtce extends Application {
         $this->data['field_title'] = makeTextField('Post Title', 'ptitle', $posting['ptitle'], 'Title of the post');
         $this->data['field_date'] = makeDateSelector('Post Date', 'created', $posting['created'], 'The date of posting', 10, TRUE);
         $this->data['field_slug'] = makeTextArea('Slug', 'slug', $posting['slug'], 'Short Description of post', 140, 15, 1);
-        $this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        //$this->data['field_story'] = makeTextEditor('Story', 'story', $posting['story']);
+        $this->data['field_story'] = makeCKEditor('Story', 'story', $posting['story']);
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'submit');
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
 
@@ -141,7 +143,9 @@ class Postmtce extends Application {
 
         // only attempt to upload image if no other errors
         if (count($errors) == 0) {
-            if ($_FILES['pic']['name'] != '') {
+            
+            // Check to see if there is a valid upload
+            if ($_FILES['pic']['error'] === UPLOAD_ERR_OK) {
                 $imgid = $this->images_dao->addFile($_FILES['pic']);
                 if ($imgid == 0) {
                     // image failed to upload
@@ -149,6 +153,17 @@ class Postmtce extends Application {
                 } else {
                     $posting['pic'] = $imgid;
                 }
+            }
+            
+            // check to see if there was an error
+            else if($_FILES['pic']['error'] === UPLOAD_ERR_NO_FILE){
+                // no file selected
+                // leave file
+            }
+            
+            else{
+                // some other error occured
+                $errors[] = 'pic';
             }
         }
 
