@@ -6,5 +6,5 @@
     {field_slug}<br/>
     {field_tags}<br/>
     {field_story}<br/>
-    {field_submit_btn}
+    {field_submit_btn} {cancel}
 </form>
