@@ -213,7 +213,7 @@ class Usermtce extends Application {
             $this->users_dao->update($user);
         }
         // redisplay the list of users
-        redirect('usermtce');
+        redirect('/usermtce');
     }
 
     // Delete a user

@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `posts`
     `slug`      VARCHAR(100)    NOT NULL,
     `story`     TEXT            NULL,
     `created`   TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
-    `updated`   TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `updated`   TIMESTAMP       NOT NULL,
     `pic`       INT(11)         NOT NULL,
     PRIMARY KEY (`pid`),
     CONSTRAINT fk_user FOREIGN KEY (`user`) REFERENCES users(`id`),
@@ -79,14 +79,14 @@ CREATE TABLE IF NOT EXISTS `comments`
     CONSTRAINT fk_pic FOREIGN KEY(`post`) REFERENCES posts(`pid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE TABLE contacts 
+CREATE TABLE IF NOT EXISTS contacts 
 (
-`id` varchar(3) NOT NULL,
-`surname` varchar(80),
-`firstname` varchar(80),
-`phone` varchar(80),
-`email` varchar(80),
-  PRIMARY KEY (`id`)
+    `id`        VARCHAR(3)      NOT NULL,
+    `surname`   VARCHAR(80),
+    `firstname` VARCHAR(80),
+    `phone`     VARCHAR(80),
+    `email`     VARCHAR(80),
+    PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -111,9 +111,7 @@ INSERT INTO `tags` (`pid`, `tag`) VALUES
 (2, 'apple'),
 (2, 'beer');
 
-INSERT INTO contacts (id, surname, firstname, phone, email) 
-	VALUES ('MM', 'Mouse', 'Mickey', '555-1234', 'mickey@disney.com');
-INSERT INTO contacts (id, surname, firstname, phone, email) 
-	VALUES ('DD', 'Duck', 'Donald', '555-1444', 'donald@disney.com');
-INSERT INTO contacts (id, surname, firstname, phone, email) 
-	VALUES ('HRH', 'Highness', 'Her Royal', '604-555-9999', 'hrh@buckinghampalace.gov.uk');
+INSERT INTO contacts (id, surname, firstname, phone, email) VALUES 
+('MM', 'Mouse', 'Mickey', '555-1234', 'mickey@disney.com'),
+('DD', 'Duck', 'Donald', '555-1444', 'donald@disney.com'),
+('HRH', 'Highness', 'Her Royal', '604-555-9999', 'hrh@buckinghampalace.gov.uk');
