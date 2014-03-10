@@ -11,6 +11,7 @@ class View extends Application {
 
     function __construct() {
         parent::__construct();
+        $this->load->model('tags_dao');
     }
 
     //-------------------------------------------------------------
@@ -31,11 +32,16 @@ class View extends Application {
     function post($which) {
         //Get the post
         $record = (array) $this->posts->get($which);
+        if(empty($record)){
+            redirect('/');
+        }
         $this->data = array_merge($this->data, $record);
 
         //get associated images
         $this->data['img_src'] = $this->images_dao->getPath($record['pic']);
         $this->data['caption'] = $this->images_dao->getCaption($record['pic']);
+        
+        $this->data['tags'] = $this->tags_dao->getTagsLinks($which);
 
         //the rest of the page
         $this->data['title'] = 'Greater Vancouver Pub Reviews';

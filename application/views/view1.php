@@ -26,7 +26,8 @@ if (!defined('APPPATH'))
             </div>
         </div>
         <h4>{slug}</h4>
-        <br/>
+        {tags}
+        <br/><br/>
         <img src="{author_img}" height="50" width="50"/>
         Posted by: <strong>{author_name}</strong>
         <br/><br/>
