@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `posts`
     `pid`       INTEGER(18)     NOT NULL    AUTO_INCREMENT,
     `user`      INTEGER(18)     NOT NULL,
     `ptitle`    VARCHAR(80)     NOT NULL    UNIQUE,
-    `slug`      VARCHAR(100)    NOT NULL,
+    `slug`      VARCHAR(140)    NOT NULL,
     `story`     TEXT            NULL,
     `created`   TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     `updated`   TIMESTAMP       NOT NULL,
@@ -92,24 +92,18 @@ CREATE TABLE IF NOT EXISTS contacts
 
 INSERT INTO `users` (`id`, `name`, `password`, `role`, `email`, `status`, `pic`) VALUES
 (1, 'ABurian', md5('AB'), 'admin', 'a@b.com', 'A', 0),
-(2, 'CHolisky', md5('CH'), 'user', 'c@h.com', 'A', 0);
+(2, 'CHolisky', md5('CH'), 'user', 'c@h.com', 'A', 0),
+(3, 'JPerry', md5('TieGuy'), 'admin', 'j@p.com', 'A', 0);
 
 INSERT INTO `images` (`iid`, `filename`, `author`, `date`, `caption`, `licence`, `thumbnail`) VALUES
-(1, 'img01.jpg', 'Who knows', '2014.09.3', 'A flower', 'CCL', 0),
-(2, 'img02.jpg', 'Who knows', '2014.09.2', 'A balloon', 'CCL', 0),
-(3, 'img03.jpg', 'Who knows', '2014.09.1', 'More than one balloon', 'CCL', 0);
+(1, 'favicon.ico', 'GVPR', '2014.03.09', 'Logo', 'CCL', 0);
 
-INSERT INTO `posts` (`pid`, `user`, `ptitle`, `slug`, `story`, `created`, `pic`) VALUES
-(1,'1', 'The first pub', 'The waitresses were pretty but kinda slow.', '<p>Seriously, folks.  Why do so many places hire pretty girls that can pass light between their ears?</p>\r\n<p>If I want overpriced beer and pretty girls I don''t go to a pub, I go to Sammy J Peppers.</p>\r\n<p>Right now all I''m doing is filling space.</p>', '2014.09.3', 1),
-(2,'2', 'The second pub','This one had decent food.', '<p>So we decided to eat at this one to help soak up some alchohol.  The plan was that we remember what happened this time.</p>\r\n<p>We ate and I recall that we made exclaimations over the food but we also sampled from alll 278 taps.</p>\r\n<p>Now I''m just trying to fill some space so that this looks a little more like a real post.  Yay for creative writing!</p>', '2014.09.2', 2),
-(3,'2', 'Another pub',   'Another pub.', '<p>There was beer to be had and we went to drink it.</p>\r\n<p>It was good but we didn''t write anything down.  We forgot in the joy of the sweet amber elixer.</p>\r\n<p>If you want to enjoy forgetfulness, try this pub.</p>', '2014.09.1', 3);                                                                  
+INSERT INTO `posts` (`pid`, `user`, `ptitle`, `slug`, `story`, `created`, `updated`, `pic`) VALUES
+(1, 1, 'Welcome!', 'Welcome to Greater Vancouver Pub Reviews!', '<p><strong>Welcome to the official Greater Vancouver Pub Reviews Site!</strong></p>\r\n\r\n<p>We hope to become your go-to source for finding a choice establishment in the Greater Vancouver area.<br />\r\nWhy chose us? We&#39;re experts! But don&#39;t just take our word for it:</p>\r\n\r\n<blockquote>\r\n<p>Vancouver Pub Reviews is the best site for quick and accurate descriptions of pubs!</p>\r\n\r\n<p>&nbsp; &nbsp;<em>- Our mothers</em></p>\r\n</blockquote>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>We hope you enjoy all that our site has to offer!</p>\r\n\r\n<p>Happy drinking!</p>\r\n', '2014-02-20 03:45:11', '2014-03-10 03:45:11', 1);
 
 INSERT INTO `tags` (`pid`, `tag`) VALUES
-(1, 'test'),
-(1, 'banana'),
-(2, 'test'),
-(2, 'apple'),
-(2, 'beer');
+(1, 'Welcome'),
+(1, 'GVPR');
 
 INSERT INTO contacts (id, surname, firstname, phone, email) VALUES 
 ('MM', 'Mouse', 'Mickey', '555-1234', 'mickey@disney.com'),
