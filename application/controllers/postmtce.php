@@ -208,7 +208,7 @@ class Postmtce extends Application {
         
         // either add or update the posting record, as appropriate
         if ($pid == null) {
-            unset($posting['pid']);
+            $posting['pid'] = null;
             $this->posts->add($posting);
         } else {
             $this->posts->update($posting);

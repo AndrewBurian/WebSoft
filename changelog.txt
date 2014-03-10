@@ -32,28 +32,7 @@ Controllers/postmtce
     	make title a link to homepage
 
 
-To-Do
----------------------------------------------------------------------
-Account controller		
-	reformat
-	add user picture (fixed size)
-		Next lab: (user authored posts + user authored pictures)
-
-View controller
-	Picture size (fixed?)
-	add Tags
-	add Author (with author picture)
-
-Blog
-	Picture size set to fixed without distortion
-
-Home
-	*replace updated time for created time - now that updated time is
-            working we can keep updated time - CH
-	Picture fixed size without distortion
-
-Login
-	Set focus to username right away
-
-Testing
-
+To-Do:
+--------------------------
+PostMan
+	Substring for story portion of entry

@@ -9,7 +9,7 @@
  */
 class Blog extends Application {
 
-    var $_postsPerPage = 5;
+    var $_postsPerPage = 4;
 
     function __construct() {
         parent::__construct();
@@ -46,7 +46,7 @@ class Blog extends Application {
 
         $postIdsOnPage = array();
         $thisCount = 0;
-        for($i = ($count-1) * $this->_postsPerPage; $i < count($allIds) && $thisCount < 5; $i++){
+        for($i = ($count-1) * $this->_postsPerPage; $i < count($allIds) && $thisCount < $this->_postsPerPage; $i++){
             $postIdsOnPage[] = $allIds[$i];
             $thisCount++;
         }
@@ -81,7 +81,7 @@ class Blog extends Application {
 
         $postIdsOnPage = array();
         $thisCount = 0;
-        for($i = ($count-1) * $this->_postsPerPage; $i < count($allIds) && $thisCount < 5; $i++){
+        for($i = ($count-1) * $this->_postsPerPage; $i < count($allIds) && $thisCount < $this->_postsPerPage; $i++){
             $postIdsOnPage[] = $allIds[$i];
             $thisCount++;
         }
@@ -129,6 +129,7 @@ class Blog extends Application {
             $viewParams['slug'] = $post['slug'];
             $viewParams['img_src'] = $this->images_dao->getPath($post['pic']);
             $result .= $this->parser->parse('blog/_post', $viewParams, true);
+            $result .= '<br/>';
         }
 
         return $result;
