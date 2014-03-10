@@ -128,17 +128,17 @@ class Usermtce extends Application {
         $user = (array) $user;
 
         if ($user['name'] == '') {
-            $errors[] = 'name';
+            $errors['name'] = 'cannot be empty';
         }
 
         if ($_POST['password'] == '') {
-            $errors[] = 'password';
+            $errors['password'] = 'No password entered';
         } else {
 
             // If they're editing a user, password required
             if ($id != null) {
                 if (!$this->users_dao->authenticateUser($id, $_POST['password'])) {
-                    $errors[] = 'passchk';
+                    $errors['passchk'] = 'Password incorrect';
                 } else {
                     if (isset($_POST['password_new'])) {
                         // their old password is correct and there is a new one
@@ -185,7 +185,7 @@ class Usermtce extends Application {
             $imgid = $this->images_dao->addFile($_FILES['pic']);
             if ($imgid == 0) {
                 // image failed to upload
-                $errors[] = 'pic';
+                $errors['pic'] = 'image failed to upload';
             } else {
                 $user['pic'] = $imgid;
             }
@@ -197,7 +197,7 @@ class Usermtce extends Application {
             // leave file
         } else {
             // some other error occured
-            $errors[] = 'pic';
+            $errors['pic'] = 'php error: ' . $_FILES['pic']['error'];
         }
 
         // if there are errors, redirect
@@ -223,10 +223,7 @@ class Usermtce extends Application {
     }
 
     function redirectErrors($errors, $id = null) {
-        $get = '?';
-        foreach ($errors as $error) {
-            $get .= $error . '=err&';
-        }
+        $this->session->set_flashdata('usererr', $errors);
         if ($id != null) {
             redirect('/usermtce/edit/' . $id . $get);
         } else {
@@ -235,31 +232,32 @@ class Usermtce extends Application {
     }
 
     function getErrors() {
+        $errors = $this->session->flashdata('usererr');
         $result = '';
         $viewParams = array();
         $viewParams['error_msg'] = '';
 
-        if (isset($_GET['name'])) {
+        if (isset($errors['name'])) {
             $viewParams['error_msg'] = 'Your name cannot be empty';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['password'])) {
+        if (isset($errors['password'])) {
             $viewParams['error_msg'] = 'Your passowrd cannot be empty';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['email'])) {
+        if (isset($errors['email'])) {
             $viewParams['error_msg'] = 'Your email is not valid';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['pic'])) {
+        if (isset($errors['pic'])) {
             $viewParams['error_msg'] = 'Your picture could not be uploaded. It may be too big or an unsupported format';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['passchk'])) {
+        if (isset($errors['passchk'])) {
             $viewParams['error_msg'] = 'Your password is incorrect';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }

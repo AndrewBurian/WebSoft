@@ -151,13 +151,13 @@ class Postmtce extends Application {
         }
 
         if ($posting['ptitle'] == '') {
-            $errors[] = 'title';
+            $errors['title'] = 'cannot be empty';
         }
 
         $posting['ptitle'] = htmlspecialchars($posting['ptitle']);
 
         if ($posting['slug'] == '') {
-            $errors[] = 'slug';
+            $errors['slug'] = 'cannot be empty';
         }
 
         $posting['slug'] = htmlspecialchars($posting['slug']);
@@ -179,7 +179,7 @@ class Postmtce extends Application {
                 $imgid = $this->images_dao->addFile($_FILES['pic']);
                 if ($imgid == 0) {
                     // image failed to upload
-                    $errors[] = 'pic';
+                    $errors['pic'] = 'Failed to upload';
                 } else {
                     $posting['pic'] = $imgid;
                 }
@@ -193,7 +193,7 @@ class Postmtce extends Application {
             
             else{
                 // some other error occured
-                $errors[] = 'pic';
+                $errors['pic'] = 'php error code: ' . $_FILES['pic']['error'];
             }
         }
 
@@ -232,33 +232,34 @@ class Postmtce extends Application {
     }
 
     function redirectErrors($errors, $pid = null) {
-        $get = '?';
-        foreach ($errors as $error) {
-            $get .= $error . '=err&';
-        }
+        
+        $this->session->set_flashdata('posterr', $errors);
         if ($pid != null) {
-            redirect('/postmtce/edit/' . $pid . $get);
+            redirect('/postmtce/edit/' . $pid);
         } else {
-            redirect('/postmtce/add' . $get);
+            redirect('/postmtce/add');
         }
     }
 
     function getErrors() {
+        $errors = $this->session->flashdata('posterr');
         $result = '';
-        $viewParams = array();
-        $viewParams['error_msg'] = '';
+        
+        if($errors == NULL){
+            return '';
+        }
 
-        if (isset($_GET['title'])) {
+        if (isset($errors['title'])) {
             $viewParams['error_msg'] = 'Title must be set';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['slug'])) {
+        if (isset($errors['slug'])) {
             $viewParams['error_msg'] = 'Slug must contain something';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['pic'])) {
+        if (isset($errors['pic'])) {
             $viewParams['error_msg'] = 'Your picture could not be uploaded. It may be too big or an unsupported format';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
