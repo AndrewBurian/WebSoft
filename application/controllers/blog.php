@@ -94,7 +94,7 @@ class Blog extends Application {
         if($i == count($allIds)){
             $next = 0;
         }
-        $this->data['pagination'] = $this->makePaginationArrows($count, $prev, $next);
+        $this->data['pagination'] = $this->makePaginationArrows($count, $prev, $next, $tag);
         $this->render();
     }
 
