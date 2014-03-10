@@ -225,9 +225,9 @@ class Usermtce extends Application {
     function redirectErrors($errors, $id = null) {
         $this->session->set_flashdata('usererr', $errors);
         if ($id != null) {
-            redirect('/usermtce/edit/' . $id . $get);
+            redirect('/usermtce/edit/' . $id);
         } else {
-            redirect('/usermtce/add' . $get);
+            redirect('/usermtce/add');
         }
     }
 
