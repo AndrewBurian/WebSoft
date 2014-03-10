@@ -1,0 +1,13 @@
+<tr>
+    <td>
+        {post_edit}
+        {post_delete}
+    </td>
+    <td>{pid}</td>
+    <td>{picname}</td>
+    <td>{ptitle}</td>
+    <td>{updated}</td>
+    <td>{tags}</td>
+    <td>{slug}</td>
+    <td>{story}</td>
+</tr>

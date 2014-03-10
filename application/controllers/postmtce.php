@@ -31,19 +31,44 @@ class Postmtce extends Application {
         $this->data['pageTitle'] = "Posts";
         $this->data['pageDescrip'] = "Post maintenance functions";
 
-        $posts = $this->posts->getAll_array();
-        foreach ($posts as &$post) {
-            $post['picname'] = $this->images_dao->getName($post['pic']);
-            $this->data['post_edit'] = makeLinkButton('Edit', '/postmtce/edit/{pid}', 'Edit');
-            $this->data['post_delete'] = makeLinkButton('Delete', '/postmtce/delete/{pid}', 'Delete');
-        }
-        $this->data['posts'] = $posts;
+        
+        $this->data['posts'] = $this->listPosts();
         $this->data['pagebody'] = 'postlist';
 
         $this->data['post_add'] = makeLinkButton('Add a post', '/postmtce/add', 'Add a post');
         $this->data['cancel'] = makeLinkButton('Cancel', "/accountMan", 'Cancel');
 
         $this->render();
+    }
+    
+    
+    function listPosts(){
+        $result = '';
+        $viewParams = array();
+        $posts = $this->posts->getAll_array();
+        foreach ($posts as &$post) {
+            
+            if($post['user'] == $this->activeuser->getID() || $this->activeuser->isAuthorized(ROLE_ADMIN)){
+                $viewParams['post_edit'] = makeLinkButton('Edit', '/postmtce/edit/{pid}', 'Edit');
+                $viewParams['post_delete'] = makeLinkButton('Delete', '/postmtce/delete/{pid}', 'Delete');
+            }
+            else {
+                $viewParams['post_edit'] = '';
+                $viewParams['post_delete'] = '';
+            }
+            
+            $viewParams['pid'] = $post['pid'];
+            $viewParams['picname'] = $this->images_dao->getName($post['pic']);
+            $viewParams['ptitle'] = $post['ptitle'];
+            $viewParams['updated'] = $post['updated'];
+            $viewParams['tags'] = $this->tags_dao->getTagsString($post['pid']);
+            $viewParams['slug'] = $post['slug'];
+            $viewParams['story'] = $post['story'];
+            
+            $result .= $this->parser->parse('_postListRow', $viewParams, true);
+        }
+        
+        return $result;
     }
 
     //-------------------------------------------------------------
