@@ -20,7 +20,18 @@ Blog
 	Added post and tag controller
 	tag sidebar contains all tags known in database
 
-
+Done by Chris:
+controllers/postmtce
+    changed unset($posting['updated']); to $posting['updated']=NULL; so that 
+        the database would add the current timestamp to the updated field when
+        any changes are being made.
+views/postedit.php
+controllers/postmtce.php
+    add cancel button to edit post page
+scripts/all_tables.sql
+    added current timestamp if value null for posts/updated
+views/_template.php
+    make title a link to homepage
 
 
 To-Do
@@ -36,23 +47,27 @@ View controller
 	add Author (with author picture)
 
 Post Mtce
-	Updated Time not working
+	*Updated Time not working - fixed - CH
 
 All
 	Take out the flippin latin
-	Take out 'Greater Vancouver Pub Reviews ~' just leave the sub-title
-	Make title bar a link to homepage
-	Remove 'Contact'
+	*Take out 'Greater Vancouver Pub Reviews ~' just leave the sub-title - CH
+	*Make title bar a link to home page - fixed - CH
+	*Remove 'Contact' 
+            CH - from earlier assignment.  May be used later.  If not, we pull
+                the menu link.
 
 Blog
 	Pagination
 	Picture size set to fixed without distortion
 
 Home
-	replace updated time for created time
+	*replace updated time for created time - now that updated time is
+            working we can keep updated time - CH
 	Picture fixed size without distortion
 
 Login
 	Set focus to username right away
 
 Testing
+

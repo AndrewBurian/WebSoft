@@ -24,19 +24,8 @@ class Blog extends Application {
     //-------------------------------------------------------------
 
     function index() {
-        $this->data['page'] = 'Blog';
-        $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = 'Blog';
-        $this->data['pageDescrip'] = 'Donec ac dui eu augue faucibus sagittis ';
-        $this->data['pagebody'] = 'blog/blog';
-
-        $this->data['tag_list'] = $this->buildTagSidebar();
-        $this->data['posts'] = $this->defaultPosts();
-        
-        // Cheat the pagination for the landing page
-        $this->data['pagination'] = '<strong>1</strong> | <a href="/blog/post/2">Older</a>';
-
-        $this->render();
+        // default landing is the same as blog/post/1
+        $this->post();
     }
 
     function post($count = 1) {
@@ -48,8 +37,29 @@ class Blog extends Application {
         $this->data['tag_list'] = $this->buildTagSidebar();
         
         // TO-DO Actual pagination logic here...
-        $this->data['posts'] = $this->defaultPosts();
-        $this->data['pagination'] = $this->makePaginationArrows($count, $count -1, $count +1);
+        $allPosts = $this->posts->getAll_array();
+        $allIds = array();
+        foreach($allPosts as $post){
+            $allIds[] = (int)$post['pid'];
+        }
+        rsort($allIds);
+
+        $postIdsOnPage = array();
+        $thisCount = 0;
+        for($i = ($count-1) * $this->_postsPerPage; $i < count($allIds) && $thisCount < 5; $i++){
+            $postIdsOnPage[] = $allIds[$i];
+            $thisCount++;
+        }
+        $this->data['posts'] = $this->processPostsByID($postIdsOnPage);
+        $prev = $count -1;
+        $next = $count +1;
+        if($i == 0){
+            $prev = 0;
+        }
+        if($i == count($allIds)){
+            $next = 0;
+        }
+        $this->data['pagination'] = $this->makePaginationArrows($count, $prev, $next);
         $this->render();
     }
 
@@ -66,12 +76,25 @@ class Blog extends Application {
         $this->data['tag_list'] = $this->buildTagSidebar();
 
         // TO-DO Actual pagination logic here...
-        $postIDs = $this->tags_dao->getPostsWithTag($tag);
-        sort($postIDs, SORT_NUMERIC);
+        $allIds = $this->tags_dao->getPostsWithTag($tag);
+        rsort($allIds);
 
-        $this->data['posts'] = $this->processPostsByID($postIDs);
-
-        $this->data['pagination'] = $this->makePaginationArrows($count, $count -1, $count +1, $tag);
+        $postIdsOnPage = array();
+        $thisCount = 0;
+        for($i = ($count-1) * $this->_postsPerPage; $i < count($allIds) && $thisCount < 5; $i++){
+            $postIdsOnPage[] = $allIds[$i];
+            $thisCount++;
+        }
+        $this->data['posts'] = $this->processPostsByID($postIdsOnPage);
+        $prev = $count -1;
+        $next = $count +1;
+        if($i == 0){
+            $prev = 0;
+        }
+        if($i == count($allIds)){
+            $next = 0;
+        }
+        $this->data['pagination'] = $this->makePaginationArrows($count, $prev, $next, $tag);
         $this->render();
     }
 

@@ -5,6 +5,9 @@ DROP TABLE IF EXISTS `comments`;
 DROP TABLE IF EXISTS `ci_sessions`;
 DROP TABLE IF EXISTS `media`;
 DROP TABLE IF EXISTS `tags`;
+DROP TABLE IF EXISTS `contacts`;
+
+
 
 CREATE TABLE IF NOT EXISTS  `ci_sessions` (
 	session_id varchar(40) DEFAULT '0' NOT NULL,
@@ -49,8 +52,8 @@ CREATE TABLE IF NOT EXISTS `posts`
     `ptitle`    VARCHAR(80)     NOT NULL    UNIQUE,
     `slug`      VARCHAR(100)    NOT NULL,
     `story`     TEXT            NULL,
-    `created`   TIMESTAMP        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
-    `updated`   TIMESTAMP       NOT NULL,
+    `created`   TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `updated`   TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     `pic`       INT(11)         NOT NULL,
     PRIMARY KEY (`pid`),
     CONSTRAINT fk_user FOREIGN KEY (`user`) REFERENCES users(`id`),
@@ -76,6 +79,17 @@ CREATE TABLE IF NOT EXISTS `comments`
     CONSTRAINT fk_pic FOREIGN KEY(`post`) REFERENCES posts(`pid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+CREATE TABLE contacts 
+(
+`id` varchar(3) NOT NULL,
+`surname` varchar(80),
+`firstname` varchar(80),
+`phone` varchar(80),
+`email` varchar(80),
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
 INSERT INTO `users` (`id`, `name`, `password`, `role`, `email`, `status`, `pic`) VALUES
 (1, 'ABurian', md5('AB'), 'admin', 'a@b.com', 'A', 0),
 (2, 'CHolisky', md5('CH'), 'user', 'c@h.com', 'A', 0);
@@ -96,3 +110,10 @@ INSERT INTO `tags` (`pid`, `tag`) VALUES
 (2, 'test'),
 (2, 'apple'),
 (2, 'beer');
+
+INSERT INTO contacts (id, surname, firstname, phone, email) 
+	VALUES ('MM', 'Mouse', 'Mickey', '555-1234', 'mickey@disney.com');
+INSERT INTO contacts (id, surname, firstname, phone, email) 
+	VALUES ('DD', 'Duck', 'Donald', '555-1444', 'donald@disney.com');
+INSERT INTO contacts (id, surname, firstname, phone, email) 
+	VALUES ('HRH', 'Highness', 'Her Royal', '604-555-9999', 'hrh@buckinghampalace.gov.uk');
