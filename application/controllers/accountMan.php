@@ -21,7 +21,7 @@ class AccountMan extends Application {
         $this->data['page'] = 'Account Management';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Manage your account';
-        $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
+        $this->data['pageDescrip'] = 'Change your avatar, email, or password';
         $this->data['pagebody'] = 'accountMan';
         $this->data['pageOptions'] = $this->build_Account_Man_page();
         if ($this->activeuser->isLoggedIn()) {

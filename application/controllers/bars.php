@@ -25,7 +25,8 @@ class Bars extends Application {
         $this->data['page'] = 'Bars';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Bars in the Lower Mainland';
-        $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
+        $this->data['pageDescrip'] = 'A breakdown of all licenced establishments in the Greater' . 
+                ' Vancouver area';
         $this->data['pagebody'] = 'bars/bars';
         $this->data['report_heading'] = $this->build_report_header();
         $this->data['report_body'] = $this->build_report_body();

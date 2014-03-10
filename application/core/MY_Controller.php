@@ -33,7 +33,7 @@ class Application extends CI_Controller {
     function render() {
         $this->data['menubar'] = $this->build_menu_bar($this->config->item('menu_choices'));
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
-        $this->data['session_id'] = $this->session->userdata('session_id');
+        $this->data['foot_note'] = 'Powered by <a>magic elves</a>';
         $this->data['login'] = $this->activeuser->buildLoginBar();
 
         // Caboose

@@ -95,6 +95,7 @@ class Images_dao extends _Mymodel {
         $Imgdata['caption'] = $file['name'];
         $Imgdata['filename'] = $timestamp . '-' . $file['name'];
         $Imgdata['author'] = $this->activeuser->getName();
+        $Imgdata['iid'] = NULL;
 
         // Add to database
         $this->add($Imgdata);
