@@ -11,6 +11,7 @@ class Services extends Application {
 
     function __construct() {
         parent::__construct();
+        $this->activeuser->restrict(ROLE_ADMIN);
     }
 
     //-------------------------------------------------------------
@@ -21,7 +22,7 @@ class Services extends Application {
         $this->data['page'] = 'Services';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Services';
-        $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
+        $this->data['pageDescrip'] = 'Ignore the empty shell of a page...';
         $this->data['pagebody'] = 'services';
         $this->render();
     }

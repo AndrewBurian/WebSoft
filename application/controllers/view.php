@@ -19,11 +19,12 @@ class View extends Application {
 
     function index() {
         //$this->data['page'] = 'View';
-        $this->data['pagebody'] = 'view';
-        $this->data['title'] = 'Greater Vancouver Pub Reviews';
-        $this->data['pageTitle'] = 'Recent Posts';
-        $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
-        $this->render();
+        //$this->data['pagebody'] = 'view';
+        //$this->data['title'] = 'Greater Vancouver Pub Reviews';
+        //$this->data['pageTitle'] = 'Recent Posts';
+        //$this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
+        //$this->render();
+        redirect('/');
     }
 
     // Present a single post.
@@ -39,8 +40,13 @@ class View extends Application {
         //the rest of the page
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = "Post #" . $record['pid'] . ' ' . $record['ptitle'];
-        $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
+        $this->data['pageDescrip'] = '';
         $this->data['pagebody'] = 'view1';
+        
+        $this->data['author_name'] = $this->users_dao->getUserName($record['user']);
+        $this->data['author_img'] = $this->images_dao->getPath(
+                $this->users_dao->getUserPic($record['user']));
+        
         $this->render();
     }
 

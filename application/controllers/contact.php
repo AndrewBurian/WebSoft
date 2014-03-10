@@ -21,7 +21,7 @@ class Contact extends Application {
         $this->data['page'] = 'Contact';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Contact';
-        $this->data['pageDescrip'] = 'Suspendisse venenatis dolor vitae dolor';
+        $this->data['pageDescrip'] = "Let us know how we're doing. Suggest a review!";
         $this->data['pagebody'] = 'contact';
         $this->render();
     }

@@ -21,7 +21,7 @@ class About extends Application {
         $this->data['page'] = 'About';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'About us';
-        $this->data['pageDescrip'] = 'Nullam tempor semper nisl in tristique';
+        $this->data['pageDescrip'] = 'Who are we, what do we do, and why do we do it?';
         $this->data['pagebody'] = 'about';
         $this->render();
     }

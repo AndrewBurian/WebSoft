@@ -32,7 +32,7 @@ class Blog extends Application {
         $this->data['page'] = 'Blog';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Blog';
-        $this->data['pageDescrip'] = 'Donec ac dui eu augue faucibus sagittis ';
+        $this->data['pageDescrip'] = 'Check out all of our reviews!';
         $this->data['pagebody'] = 'blog/blog';
         $this->data['tag_list'] = $this->buildTagSidebar();
         
@@ -71,7 +71,7 @@ class Blog extends Application {
         $this->data['page'] = 'Blog';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Blog';
-        $this->data['pageDescrip'] = 'Donec ac dui eu augue faucibus sagittis ';
+        $this->data['pageDescrip'] = 'Check out all of our reviews tagged as ' . $tag;
         $this->data['pagebody'] = 'blog/blog';
         $this->data['tag_list'] = $this->buildTagSidebar();
 

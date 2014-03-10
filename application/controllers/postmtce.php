@@ -74,11 +74,15 @@ class Postmtce extends Application {
     }
 
     // Request a post edit
-    function edit($pid) {
+    function edit($pid = null) {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
         $this->data['pageTitle'] = "Edit a Posting";
         $this->data['pageDescrip'] = "Edit post";
-
+        
+        if($pid == null){
+            redirect('/postmtce');
+        }
+        
         $posting = (array) $this->posts->get($pid);
         $this->data = array_merge($this->data, $posting);
         $this->data['pid'] = $posting['pid'];
