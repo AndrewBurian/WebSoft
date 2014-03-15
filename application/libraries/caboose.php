@@ -57,6 +57,11 @@ class Caboose {
             'css' => 'jRating.jquery.css',
             'js' => 'jRating.jquery.js',
             'template' => 'rating'
+        ),
+        'CKEditor' => array(
+            'css' => '',
+            'js' => 'ckeditor/ckeditor.js',
+            'template' => 'ckeditor'
         )
     );
     // provide for any fields they need. this should be indexed [component][field]
@@ -181,7 +186,7 @@ class Caboose {
     function trailer($what) {
         $this->result .= $what;
     }
-    
+
     /**
      * Return everything that is supposed to be tacked onto the end.
      * @return string 
@@ -189,6 +194,7 @@ class Caboose {
     function trailings() {
         return $this->result;
     }
+
 }
 
 /* End of file bs_form.php */

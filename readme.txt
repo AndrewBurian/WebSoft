@@ -77,3 +77,46 @@ Added images model for access to images.
 Added accounts page as a starting point for later profile development.
 Date picker added to post maintenance.
 Image uploaded added to both post maintenance and user maintenance. 
+
+---------------------------------------------------------------------------------------
+
+Assignment 2 Updates
+
+Admin Account:
+JPerry - TieGuy
+
+User Account
+MJackson - Thriller
+
+CKEditor
+	Added makeCKEditor() to formfieldhelpers
+	Added CKE to caboose
+	Swapped text area in postmtce for CKE
+KCFinder
+	Added KCFinder to CKEditor
+	probably a mistake. Not useful. Will remove
+Image uploader
+	Redid addFile() backed in images_dao
+	Now works on posts and users
+Tags
+	Added Tags table to database
+	Added tags textfield to postmtce
+	Created tags_dao for backend
+	*Tags cannot yet be removed from a post, only new ones added*
+Blog
+	Added post and tag controller
+	tag sidebar contains all tags known in database
+Controllers/postmtce
+    changed unset($posting['updated']); to $posting['updated']=NULL; so that 
+        the database would add the current timestamp to the updated field when
+        any changes are being made.
+	views/postedit.php
+	controllers/postmtce.php
+    	add cancel button to edit post page
+	scripts/all_tables.sql
+    	added current timestamp if value null for posts/updated
+	views/_template.php
+    	make title a link to homepage
+    Replace $_GET error messages with flashdata
+Posts
+	users cannot edit other users posts

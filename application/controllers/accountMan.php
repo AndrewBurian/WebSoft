@@ -21,7 +21,7 @@ class AccountMan extends Application {
         $this->data['page'] = 'Account Management';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Manage your account';
-        $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
+        $this->data['pageDescrip'] = 'Change your avatar, email, or password';
         $this->data['pagebody'] = 'accountMan';
         $this->data['pageOptions'] = $this->build_Account_Man_page();
         if ($this->activeuser->isLoggedIn()) {
@@ -34,16 +34,17 @@ class AccountMan extends Application {
     function build_Account_Man_page() {
         $result = '';
         if ($this->activeuser->isAuthorized(ROLE_ADMIN)) {
-            $this->data['userMan'] = makeLinkButton('User Management', '/usermtce', 'User Management');
-            $result .= $this->parser->parse('management/_admin', $this->data, true);
+            $this->data['userMan'] = makeLinkButton('User Management', "/usermtce", 'User Management');
+            $result .= $this->parser->parse("/management/_admin", $this->data, true);
         }
         if ($this->activeuser->isAuthorized(ROLE_USER || ROLE_ADMIN)) {
-            
-            $this->data['postMan'] = makeLinkButton('Post Management', '/postmtce', 'Post Management');
+
+            $this->data['postMan'] = makeLinkButton('Post Management', "/postmtce", 'Post Management');
             $result .= $this->parser->parse('management/_user', $this->data, true);
         }
         return $result;
     }
+
 }
 
 /* End of file welcome.php */

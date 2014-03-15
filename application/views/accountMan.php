@@ -21,5 +21,5 @@ if (!defined('APPPATH'))
 <h3>Hello, {user_name}.  With {role} access, the following options are available to you:</h3>
 
 <div>
-{pageOptions}
+    {pageOptions}
 </div>

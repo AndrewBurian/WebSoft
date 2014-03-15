@@ -26,7 +26,7 @@ class Logout extends Application {
         $this->data['pageDescrip'] = 'Come Back Soon!';
 
         $this->activeuser->logout();
-        redirect('/');
+        redirect("/");
         $this->render();
     }
 

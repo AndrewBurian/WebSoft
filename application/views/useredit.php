@@ -14,7 +14,7 @@ if (isset($errors) && count($errors) > 0) {
         <p><strong></strong></p>
         <?php
         foreach ($errors as $booboo)
-            echo '<p>' . $booboo . '</p>';
+          //  echo '<p>' . $booboo . '</p>';
         ?>
     </div>
 <?php }
@@ -30,5 +30,6 @@ if (isset($errors) && count($errors) > 0) {
     {field_pic}
     <br/><br/>
     {field_submit_btn}
+    {cancel}
 </form>
 

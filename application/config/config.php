@@ -29,7 +29,10 @@ $config['menu_choices'] = array(
   | path to your installation.
   |
  */
-$config['base_url'] = '';
+$config['base_url'] = '/';
+//if ($_SERVER['SERVER_NAME'] == 'vancouverpubreviews.bcitxml.com') {
+//    $config['base_url'] = 'http://vancouverpubreviews.bcitxml.com/';
+//}
 
 /*
   |--------------------------------------------------------------------------

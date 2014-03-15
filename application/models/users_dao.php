@@ -74,6 +74,20 @@ class Users_dao extends _Mymodel {
 
         return $userInfo['role'];
     }
+    
+    function getUserName($userID) {
+        // Get the users details
+        $userInfo = $this->get_array($userID);
+
+        return $userInfo['name'];
+    }
+    
+    function getUserPic($userID) {
+        // Get the users details
+        $userInfo = $this->get_array($userID);
+
+        return $userInfo['pic'];
+    }
 
     function getAllUsers() {
         return $this->getAll_array();

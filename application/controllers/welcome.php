@@ -21,7 +21,7 @@ class Welcome extends Application {
         $this->data['page'] = 'Home';
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Recent articles';
-        $this->data['pageDescrip'] = 'Lorem ipsum dolor amet sit consectetur adipiscing';
+        $this->data['pageDescrip'] = 'Our latest Reviews! Many more inside.';
         $this->data['pagebody'] = 'welcome';
         $latest = $this->posts->newest();
         foreach ($latest as &$post) {

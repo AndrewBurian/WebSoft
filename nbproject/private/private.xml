@@ -4,13 +4,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/models/images_dao.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/models/activeuser.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/scripts/all_tables.sql</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/views/_fields/image_upload.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/controllers/usermtce.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/models/users_dao.php</file>
-            <file>file:/C:/xampp/htdocs/WebSoft/application/views/useredit.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/postmtce.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/usermtce.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/userlist.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/accountMan.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/index.html</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/error_fragment.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/posts.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/blog.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/view.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/logout.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/users_dao.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/about.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/accountMan.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/postedit.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/welcome.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/scripts/sessions.sql</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/models/activeuser.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/services.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/friends_list.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/controllers/login.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/login.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/useredit.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/postmtce.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/welcome.php</file>
+            <file>file:/C:/xampp/htdocs/BurianAndrew_HoliskyChris_4711Lab06/application/views/postlist.php</file>
         </group>
     </open-files>
 </project-private>

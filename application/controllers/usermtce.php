@@ -25,12 +25,21 @@ class Usermtce extends Application {
 
     function index() {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Users";
+        $this->data['pageTitle'] = "Users";
         $this->data['pageDescrip'] = "User maintenance functions";
 
         $users = $this->users_dao->getAll_array();
+        foreach ($users as &$user) {
+            $this->data['user_edit'] = makeLinkButton('Edit', '/usermtce/edit/{id}', 'Edit');
+            $this->data['user_delete'] = makeLinkButton('Delete', '/usermtce/delete/{id}', 'Delete');
+        }
+
         $this->data['users'] = $users;
         $this->data['pagebody'] = 'userlist';
+
+        $this->data['user_add'] = makeLinkButton('Add a user', '/usermtce/add', 'Add a user');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/accountMan", 'Cancel');
+
         $this->render();
     }
 
@@ -40,7 +49,7 @@ class Usermtce extends Application {
 
     function add() {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Add a User";
+        $this->data['pageTitle'] = "Add a User";
         $this->data['pageDescrip'] = "Add user";
         $this->data['pagebody'] = 'useredit';
 
@@ -63,6 +72,7 @@ class Usermtce extends Application {
         $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/usermtce", 'Cancel');
 
         $this->render();
     }
@@ -70,8 +80,8 @@ class Usermtce extends Application {
     // Request a user edit
     function edit($id) {
         $this->data['title'] = "Greater Vancouver Pub Reviews";
-        $this->data['pageTitle'] = "Greater Vancouver Pub Reviews ~ Edit a User";
-        $this->data['pageDescrip'] = "Edt user";
+        $this->data['pageTitle'] = "Edit a User";
+        $this->data['pageDescrip'] = "Edit user";
 
         $user = (array) $this->users_dao->get($id);
         $this->data = array_merge($this->data, $user);
@@ -91,6 +101,7 @@ class Usermtce extends Application {
         $this->data['field_status'] = makeComboField('Status', 'status', $user['status'], array('A', 'D'), 'A- Active, D- Dormant', 1, 3);
         $this->data['field_pic'] = makeImageUploader('Profile Picture', 'pic');
         $this->data['field_submit_btn'] = makeSubmitButton('Submit', 'Submit');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/usermtce", 'Cancel');
 
         $this->render();
     }
@@ -117,19 +128,17 @@ class Usermtce extends Application {
         $user = (array) $user;
 
         if ($user['name'] == '') {
-            $errors[] = 'name';
+            $errors['name'] = 'cannot be empty';
         }
-        
-        $user['name'] = htmlspecialchars($user['name']);
-        
+
         if ($_POST['password'] == '') {
-            $errors[] = 'password';
+            $errors['password'] = 'No password entered';
         } else {
 
             // If they're editing a user, password required
             if ($id != null) {
                 if (!$this->users_dao->authenticateUser($id, $_POST['password'])) {
-                    $errors[] = 'passchk';
+                    $errors['passchk'] = 'Password incorrect';
                 } else {
                     if (isset($_POST['password_new'])) {
                         // their old password is correct and there is a new one
@@ -166,24 +175,29 @@ class Usermtce extends Application {
         if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = 'email';
         }
-        
-        $user['email'] = htmlspecialchars($user['email']);
 
         if ($user['pic'] == '') {
             $user['pic'] = 0;
         }
 
-        // only attempt to upload image if no other errors
-        if (count($errors) == 0) {
-            if ($_FILES['pic']['name'] != '') {
-                $imgid = $this->images_dao->addFile($_FILES['pic']);
-                if ($imgid == 0) {
-                    // image failed to upload
-                    $errors[] = 'pic';
-                } else {
-                    $user['pic'] = $imgid;
-                }
+        // Check to see if there is a valid upload
+        if ($_FILES['pic']['error'] === UPLOAD_ERR_OK) {
+            $imgid = $this->images_dao->addFile($_FILES['pic']);
+            if ($imgid == 0) {
+                // image failed to upload
+                $errors['pic'] = 'image failed to upload';
+            } else {
+                $user['pic'] = $imgid;
             }
+        }
+
+        // check to see if there was an error
+        else if ($_FILES['pic']['error'] === UPLOAD_ERR_NO_FILE) {
+            // no file selected
+            // leave file
+        } else {
+            // some other error occured
+            $errors['pic'] = 'php error: ' . $_FILES['pic']['error'];
         }
 
         // if there are errors, redirect
@@ -209,43 +223,41 @@ class Usermtce extends Application {
     }
 
     function redirectErrors($errors, $id = null) {
-        $get = '?';
-        foreach ($errors as $error) {
-            $get .= $error . '=err&';
-        }
+        $this->session->set_flashdata('usererr', $errors);
         if ($id != null) {
-            redirect('/usermtce/edit/' . $id . $get);
+            redirect('/usermtce/edit/' . $id);
         } else {
-            redirect('/usermtce/add' . $get);
+            redirect('/usermtce/add');
         }
     }
 
     function getErrors() {
+        $errors = $this->session->flashdata('usererr');
         $result = '';
         $viewParams = array();
         $viewParams['error_msg'] = '';
 
-        if (isset($_GET['name'])) {
+        if (isset($errors['name'])) {
             $viewParams['error_msg'] = 'Your name cannot be empty';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['password'])) {
+        if (isset($errors['password'])) {
             $viewParams['error_msg'] = 'Your passowrd cannot be empty';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['email'])) {
+        if (isset($errors['email'])) {
             $viewParams['error_msg'] = 'Your email is not valid';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['pic'])) {
+        if (isset($errors['pic'])) {
             $viewParams['error_msg'] = 'Your picture could not be uploaded. It may be too big or an unsupported format';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }
 
-        if (isset($_GET['passchk'])) {
+        if (isset($errors['passchk'])) {
             $viewParams['error_msg'] = 'Your password is incorrect';
             $result .= $this->parser->parse('error_fragment', $viewParams, true);
         }

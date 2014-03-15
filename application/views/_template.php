@@ -23,12 +23,12 @@ if (!defined('APPPATH'))
         <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/jasny-bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css"/>
-        
+
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1><a href="#">Greater Vancouver Pub Reviews</a></h1>
+                <h1><a href="/">Greater Vancouver Pub Reviews</a></h1>
                 <strong>Casual reviews of our favorite watering holes</strong>
                 <div class="mynav">
                     <ul id="main-nav">
@@ -72,7 +72,7 @@ if (!defined('APPPATH'))
                     </ul>
 
                     <!--<p><strong>Design: <a href="http://www.google.com/">Baranda</a></strong> <span>|</span> <strong>Code: <a href="http://www.google.com" title="PSD to (X)HTML, PSD to CMS service">Slicejack</a></strong></p> -->
-                    <p><strong>Session ID: {session_id}</strong></p>
+                    <p><strong>{foot_note}</strong></p>
                 </div>
                 <!--  Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>. -->
             </div>

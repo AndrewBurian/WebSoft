@@ -8,4 +8,4 @@
         <small>{explain}</small>
     </div>
 </div>
-<script>$('#{name}').timepicker({template:false,showMeridian:false});</script>
+<script>$('#{name}').timepicker({template: false, showMeridian: false});</script>
