@@ -25,32 +25,39 @@ class Capo extends Application {
         $this->xmlrpcs->serve();
     }
 
-    function info($request) {
-        $response = array(array('code' => array('O07', 'string'),
-                'name' => array('Vancouver Pub Reviews', 'string'),
-                'link' => array('vancouverpubreviews.bcitxml.com', 'string'),
-                'plug' => array('Casual reviews of our favorite watering holes.', 'string')
-            ),
-            'struct');
-
+    function info($request = null) {
+        // set up the response, which is an array of structures
+        $response = array();
+        
+        // load all the info into one array
+        $info = array(
+                array('code' => array('O07', 'string')),
+                array('name' => array('Vancouver Pub Reviews', 'string')),
+                array('link' => array('vancouverpubreviews.bcitxml.com', 'string')),
+                array('plug' => array('Casual reviews of our favorite watering holes.', 'string'))
+                );
+        
+        // load each of the info elements into the response as it's own struct
+        foreach($info as $item){
+            $response[] = array($item, 'struct');
+        }
+        
+        // cast it back into one struct? What the actual fuck?
+        $response = array($response, 'struct');
+        
+        // Send the mess back
         return $this->xmlrpc->send_response($response);
     }
 
-    function latest($request) {
+    function latest($request = null) {
         $pid = $this->posts->getLatestID();
-        $response = array(
-                            array(  'code'      => 'O07',
-                                    'id'        => $pid,
-                                    'datetime'  => $this->posts->getDateTime($pid),
-                                    'link'      => $this->posts->getLink($pid, true),
-                                    'title'     => $this->posts->getTitle($pid),
-                                    'slug'      => $this->posts->getSlug($pid),
-                                ),
-                    'struct');
+        
+        $response = $this->makeSinglePostReply($pid);
+        
         return $this->xmlrpc->send_response($response);
     }
 
-    function allPosts($request) {
+    function allPosts($request = null) {
         // get the upper limit to post id's
         $maxPid = $this->posts->getLatestID();
         
@@ -106,17 +113,33 @@ class Capo extends Application {
         }
         
         // Create the response structure
-        $response = array(
-                            array(  'code'      => 'O07',
-                                    'id'        => $pid,
-                                    'datetime'  => $this->posts->getDateTime($pid),
-                                    'link'      => $this->posts->getLink($pid, true),
-                                    'title'     => $this->posts->getTitle($pid),
-                                    'slug'      => $this->posts->getSlug($pid),
-                                ),
-                    'struct');
+        
+        $response = $this->makeSinglePostReply($pid);
         
         return $this->xmlrpc->send_response($response);
     }
-
+    
+    
+    function makeSinglePostReply($pid){
+        $response = array();
+        
+        // get the post information
+        $post =  array(  array('code'      => 'O07'),
+                         array('id'        => $pid),
+                         array('datetime'  => $this->posts->getDateTime($pid)),
+                         array('link'      => $this->posts->getLink($pid, true)),
+                         array('title'     => $this->posts->getTitle($pid)),
+                         array('slug'      => $this->posts->getSlug($pid)),
+                        );
+        
+        // load each item into it's own flippin struct
+        foreach($post as $item){
+            $response[] = array($item, 'struct');
+        }
+        
+        // cast it back to a single struct...
+        $response = array($response, 'struct');
+        
+        return $response;
+    }
 }
