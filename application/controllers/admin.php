@@ -8,13 +8,13 @@
 
 class Admin extends Application {
 
+    var $_syndicateURL = 'http://showcase.bcitxml.com/';
+    var $_syndicatePort = 80;
+    
     function __construct() {
         parent::__construct();
         $this->activeuser->restrict(ROLE_ADMIN);
-        $this->load->model('site_info');
-        $this->load->library('xmlrpc');
-        $this->xmlrpc->server('http://http://showcase.bcitxml.com/test/', 80);
-        $this->xmlrpc->method('update');
+        
     }
 
     //-------------------------------------------------------------
@@ -34,6 +34,7 @@ class Admin extends Application {
         $this->data['site_link'] = $this->site_info->getLink();
         
         $this->data['site_changes'] = $this->session->flashdata('changes');
+        $this->data['err'] = $this->session->flashdata('err');
 
         $this->data['field_site_name'] = makeTextArea('Site Name', 'sitename', $this->site_info->getName(), 'The name of our site, this will appear on the main title and throughout', 64, 25, 1);
         $this->data['submit_site_name'] = makeSubmitButton('Update Site Name', 'Submit');
@@ -45,25 +46,47 @@ class Admin extends Application {
     }
 
     function sitename() {
-        if ($_POST['sitename'] != '') {
-            //$this->site_info->setName($_POST['sitename']);
-            $this->updateMaster();
-            $this->session->set_flashdata('changes', 'Set sitename to: ' . $_POST['sitename']);
+        if ($_POST['sitename'] != '' && $_POST['sitename'] != $this->site_info->getName()) {
+            $this->site_info->setName($_POST['sitename']);
+            if($_POST['sitename'] == $this->site_info->getName()){
+                $this->updateMaster();
+                $this->session->set_flashdata('changes', 'Set Site Name to: ' . $this->site_info->getName());
+            }
+            else
+            {
+                $this->session->set_flashdata('err', 'Could not set Site Name');
+            }
+        }
+        else{
+            $this->session->set_flashdata('changes', 'No changes made');
         }
 
         redirect('/admin');
     }
 
     function siteplug() {
-        if ($_POST['siteplug'] != '') {
-            //$this->site_info->setPlug($_POST['siteplug']);
-            $this->updateMaster();
-            $this->session->set_flashdata('changes', 'Set sitename to: ' . $_POST['siteplug']);
+        if ($_POST['siteplug'] != '' && $_POST['siteplug'] != $this->site_info->getPlug()) {
+            $this->site_info->setPlug($_POST['siteplug']);
+            if($_POST['siteplug'] == $this->site_info->getPlug()){
+                $this->updateMaster();
+                $this->session->set_flashdata('changes', 'Set Site Plug to: ' . $this->site_info->getPlug());
+            }
+            else
+            {
+                $this->session->set_flashdata('err', 'Could not set Site Plug');
+            }
+        }
+        else{
+            $this->session->set_flashdata('changes', 'No changes made');
         }
         redirect('/admin');
     }
 
     function updateMaster() {
+        
+        $this->load->library('xmlrpc');
+        $this->xmlrpc->server($this->_syndicateURL, $this->_syndicatePort);
+        $this->xmlrpc->method('update');
         
         $request = array($this->site_info->getCode(),
             $this->site_info->getName(),

@@ -14,6 +14,9 @@
 //FIXME Needs fleshing out
 class Postmtce extends Application {
 
+    var $_syndicateURL = 'noIdea';
+    var $_syndicatePort = 7;
+    
     function __construct() {
         parent::__construct();
         $this->activeuser->restrict(array(ROLE_USER, ROLE_ADMIN));
@@ -221,6 +224,9 @@ class Postmtce extends Application {
         }
         $this->tags_dao->addTags($pid, htmlspecialchars($tags));
 
+        // Update the Syndicate
+        $this->updateSyndicate($pid);
+        
         // redisplay the list of users
         redirect('/postmtce');
     }
@@ -265,6 +271,25 @@ class Postmtce extends Application {
         }
 
         return $result;
+    }
+    
+    function updateSyndicate($pid){
+        $this->load->library('xmlrpc');
+        $this->xmlrpc->server($this->_syndicateURL, $this->_syndicatePort);
+        $this->xmlrpc->method('update');
+        $params = array(
+            $this->site_info->getCode(),
+            $pid,
+            $this->posts->getDateTime($pid),
+            $this->posts->getLink($pid),
+            $this->posts->getTitle($pid),
+            $this->posts->getSlug($pid)
+                );
+        $this->xmlrpc->request($params);
+         if (!$this->xmlrpc->send_request()) {
+            echo $this->xmlrpc->display_error();
+            exit;
+        }
     }
 
 }

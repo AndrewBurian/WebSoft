@@ -7,15 +7,25 @@
         <li>Site URL: {site_link}</li>
     </ul>
 </h5>
-<br/><span style="color:red">{site_changes}</span><br/>
+<br/>
+<span style="color:green">{site_changes}</span>
+<span style="color:red">{err}</span>
+<br/>
 <h3>Make Changes to the Site</h3>
-<form method="post" action="/admin/sitename">
-    {field_site_name}
-    {submit_site_name}
-</form>
 <br/>
-<form method="post" action="/admin/siteplug">
-    {field_site_plug}
-    {submit_site_plug}
-</form>
-<br/>
+<table style="width: 100%;">
+    <tr>
+        <td style="vertical-align: top">
+            <form method="post" action="/admin/sitename">
+                {field_site_name}
+                {submit_site_name}
+            </form>
+        </td>
+        <td style="vertical-align: top">
+            <form method="post" action="/admin/siteplug">
+                {field_site_plug}
+                {submit_site_plug}
+            </form>
+        <td>
+    </tr>
+</table>
