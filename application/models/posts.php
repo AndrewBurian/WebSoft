@@ -41,7 +41,7 @@ class Posts extends _Mymodel {
     function getlink($pid, $full = false){
         $link = "";
         if($full){
-            $link .= "VancouverPubReviews.bcitxml.com";
+            $link .= $_SERVER['HTTP_HOST'];//"VancouverPubReviews.bcitxml.com";
         }
         $link .= '/view/post/' . $pid;
         return $link;
