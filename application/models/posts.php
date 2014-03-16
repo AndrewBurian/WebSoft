@@ -24,6 +24,38 @@ class Posts extends _Mymodel {
         $query = $this->db->get($this->_tableName);
         return $query->result_array();
     }
+    
+    function getLatestID(){
+        $posts = $this->newest(1);
+        return $posts[0]['pid'];
+    }
+    
+    function getDateTime($pid){
+        $post = (array)$this->get($pid);
+        $date = (string)$post['created'];
+        $date = str_replace(array(" ", ":"), "-", $date);
+        $date = substr($date, 0, -3);
+        return $date;
+    }
+    
+    function getlink($pid, $full = false){
+        $link = "";
+        if($full){
+            $link .= "VancouverPubReviews.bcitxml.com";
+        }
+        $link .= '/view/post/' . $pid;
+        return $link;
+    }
+    
+    function getTitle($pid){
+        $post = (array)$this->get($pid);
+        return (string)$post['ptitle'];
+    }
+    
+    function getSlug($pid){
+        $post = (array)$this->get($pid);
+        return (string)$post['slug'];
+    }
 
 }
 
