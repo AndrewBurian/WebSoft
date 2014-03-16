@@ -7,7 +7,7 @@
  *
  * ------------------------------------------------------------------------
  */
-class AccountMan extends Application {
+class Account extends Application {
 
     function __construct() {
         parent::__construct();
@@ -22,7 +22,7 @@ class AccountMan extends Application {
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Manage your account';
         $this->data['pageDescrip'] = 'Change your avatar, email, or password';
-        $this->data['pagebody'] = 'accountMan';
+        $this->data['pagebody'] = 'account';
         $this->data['pageOptions'] = $this->build_Account_Man_page();
         if ($this->activeuser->isLoggedIn()) {
             $this->data['user_name'] = $this->activeuser->getName();

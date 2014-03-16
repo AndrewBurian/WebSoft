@@ -14,7 +14,7 @@
 //FIXME Needs fleshing out
 class Postmtce extends Application {
 
-    var $_syndicateURL = 'http://showcase.bcitxml.com/llama';
+    var $_syndicateURL = 'http://showcase.bcitxml.com/boss';
     var $_syndicatePort = 80;
     
     function __construct() {
@@ -40,7 +40,7 @@ class Postmtce extends Application {
         $this->data['pagebody'] = 'postlist';
 
         $this->data['post_add'] = makeLinkButton('Add a post', '/postmtce/add', 'Add a post');
-        $this->data['cancel'] = makeLinkButton('Cancel', "/accountMan", 'Cancel');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/account", 'Cancel');
 
         $this->render();
     }

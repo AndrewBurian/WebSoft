@@ -60,7 +60,7 @@ class Application extends CI_Controller {
         // if($this->session->userdata['role']=='admin')
         if ($this->activeuser->isLoggedIn()) {
             if ($this->activeuser->isAuthorized(ROLE_USER) || $this->activeuser->isAuthorized(ROLE_ADMIN)) {
-                $menudata['menudata'][] = array('menulink' => '/accountMan', 'menuname' => 'Account');
+                $menudata['menudata'][] = array('menulink' => '/account', 'menuname' => 'Account');
             }
         }
         return $this->parser->parse('_menubar', $menudata, true);

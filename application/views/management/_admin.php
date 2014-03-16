@@ -2,7 +2,7 @@
 if (!defined('APPPATH'))
     exit('No direct script access allowed');
 /**
- * view/accountMan.php
+ * view/Account.php
  *
  * Account Management admin fragment page for the Greater Vancouver Pub Reviews website
  *

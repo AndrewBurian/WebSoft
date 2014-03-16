@@ -38,7 +38,7 @@ class Usermtce extends Application {
         $this->data['pagebody'] = 'userlist';
 
         $this->data['user_add'] = makeLinkButton('Add a user', '/usermtce/add', 'Add a user');
-        $this->data['cancel'] = makeLinkButton('Cancel', "/accountMan", 'Cancel');
+        $this->data['cancel'] = makeLinkButton('Cancel', "/account", 'Cancel');
 
         $this->render();
     }
