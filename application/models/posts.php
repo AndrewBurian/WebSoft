@@ -56,6 +56,18 @@ class Posts extends _Mymodel {
         $post = (array)$this->get($pid);
         return (string)$post['slug'];
     }
+    
+    function getAllByUser($uid){
+        $ids = array();
+        $allPosts = $this->getAll_array();
+        foreach($allPosts as $post){
+            if($post['user'] == $uid){
+                $ids[] = $post['pid'];
+            }
+        }
+        
+        return $ids;
+    }
 
 }
 

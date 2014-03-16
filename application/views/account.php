@@ -17,9 +17,22 @@ if (!defined('APPPATH'))
  */
 ?>
 
-<h2>Account Management</h2>
-<h3>Hello, {user_name}.  With {role} access, the following options are available to you:</h3>
+<div class="column main">
+    <h2>Your Account</h2>
+    <table style="width: 50%">
+        <tr>
+            <td><img src="{user_image}" style="height: 200px; width: 200px;"/></td>
+            <td style="vertical-align: top">{user_info}</td>
+        </tr>
+    </table>
+    <br/><br/>
+    <h4>My Posts:</h4>
+    {user_posts}
+</div>
 
-<div>
-    {pageOptions}
+<div class="column sidebar">
+    <h3>Options</h3>
+    <ul>
+        {user_options}
+    </ul>
 </div>
