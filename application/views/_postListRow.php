@@ -2,6 +2,7 @@
     <td>
         {post_edit}
         {post_delete}
+        {post_update}
     </td>
     <td>{pid}</td>
     <td>{picname}</td>

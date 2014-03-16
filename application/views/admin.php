@@ -1,4 +1,4 @@
-<h1>Current Project Settings</h1>
+<h1>Current Site Settings</h1>
 <h5>
     <ul>
         <li>Project code: {site_code}</li>
@@ -29,3 +29,8 @@
         <td>
     </tr>
 </table>
+<br/><br/><br/>
+<h4>Force Update</h4>
+<strong>If the syndicate did not automatically update, you can attempt a force an update here.</strong>
+<br/><br/>
+{force_update_btn}

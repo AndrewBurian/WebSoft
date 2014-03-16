@@ -14,8 +14,8 @@
 //FIXME Needs fleshing out
 class Postmtce extends Application {
 
-    var $_syndicateURL = 'noIdea';
-    var $_syndicatePort = 7;
+    var $_syndicateURL = 'http://showcase.bcitxml.com/llama';
+    var $_syndicatePort = 80;
     
     function __construct() {
         parent::__construct();
@@ -34,7 +34,8 @@ class Postmtce extends Application {
         $this->data['pageTitle'] = "Posts";
         $this->data['pageDescrip'] = "Post maintenance functions";
 
-        
+        $this->data['err_message'] = $this->session->flashdata('err_message');
+        $this->data['message'] = $this->session->flashdata('message');
         $this->data['posts'] = $this->listPosts();
         $this->data['pagebody'] = 'postlist';
 
@@ -47,17 +48,25 @@ class Postmtce extends Application {
     
     function listPosts(){
         $result = '';
+        $deleteWarning = "Are you sure you wish to delete this post? This is permanent!";
         $viewParams = array();
         $posts = $this->posts->getAll_array();
         foreach ($posts as &$post) {
             
             if($post['user'] == $this->activeuser->getID() || $this->activeuser->isAuthorized(ROLE_ADMIN)){
-                $viewParams['post_edit'] = makeLinkButton('Edit', '/postmtce/edit/{pid}', 'Edit');
-                $viewParams['post_delete'] = makeLinkButton('Delete', '/postmtce/delete/{pid}', 'Delete');
+                $viewParams['post_edit'] = makeImageButton('icons/pencil.ico', '/postmtce/edit/{pid}', 'Edit Post', 20, 20);
+                $viewParams['post_delete'] = makeImageButton('icons/delete.ico', '/postmtce/delete/{pid}', 'Delete Post', 20, 20, "return confirm('". $deleteWarning . "')");
             }
             else {
                 $viewParams['post_edit'] = '';
                 $viewParams['post_delete'] = '';
+            }
+            
+            if($this->activeuser->isAuthorized(ROLE_ADMIN)){
+                $viewParams['post_update'] = makeImageButton('icons/sync.ico', '/postmtce/sync/{pid}', 'Sync With Syndicate', 20, 20);
+            }
+            else{
+                $viewParams['post_update'] = '';
             }
             
             $viewParams['pid'] = $post['pid'];
@@ -66,7 +75,7 @@ class Postmtce extends Application {
             $viewParams['updated'] = $post['updated'];
             $viewParams['tags'] = $this->tags_dao->getTagsString($post['pid']);
             $viewParams['slug'] = $post['slug'];
-            $viewParams['story'] = $post['story'];
+            $viewParams['story'] = substr($post['story'], 0, 40) . '...';
             
             $result .= $this->parser->parse('_postListRow', $viewParams, true);
         }
@@ -126,6 +135,13 @@ class Postmtce extends Application {
         $this->data['cancel'] = makeLinkButton('Cancel', "/postmtce", 'Cancel');
 
        $this->render();
+    }
+    
+    function sync($pid = null){
+        if($pid != null){
+            $this->updateSyndicate($pid);
+        }
+        redirect('/postmtce');
     }
 
     // Process an add/edit form submission
@@ -213,8 +229,10 @@ class Postmtce extends Application {
         if ($pid == null) {
             $posting['pid'] = null;
             $this->posts->add($posting);
+            $this->session->set_flashdata('message', 'Added post: ' . $pid);
         } else {
             $this->posts->update($posting);
+            $this->session->set_flashdata('message', 'Updated post: ' . $pid);
         }
         
         // Tags are added after as they cannot be added to a nonexistant post
@@ -234,7 +252,8 @@ class Postmtce extends Application {
     // Delete a posting
     function delete($pid) {
         $this->posts->delete($pid);
-        $this->index();
+        $this->session->set_flashdata('err_message', 'Post ' . $pid . ' deleted!');
+        redirect('/postmtce');
     }
 
     function redirectErrors($errors, $pid = null) {
@@ -276,7 +295,7 @@ class Postmtce extends Application {
     function updateSyndicate($pid){
         $this->load->library('xmlrpc');
         $this->xmlrpc->server($this->_syndicateURL, $this->_syndicatePort);
-        $this->xmlrpc->method('update');
+        $this->xmlrpc->method('newpost');
         $params = array(
             $this->site_info->getCode(),
             $pid,
@@ -286,9 +305,11 @@ class Postmtce extends Application {
             $this->posts->getSlug($pid)
                 );
         $this->xmlrpc->request($params);
-         if (!$this->xmlrpc->send_request()) {
-            echo $this->xmlrpc->display_error();
-            exit;
+        if(!$this->xmlrpc->send_request()){
+            $this->session->set_flashdata('err_message', 'Error Syncing Syndicate: ' . $this->xmlrpc->display_error());
+        }
+        else{
+          $this->session->set_flashdata('message', 'Synced post ' . $pid . ' with Syndicate');  
         }
     }
 

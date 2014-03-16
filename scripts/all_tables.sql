@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS `images`;
 DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `posts`;
 DROP TABLE IF EXISTS `comments`;
-DROP TABLE IF EXISTS `ci_sessions`;
+--DROP TABLE IF EXISTS `ci_sessions`;
 DROP TABLE IF EXISTS `media`;
 DROP TABLE IF EXISTS `tags`;
 DROP TABLE IF EXISTS `contacts`;

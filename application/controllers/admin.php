@@ -8,7 +8,7 @@
 
 class Admin extends Application {
 
-    var $_syndicateURL = 'http://showcase.bcitxml.com/';
+    var $_syndicateURL = 'http://showcase.bcitxml.com/boss';
     var $_syndicatePort = 80;
     
     function __construct() {
@@ -39,8 +39,10 @@ class Admin extends Application {
         $this->data['field_site_name'] = makeTextArea('Site Name', 'sitename', $this->site_info->getName(), 'The name of our site, this will appear on the main title and throughout', 64, 25, 1);
         $this->data['submit_site_name'] = makeSubmitButton('Update Site Name', 'Submit');
 
-        $this->data['field_site_plug'] = makeTextArea('Site Plug', 'siteplug', $this->site_info->getPlug(), 'The short description of our site that will appear on the title bar', 128, 30, 5);
+        $this->data['field_site_plug'] = makeTextArea('Site Plug', 'siteplug', $this->site_info->getPlug(), 'The short description of our site that will appear on the title bar', 128, 30, 1);
         $this->data['submit_site_plug'] = makeSubmitButton('Update Site Plug', 'Submit');
+        
+        $this->data['force_update_btn'] = makeLinkButton('Force Update', '/admin/forceUpdate', 'Submit');
 
         $this->render();
     }
@@ -81,12 +83,19 @@ class Admin extends Application {
         }
         redirect('/admin');
     }
+    
+    function forceUpdate(){
+        $this->updateMaster();
+        $this->session->set_flashdata('changes', 'A Forced Update has been attempted');
+        redirect('/admin');
+    }
 
     function updateMaster() {
         
         $this->load->library('xmlrpc');
         $this->xmlrpc->server($this->_syndicateURL, $this->_syndicatePort);
         $this->xmlrpc->method('update');
+        $this->xmlrpc->set_debug(false);
         
         $request = array($this->site_info->getCode(),
             $this->site_info->getName(),
@@ -94,7 +103,9 @@ class Admin extends Application {
             $this->site_info->getPlug());
         
         $this->xmlrpc->request($request);
-        $this->xmlrpc->send_request();
+        if(!$this->xmlrpc->send_request()){
+            $this->session->set_flashdata('err', 'Error updating Syndicate: ' . $this->xmlrpc->display_error());
+        }
     }
 
 }

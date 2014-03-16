@@ -158,6 +158,20 @@ function makeIconButton($icon, $href, $title, $css_extras = "", $keep = TRUE) {
     return $CI->parser->parse('_fields/ilink', $parms, $keep);
 }
 
+function makeImageButton($image, $href, $title, $width = 20, $height = 20, $onclick = "", $css_extras = "", $keep = true){
+    $CI = &get_instance();
+    $parms = array(
+        'src' => $image,
+        'href' => $href,
+        'title' => $title,
+        'height' => $height,
+        'width' => $width,
+        'onclick' => $onclick,
+        'css_extras' => $css_extras
+    );
+    return $CI->parser->parse('_fields/image_button', $parms, $keep);
+}
+
 /**
  * Make a combo icon button.
  * 
