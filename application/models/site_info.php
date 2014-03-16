@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Site_info extends CI_model {
+class Site_info extends _Mymodel {
 
     // Constructor
     function __construct() {
