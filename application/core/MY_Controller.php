@@ -31,6 +31,9 @@ class Application extends CI_Controller {
      * Render this page
      */
     function render() {
+        $this->data['main_site_name'] = $this->site_info->getName();
+        $this->data['main_site_plug'] = $this->site_info->getPlug();
+        
         $this->data['menubar'] = $this->build_menu_bar($this->config->item('menu_choices'));
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['foot_note'] = 'Powered by <a>magic elves</a>';
