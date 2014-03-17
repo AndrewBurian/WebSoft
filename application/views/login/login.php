@@ -1,3 +1,4 @@
+<span style="color: red">{error}</span>
 <form action="/login/submit" method="post">
     <fieldset id="login">
         <ul>

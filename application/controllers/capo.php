@@ -14,6 +14,7 @@ class Capo extends Application {
 
         $this->load->library('xmlrpc');
         $this->load->library('xmlrpcs');
+        $this->load->model('site_info');
 
         $config['functions']['info'] = array('function' => 'Capo.info');
         $config['functions']['latest'] = array('function' => 'Capo.latest');
@@ -31,10 +32,10 @@ class Capo extends Application {
         
         // load all the info into one array
         $info = array(
-                array('code' => array('O07', 'string')),
-                array('name' => array('Vancouver Pub Reviews', 'string')),
-                array('link' => array('vancouverpubreviews.bcitxml.com', 'string')),
-                array('plug' => array('Casual reviews of our favorite watering holes.', 'string'))
+                array('code' => array($this->site_info->getCode(), 'string')),
+                array('name' => array($this->site_info->getName(), 'string')),
+                array('link' => array($this->site_info->getLink(), 'string')),
+                array('plug' => array($this->site_info->getPlug(), 'string'))
                 );
         
         // load each of the info elements into the response as it's own struct
@@ -68,7 +69,7 @@ class Capo extends Application {
         $singlePost = array();
         
         // since it's constant
-        $singlePost['code'] = 'O07';
+        $singlePost['code'] = $this->site_info->getCode();
         
         // loop through all possible posts
         for($pid = 1; $pid <= $maxPid; $pid++){

@@ -41,7 +41,7 @@ class Posts extends _Mymodel {
     function getlink($pid, $full = false){
         $link = "";
         if($full){
-            $link .= "VancouverPubReviews.bcitxml.com";
+            $link .= $_SERVER['HTTP_HOST'];//"VancouverPubReviews.bcitxml.com";
         }
         $link .= '/view/post/' . $pid;
         return $link;
@@ -55,6 +55,18 @@ class Posts extends _Mymodel {
     function getSlug($pid){
         $post = (array)$this->get($pid);
         return (string)$post['slug'];
+    }
+    
+    function getAllByUser($uid){
+        $ids = array();
+        $allPosts = $this->getAll_array();
+        foreach($allPosts as $post){
+            if($post['user'] == $uid){
+                $ids[] = $post['pid'];
+            }
+        }
+        
+        return $ids;
     }
 
 }
