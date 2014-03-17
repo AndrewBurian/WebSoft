@@ -4,6 +4,8 @@
  */
 ?>
 <h2>Post Maintenance</h2>
+<span style="color:green">{message}</span>
+<span style="color:red">{err_message}</span>
 <div>
     <table class="table">
         <tr>

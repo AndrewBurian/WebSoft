@@ -24,6 +24,8 @@ class Login extends Application {
         $this->data['title'] = 'Greater Vancouver Pub Reviews';
         $this->data['pageTitle'] = 'Log In';
         $this->data['pageDescrip'] = 'Log In to our site';
+        
+        $this->data['error'] = $this->session->flashdata('error');
 
         if ($this->activeuser->isLoggedIn()) {
             $this->data['user_name'] = $this->activeuser->getName();
@@ -42,9 +44,17 @@ class Login extends Application {
         if ($userID != NULL) {
             if ($this->users_dao->authenticateUser($userID, $_POST['password'])) {
                 $this->activeuser->login($userID, $_POST['username'], $this->users_dao->getUserRole($userID));
+                redirect('/account');
+            }
+            else{
+                $this->session->set_flashdata('error', '    Invalid Login');
+                redirect('/login');
             }
         }
-        redirect("/");
+        else{
+            $this->session->set_flashdata('error', '    Invalid Login');
+            redirect('/login');
+        }
     }
 
 }

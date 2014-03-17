@@ -82,12 +82,6 @@ Image uploaded added to both post maintenance and user maintenance.
 
 Assignment 2 Updates
 
-Admin Account:
-JPerry - TieGuy
-
-User Account
-MJackson - Thriller
-
 CKEditor
 	Added makeCKEditor() to formfieldhelpers
 	Added CKE to caboose
@@ -120,3 +114,65 @@ Controllers/postmtce
     Replace $_GET error messages with flashdata
 Posts
 	users cannot edit other users posts
+
+
+----------------------------------------------------------------------
+
+Lab 8 Updates
+
+
+XML-RPC
+
+	*Capo controller capable of handling incoming requests from the syndicate
+	*Admin and Postmtce controllers send out info to the syndicate on state change
+
+
+Admin Page
+	
+	*Admin users can now access the admin controller from their account page
+	*From there they can change the site title, and plug, which are also tied
+		to the main title bar of the site
+
+	*Admins can also force a refresh to the syndicate if it failed to get an update
+		or a database change was made directly.
+
+	*Flashdata messages will report any errors returned by the syndicate
+
+
+Rebuilt Accounts page
+	
+	*Now with user picture
+	*Shows all posts submitted by the user
+	*Sidebar allows user to access any controllers they are authorized to use
+
+
+Posts Maintenance
+
+	*Now with image buttons (new form-field component)
+	*Admins will get a button to sync the specified post with the syndicate if
+		it was not appearing for some reason
+	*Users can only edit and delete their own posts
+	*Shortened story field down to just a snippit so the page isn't unreasonably long
+	*Flashdata error messages report syndicate syncing problems
+	*Added "Are you sure?" to deleting of posts to prevent one-click delete.
+
+
+Log in/out
+
+	*Improved redirect logic and added flashdata error messages so you can have some
+		clue what is going on when you're trying to log in
+
+
+Blog
+	
+	*Fixed issue where images would occasionally overflow into the next post down
+
+
+
+**Admin Login: 
+	name JPerry
+	pass TieGuy
+
+**User Login
+	name MJackson
+	pass Thriller

@@ -93,27 +93,10 @@ class Users_dao extends _Mymodel {
         return $this->getAll_array();
     }
 
-    function changeUserRole($userID, $newRole) {
-        // check new role is valid
-        if ($newRole != ROLE_ADMIN && $newRole != ROLE_USER && $newRole != ROLE_VISITOR) {
-            return false;
-        }
-        $userDetails = $this->get_array($userID);
-        $userDetails['role'] = $newRole;
-        $this->update($userDetails);
-        return true;
-    }
+    function getEmail($uid){
+        $userInfo = $this->get_array($uid);
 
-    function changeUserPassword($userID, $newPassword) {
-        $userDetails = $this->get_array($userID);
-        $userDetails['password'] = md5($newPassword);
-        $this->update($userDetails);
-    }
-
-    function changeUserName($userID, $newName) {
-        $userDetails = $this->get_array($userID);
-        $userDetails['name'] = $newName;
-        $this->update($userDetails);
+        return $userInfo['email'];
     }
 
     function removeUser($userID) {

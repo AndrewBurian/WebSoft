@@ -28,8 +28,8 @@ if (!defined('APPPATH'))
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1><a href="/">Greater Vancouver Pub Reviews</a></h1>
-                <strong>Casual reviews of our favorite watering holes</strong>
+                <h1><a href="/">{main_site_name}</a></h1>
+                <strong>{main_site_plug}</strong>
                 <div class="mynav">
                     <ul id="main-nav">
                         {menubar}
@@ -45,8 +45,7 @@ if (!defined('APPPATH'))
 
                     <h2>{pageTitle}<span>{pageDescrip}</span></h2>
 
-                </div>				
-                <!-- //#header -->
+                </div>		
 
             </div>
             <div class="alone"></div>
@@ -55,15 +54,8 @@ if (!defined('APPPATH'))
                     <div id="content-inner" class="clearfix">
                         {content}
                     </div>
-                    <!-- //#content-inner -->
-                    <!--
-                    <div id="sidebar" class="span3">
-                        {sidebar}
-                    </div>
-                    -->
                 </div>
             </div>
-            <!-- <div id="footer" class="span12">  -->
             <div id="footer">
                 <div id="footer-inner">
 
@@ -71,10 +63,8 @@ if (!defined('APPPATH'))
                         {menubar}
                     </ul>
 
-                    <!--<p><strong>Design: <a href="http://www.google.com/">Baranda</a></strong> <span>|</span> <strong>Code: <a href="http://www.google.com" title="PSD to (X)HTML, PSD to CMS service">Slicejack</a></strong></p> -->
                     <p><strong>{foot_note}</strong></p>
                 </div>
-                <!--  Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>. -->
             </div>
         </div>
         <script src="/assets/js/jquery.min.js"></script>
