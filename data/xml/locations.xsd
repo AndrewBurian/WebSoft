@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    
+    
+    <!-- A bar name must be character data at least one letter long -->
+    <xs:simpleType name="BarName">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z0-9].*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- A bar Capacity must be >= 1 person -->
+    <xs:simpleType name="BarCapacity">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    
+    <!--
+    
+    DOCUMENT STRUCTURE
+    
+    -->
+    
+    <xs:element name="ESTABLISHMENTS">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CITY" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="source" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CITY">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="BAR" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="BAR">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NAME" type="BarName" maxOccurs="unbounded"/>
+                <xs:element name="BRANCH" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="ADDRESS" type="xs:string" maxOccurs="unbounded"/>
+                <xs:element name="CAPACITY" type="BarCapacity" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+   
+    
+</xs:schema>

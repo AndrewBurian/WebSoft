@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='locations.xsl'?>
 <!--
 locations.xml
 
@@ -8,11 +9,12 @@ Data is a selected subset of establishments with a 'Liquor Only' license
 HREF: www.pssg.gov.bc.ca/lclb/licensed/all-location.htm
 -->
 
-<!DOCTYPE ESTABLISHMENTS SYSTEM 'locations.dtd'>
+<!--<!DOCTYPE ESTABLISHMENTS SYSTEM 'locations.dtd'>-->
 
 
 
-<ESTABLISHMENTS source = "www.pssg.gov.bc.ca/lclb/licensed/all-location.htm">
+<ESTABLISHMENTS source = "www.pssg.gov.bc.ca/lclb/licensed/all-location.htm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="locations.xsd">
     <CITY name = "Aldergrove">
         <BAR>
             <NAME>Alder Inn Hotel</NAME>
@@ -994,7 +996,7 @@ HREF: www.pssg.gov.bc.ca/lclb/licensed/all-location.htm
     </CITY>
     <CITY name = "Richmond">
         <BAR>
-            <NAME>#12 (Vancouver) Service Batalion</NAME>
+            <NAME>No. 12 (Vancouver) Service Batalion</NAME>
             <ADDRESS>5500 No. 4 Rd</ADDRESS>
             <CAPACITY>210</CAPACITY>
         </BAR>
@@ -2071,7 +2073,7 @@ HREF: www.pssg.gov.bc.ca/lclb/licensed/all-location.htm
             <CAPACITY>185</CAPACITY>
         </BAR>
         <BAR>
-            <NAME>keefer bar</NAME>
+            <NAME>Keefer bar</NAME>
             <ADDRESS>135 Keefer Street</ADDRESS>
             <CAPACITY>72</CAPACITY>
         </BAR>
