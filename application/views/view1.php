@@ -32,5 +32,7 @@ if (!defined('APPPATH'))
         Posted by: <strong>{author_name}</strong>
         <br/><br/>
         <p>{story}</p> 
+        <br/><br/>
+        {comments}
     </div>
 </div>

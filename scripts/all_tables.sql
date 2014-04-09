@@ -2,11 +2,12 @@ DROP TABLE IF EXISTS `images`;
 DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `posts`;
 DROP TABLE IF EXISTS `comments`;
---DROP TABLE IF EXISTS `ci_sessions`;
+DROP TABLE IF EXISTS `ci_sessions`;
 DROP TABLE IF EXISTS `media`;
 DROP TABLE IF EXISTS `tags`;
 DROP TABLE IF EXISTS `contacts`;
-
+DROP TABLE IF EXISTS `comments`;
+DROP TABLE IF EXISTS `info`;
 
 
 CREATE TABLE IF NOT EXISTS  `ci_sessions` (
@@ -60,23 +61,24 @@ CREATE TABLE IF NOT EXISTS `posts`
     CONSTRAINT fk_pic FOREIGN KEY(`pic`) REFERENCES images(`iid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `comments`
+(
+    `cid`       INTEGER(18)     NOT NULL    AUTO_INCREMENT,
+    `pid`       INTEGER(18)     NOT NULL,
+    `uid`       VARCHAR(18)     NOT NULL,
+    `time`      TIMESTAMP       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `text`      TEXT            NULL,
+    PRIMARY KEY (`cid`),
+    CONSTRAINT fk_user FOREIGN KEY (`uid`) REFERENCES users(`id`),
+    CONSTRAINT fk_pic FOREIGN KEY(`pid`) REFERENCES posts(`pid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 CREATE TABLE IF NOT EXISTS `tags`
 (
     `pid`       INTEGER(18)     NOT NULL,
     `tag`       VARCHAR(30)     NOT NULL,
     PRIMARY KEY (`pid`, `tag`),
     CONSTRAINT fk_post FOREIGN KEY (`pid`) REFERENCES posts(`pid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-CREATE TABLE IF NOT EXISTS `comments`
-(
-    `post`      INTEGER(18)     NOT NULL,
-    `user`      VARCHAR(18)     NOT NULL,
-    `time`      TIMESTAMP        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
-    `comment`   TEXT            NULL,
-    PRIMARY KEY (`post`, `user`, `time`),
-    CONSTRAINT fk_user FOREIGN KEY (`user`) REFERENCES users(`id`),
-    CONSTRAINT fk_pic FOREIGN KEY(`post`) REFERENCES posts(`pid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS contacts 
@@ -87,6 +89,13 @@ CREATE TABLE IF NOT EXISTS contacts
     `phone`     VARCHAR(80),
     `email`     VARCHAR(80),
     PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `info`
+(
+    `key`       VARCHAR(140)    NOT NULL,
+    `val`       VARCHAR(140)    NOT NULL,
+    PRIMARY KEY (`key`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -104,6 +113,14 @@ INSERT INTO `posts` (`pid`, `user`, `ptitle`, `slug`, `story`, `created`, `updat
 INSERT INTO `tags` (`pid`, `tag`) VALUES
 (1, 'Welcome'),
 (1, 'GVPR');
+
+INSERT INTO `comments` (`time`, `uid`, `pid`, `text`) VALUES
+('2014-04-08', 1, 1, 'yay!');
+
+INSERT INTO `info` (`key`, `val`) VALUES
+('name', 'Greater Vancouver Pub Reviews'),
+('code', 'O07'),
+('plug', 'Casual reviews of our favorite watering holes.');
 
 INSERT INTO contacts (id, surname, firstname, phone, email) VALUES 
 ('MM', 'Mouse', 'Mickey', '555-1234', 'mickey@disney.com'),
