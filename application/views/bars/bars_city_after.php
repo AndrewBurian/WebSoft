@@ -1,5 +1,5 @@
 <!-- city end -->
 
 <tr>
-    <th>{city_name} has {count} of bars.</th>
+    <th>{city_name} has {count} bars.</th>
 </tr>

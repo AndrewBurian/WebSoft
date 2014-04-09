@@ -31,6 +31,8 @@ class Bars extends Application {
         $this->data['report_heading'] = $this->build_report_header();
         $this->data['report_body'] = $this->build_report_body();
 
+        $this->data['field_view_raw_btn'] = makeLinkButton('View Data in Raw Form', '/data/xml/locations.xml', 'Raw XML');
+        
         $this->render();
     }
 
